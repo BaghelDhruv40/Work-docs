@@ -1,0 +1,12 @@
+1. If average kinetic energy is proportional to temperature of the system in thermal equilibrium, does it means that particle having different 
+velocities in a system have theirown associated different temperature?
+2. If different particles have different velocities, is it possible to find the number of particles having particular velocity or their 
+probability distribution?
+3. The temperature of the isolated system remains time independent and constant homogenously. So many collisions are happening within the system.
+The number of identical particles in the system is constant. Is the linear momentum of the whole system conserved?
+4. Velocity of each particle need not be same and if i look at a certain portion of the system, since temperature is same, the average 
+distributuion of velocities or kinetic energy must also be same?
+5. Changing the Kinetic energy of the system changes the momentum?
+6. For a system in thermal equilibrium, each particle has equal kinetic energy and the relation between the square of rms speed of any particle
+and the temperature of the system is linear.
+7. For two systems, of different kind of gases, at thermal equilibrium with each other, heavier gas has lower rms speed particles.

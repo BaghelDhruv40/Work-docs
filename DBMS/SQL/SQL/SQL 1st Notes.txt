@@ -1,0 +1,41 @@
+SQL is a standard language for RDBMS
+
+-> Some of the most important SQL commands: 
+
+	-> SELECT - extracts data from a database
+	-> UPDATE - updates data in a database
+	-> DELETE - deletes data from a database
+	-> INSERT INTO - inserts new data into a database
+	-> CREATE DATABASE - creates a new database
+	-> ALTER DATABASE - modifies a database
+	-> CREATE TABLE - creates a new table
+	-> ALTER TABLE - modifies a table
+	-> DROP TABLE - deletes a table
+	-> CREATE INDEX - creates an index (search key)
+	-> DROP INDEX - deletes an index
+
+-> We have the following datatypes in SQL:
+
+	-> NUMERIC: Number, Float, Int, Real, Decimal, Binary Float, etc.
+
+	-> CHARACTER: Char, Varchar, Nchar, Nvarchar, Long, Raw, Long Raw, etc.
+
+	-> DATE: Date, Time, Timestamp, Interval
+
+	-> BOOLEAN: Boolean
+
+-> We have 7 constraints in SQL:
+
+	-> Not Null: The field for an attribute can't be null
+
+	-> Unique: The fields in each tuple for an attribute must be unique.
+
+	-> Primary Key: A not null and unique attribute.
+
+	-> Foreign Key: A unique constrained attribute with null values allowed and is used for reference in another relations.
+
+	-> Check: To check for conditions on the attribute.
+
+	-> Default: To set default value for an attribute.
+
+	-> Ref Constraints

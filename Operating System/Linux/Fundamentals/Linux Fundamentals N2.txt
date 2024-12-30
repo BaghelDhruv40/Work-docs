@@ -1,0 +1,28 @@
+-> Linux is basically a kernel. Kernel is something interact with the hardware.
+
+-> Richard Stallman and Linus Benedict Torvalds are founders of Linux.
+
+-> Linux was inspired by MINUX which was inspired by UNIX.
+
+-> Linux is free because of GNU General Public License. It says that we can take any software and the redistribution of it along with the modification is totally free.
+
+-> Linux kernel is same mostly but the tools from GNU is different.
+
+-> Destros are specific group of people which takes the responsibility of linux and manage its updates and version.
+
+-> Some popular destros are Arch, Debian (owns MInt, Ubuntu, Kali, Parrot, Deepin, etc.), Redhat (owns CentOS, Fedora), etc.
+
+-> In Linux, we have wide variety of shells (or terminals). One such is Bash Shell.
+
+-> Distrotest.net is a site to try all linux.
+
+-> Bootloader is an essential topic to discuss here. Bootloader here is simply a pointer. It points to different OS installed in the Hardware. Having two OS in the system and deleting one which was used recently without resetting the boot loader will lead to loss the pointer to 1st OS.
+
+-> We have the topic named Virtualization. It is a software that helps in installing multiple OS containers.
+
+-> We have two cases. Either the virtualization is directly above the harware layer, above which we can install multiple os containers.
+The other case is, we already have an OS over hardware layer, and on top of it, we have virtualization.
+
+-> We have the concept of Hypervisors with two types.. Type 1 and Type 2.
+	-> Type 1 is loaded directly on hardware. Ex: Hyper-V
+	-> Type 2 is loaded on OS. Ex: Fusion, Virmware player, etc.

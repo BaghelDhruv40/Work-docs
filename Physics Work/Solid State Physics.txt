@@ -1,0 +1,13 @@
+Solid State Physics
+
+1. Lattice or lattice Space: A lattice is a collection of regular arrangement of imaginary points in a space. Each imaginary point represnt the location.
+
+2. Basis: A basis is an atom or a group of atom placed at the location of imaginary points in the lattice.
+
+3. Unit Cell: A unit cell is basically the smallest group of 
+
+4. Crystalline Solids: They are those which possess a regular or periodic arrangement of basis upto large extent in a solid. They are of two types namely single crystal and polycrystalline. Single crystal are throught regular while polycrystalline have grains or crystallites which are small portions with regular arrangements. Crystalline solids releases latent heat of fusion when formed.
+
+5. Amorphous Solids: They are also known as Non-Crystalline Solids. They have no definite arrangement of basis. They also do not realses latent heat of fusion in their formation. Example: Glass, Plastic.
+
+6. Crystallographic space group: This a group of all crystal symmetries (219). The symmetry of a crystal is constrained by the requirement that the unit cells stack perfectly with no gaps. These are then grouped into 7 3D Crystal Systems.

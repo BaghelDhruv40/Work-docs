@@ -1,0 +1,229 @@
+-> Linux is open source OS.
+
+-> A multitasking OS designed for PC.
+
+-> An operating system is a software that builds just above the computer hardware and control and coordinates the hardware for optimal utilization of the hardware resources.
+
+-> Kernel is the most intimitate software to the hardware. It has full control over the hardware.
+
+-> OS further provides these:
+	File System: Provides a structure in which info is stored on the computer. Info is stored in files, primarily on hard disk and has a hierarchy directory structure.
+
+	Device Drivers: These provide the interfaces to each of the hardware devices connected to the computer.
+
+	User Interface: Provides a way to the users to run programs and access the file system.
+
+Note: Linux has both GUI and TBUI namely GNOME and KDE for the GUI and Shell for text based cmd.
+
+-> Linux is multi-user: Multiple users can logged in and work on the system at the same time. Users can have their own env arranged the way they want, own home directory for storing files and own desktop interface.
+
+-> Linux OS is made up of three parts:
+	-> Kernel
+	-> Shell
+	-> Programs
+
+-> Shell commands are computer program built to perform a specific task. Ex: ls, clear, cal, date, vi. Below are some examples.
+
+	-> $ cat /etc/shells is the command to see all available shells in our system.
+
+	-> $ echo $SHELL is the command to find the current shell type.
+
+	-> $ echo $PATH is the command to evaluate the path variable that stores the path searched by the shell to execute command or programs.
+
+LINUX FILE SYSTEM
+-----------------------------
+
+-> The file system begins with a directory called ROOT. Denoted by (/). 
+
+	-> This root directory is the top level per operating system. That means, no matter how many usernames we have for a system, root directory is only one. 
+
+	-> We can go to root directory by the following syntax: $ cd /
+
+	-> We can see the contents of root directory through terminal by first going to root directory and then using: $ ls
+
+-> Branching from the root, there are several other directories called bin, lib, usr, etc, tmp, dev, and many more.
+
+	-> bin: Contains exe files for most of the linux commands. These commands can either be C programs or shell programs.
+
+	-> home: The purpose of it is to store contents of each user of the system. Actually have directories with the username of each user.
+
+	-> lib: Contians all the library functions provided by Linux.
+
+	-> boot: Contains boot loader files and grub (small program that allows to select and boot the OS)
+
+	-> cdrom: 
+
+	-> sbin: Contains system binaries (admin commands)
+
+	-> root: Home directory for the root user.
+
+		-> To see content of this directory, we must need admin power.
+
+		-> we can also use $ sudo ls /root, after this the password will be required. This will be the user password not root user password.
+
+
+	-> dev: Contains files that control various I/O devices like terminals, printer, disk drivers, etc.
+
+	-> usr: 
+
+	-> tmp: Contains temporary files created by Linux.
+
+NOTE: -> We can give two paths in two ways: Absolute r complete path and Relative Path. The relative path starts from /path/to/directory
+
+	-> using $ cd, we can return from anywhere back to our user directory (~) present in /home.
+
+What goes on inside LFS?
+-> The disk space allote to a LFS is made up of blocks.
+-> All the blocks belonging to the file system are logically divided into four parts.
+-> The first block of a FS is called the Boot Block which is follwed by Super Block then Inode table and then Data Block.
+
+	-> Boot Block: This represents the beginning of the file system. It Contains a program called bootstrap loader. This program is executed when we boot the host machine.
+
+	-> Super Block: Describes the state of the file system ( how large it is, how many max files can it accomodates and how many more files can be created, etc).
+
+	-> Inode Table: An Inode (index node) stores info about a file, but not the file's data itself. What is contain is file type, file size, permissions, owner and group ids, time stamps, etc.
+
+	-> Data Block: Stores the actual contents of files.
+
+GENERAL PURPOSE UTILITIES COMMANDS
+-----------------------------------------------------------
+
+-> cal : The calendar
+
+	eg: cal 2008
+		cal 03 2003
+
+-> date: Displaying the system date
+
+	eg: date
+		date +%m			#The month number
+		date +%b			#Abbreviated month name
+		date +%H			# The hour in 24 format
+		date +"%H %M"		# hour and min.
+
+-> who: Who are the users?
+
+	eg: who
+
+NOTE : we also have "whoami". This gives only the current user name.
+
+-> uname: Knowing Your Machine. Displays the name of the OS.
+
+	eg: $ uname
+
+-> tty: Know your terminal. Displays the filename of the terminal we are using.
+
+-> sudo -i : Used to login as root user. To return back use $ exit or $ su username.
+
+	-> to set root user password, we do $ sudo passwd root. Then a prompt comes to ask for user password and then another prompt to set new password for root user.
+
+-> su: switch user . Prompts for root user password.
+
+NOTE: root user has root as the output of whoami and has id=0.
+
+MORE SHELL COMMANDS
+-----------------------------------
+
+-> ls: list the files and directories in a directory in lexographical order. Some useful options listed below:
+
+	-> -l : lists a detailed view of the directory content. Ignores hidden files (ending with period).
+
+	-> -a : lists all files and directories in a directory. Includes hidden files.
+
+	-> x: Produces a multicolumnar output.
+
+	-> F: display all files in columnar fashion with a * after executable file, / after all sub directories and all ordinary files as it is.
+
+-> mkdir: Making directory. Below are some functions and options it have:
+	-> -p : Used when we have to create linear chained hierarchy. Example:
+		$ mkdir -p parent/child/subchild/subsubchild...
+
+-> rmdir: Remove directory. Below are some functions and options:
+	-> Deletes a directory only if it is empty.
+	-> To delete a hierarcy branch we use -p option as:
+
+		$ rmdir -p parent/child/subchild/....
+
+-> file: Used to know the type or category of the file. In linux, files are not distinguish by their extension. There's no role of extension here.
+
+-> touch: creates a file. Syntax: $ touch file1 file2 file3.....fileN
+
+	-> To change date and time: $ touch -t 05070915 filename # 7 May 09:15
+
+-> mv: Renaming Files. It has two functions:
+	-> It renames a file or directory
+	-> It moves a group of files to a different directory.
+
+-> cp: Copies files. Syntax: $ cp sourcefile destination file (or path)
+
+	-> -r : Can be used to copy directories. Syntax: $ cp -r directoryname newdirectoryname
+
+-> rm: Remove files. It has following options:
+
+	-> -i : Iterates over the given files as argument and ask to delete them.
+
+	-> -rf : Although rm doesn't delete directories, using this we can do that. Here -r and -f are recursive and forcefully options respectively.
+
+-> wc: Counting lines, words and characters. It takes one or more filenames as its arguments and displays a four columnar output. It has options:
+	-> l: Display no. of lines in a file.
+	-> w: display no. of words in a file.
+	-> c: Display no. of char in a file.
+
+-> cmp: Comparing two files (compared byte by byte). If files are same, it doesn't display any message but simply returns the prompt.
+
+-> comm: What is common? It compares two sorted files and compares each line of them. Displays a three columnar output. 1st column shows no. of lines nique to 1st file, 2nd column for secon file and 3rd column for lines common to both the files.
+
+-> diff: Converting one file to other. Unlinke its fellow members cmp and comm, it also tells which lines in one file to be changed to make the tow files identical. While making comparisons, diff compares each line character by character, and doesn’t ignore blanks that may be present.
+
+-> head: Prints first 10 lines of the file on the shell.
+
+-> tail: Prints last 10 lines of the file on the shell.
+
+	-> +n: Prints nth to last lines.
+
+-> cat: Prints the whole file ( or files ) on the shell. Actually stands for concatenate.
+
+-> echo: Prints strings on the shell.
+
+	-> Can be used to move content into a file. Syntax: $ echo message (or say text) > filename 
+
+	-> $ cat > filename. This syntax will let us write whole file content on the shell and then pressing CTRL+D will save it in given filename.
+
+	-> Can be used to copy files. Syntax: $ cat file1 > file2
+	
+
+-> chmod: Change Mode.
+
+	-> Syntax: chmod [who] [+/-/=] [permission] filename
+
+	eg: chmod +w temp
+		chmod g -r temp
+		chmod go +r, go-w temp
+
+-> sort: Sorts the content of file. Options are:
+
+	-> r: will sort the contents of the file in reverse order.
+	-> f: will ignore the cases and convert the lowercase to uppercase before sorting.
+	-> u: will sort and gives the sorted o/p without giving duplicate lines.
+
+-> uptime: Shows uptime of the system.
+
+-> free: Display amount of free and used memory in the system.
+
+-> ps: Shows all the processes running at the instant. Usually -A used along with it.
+
+-> df: Report file system disk space usage.
+
+	-> -h : This option makes the sizes shown in better readable form.
+
+-> fdisk: Manipulate disk partition table. Requires sudo.
+
+-> lsblk: Lists block devices.
+
+-> top: lists linux processes.
+
+-> ifconfig: Configure a network interface. Have to be installed by $ sudo apt install net-tools
+
+-> at: Used to schedule one time task
+
+	Syntax: $ echo "hello world" | at now + 30minutes	# specific case

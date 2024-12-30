@@ -1,0 +1,8 @@
+Through ER Model, we learned how to make tables out of the diagram. The relationship was denoted using foreign key references.
+One may ask why to take the headache of jumping through multiple tables to search for an attribute? Why don't we just make a table having all the attributes?
+
+Below is the list of problems that will occur if we do so.
+
+	-> Redundancy: Repetition of values for certain attributes.
+
+	-> Insertion/Updation: Inserting the values in such a large attributes table will be hard.

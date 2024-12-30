@@ -1,0 +1,244 @@
+ABOUT JAVASCRIPT
+
+-> JS is an OO prgramming language.
+
+-> It was introduced in by Netscape company and the name was "Mocha" (Lately named "LiveScript" released in 1995)
+
+-> Netscape was the company started by developers of very first browser "Mosaic" in 1993. Then they made the browser named "Netscape navigator" (It was paid).
+
+-> Initially JS was used to be interpreted language.
+
+-> Through the introduction of V8 Engine, JS became compiled and interpreted language (or called Just In Time compiled).
+
+-> https://tc39.es/ecma262/	#ECMA script link
+
+-> JS is loosely typed or dynamically typed programming language.
+
+-> JS is a case sensitive language.
+
+-> console.log(); #used for execution or say print
+
+-> console.table([variable_reference1, variable_reference2,...so on]) # prints a tabulated structure of variable references and their values.
+
+-> console.dir();	# used to print properties and methods of objects 
+
+-> Use "let" for declaring a variable. Syntax: let a = 9;
+
+	or use let a ;			# just for empty variable declaration
+
+-> After declaring a variable, we just use the variable name directly without let or something.
+
+-> Use "const" for contants i.e for example pi is a constant so syntax: const pi;
+
+-> Datatypes can be divided into two categories, primitive and object.
+	primitive are numbers, string, boolean, null, undefined, symbol.
+	object is what we create in class or similar to dictionary in python.
+
+-> There's a concept of "infinity" i.e if we want 1/0 the result will be infinty.
+
+-> We can use console.log(any number.MAX_VALUE);
+
+This gives the maximum value for that datatype. Doing any arithematic operation (example multiply by 10) to increase this number will result into INFINITY.
+
+-> Use "n" at the end of a very large number to convert it into large integer (Bigint) datatype.
+
+-> If we want to print Dhruv "Baghel", we can do this by console.log('Dhruv "baghel"') or console.log("Dhruv \"Baghel\""). This \ is called escape character and is used to remove the special meaning of something.
+
+-> null datatype can be assigned to a variable and it will print "null" but the type of it is "object". That means null is not a primitive datatype. Well this can be understood as one of the sus behaviour of JS.
+
+-> When we just declare a variable and print it, we get "undefined". The type of such variable is also "undefined".
+
+-> If we do console.log(5/"Dhruv"), the answer will be "NaN" (i.e., not a number) but if we do console.log( typeof(5/"Dhruv")), we get "number". Another sus behaviour.
+
+-> We have the concept of "Coerision" in JS. The use of it is that when we use arithematic operations on two different datatypes (ex: one is number and other is string), what datatype should the result variable give? The answer is not unique. If 1st is number and second is string, the answer will be  string, but if 1st is string (a number in quotes) and second is number the answer will be number.
+
+-> We have a function namely ParseInt() that accepts an alphanumeric string and tries to return numeric part. Example: 123Dhruv may result into 123 but n123Dhruv may result into NaN.
+
+-> We have "template literal". What it means is that we can use ${variablename} in console.log() to signify the value to be printed. But for that we have to write the message in backticks (i.e., ``).
+
+Example:   let x = 4
+		let y = 3
+		let result = x + y
+		console.log(`The addition of ${x} and ${y} is ${result}`)
+
+-> In JS, we have two types of variable scopes namely Global and Local, depending upon where we create it. By scope we means the life of the variable.
+
+
+FUNCTIONS
+-----------------
+
+	-> Use "function" keyword to create a function. The syntax is
+	
+		function function_name(parameters) { content }
+
+	-> We also have the arrow notation for functions i.e., let variableName = (parameters) => { content }
+
+	-> Functions can be used as constructors. This can be done by using "new" keyword. For instance,
+
+		function Details() {console.log("Here are your laptop details)}
+
+		let laptop = new Details()
+	The reason for it is that, at that time JS didn't have OOP sturcture.
+
+
+LOOPS
+---------
+
+	-> We have "for..of..." loop, which is eqivalent to "for...in..." loop in python. Ex: let arr= ["Dhruv","Baghel"]; for ( let i of arr) { console.log(i) ; }
+
+	-> Alternatively, we have map(function), filter(function). function in map should return elements while that in filter return bool.
+
+	-> We have forEach() which iterates on an iterable. For example:
+
+		const colors = ["red", "green",, "blue"];
+		colors.forEach((color) => console.log(color));
+		
+		Output: red, green, blue . Note that omitted elements are not listed. Hence ignored.
+
+
+
+ARRAYS
+-----------
+
+	-> In JS, arrays are lil bit different as they can have different datatype elements.
+
+	-> Below are the ways to create arrays in JS:
+		
+		-> Using Array constructor : Syntax => const arr = new Array(e1,e2,e3,...) or const arr = Array(e1,e2,e3,...)
+
+		-> Square brackets : Usual way.
+
+		Using the constructor approach, we can't create single array element. The consturctor will return an empty array of given value size.
+
+		-> Using Array.of(e1,e2,e3,....) : Can return any length array.
+
+	
+
+	PROPERTIES
+
+		-> arrayname.length : Gives the length of the array.
+
+	METHODS
+
+		-> arrayname.push(element) : To append an element.
+
+		-> arrayname.pop() : To pop the last element.
+
+		-> arrayname.indexOf(element) : Returns index of given element. Returns -1 if elements doesn't exist.
+
+		-> arrayname.shift() : Used to delete the first element of the array and shifts indices of the rest of the elements. It returns the deleted element.
+
+		-> arrayname.unshift(value) : Adds the value at the starting of the array and so shifts other exsisting elements to right.
+
+		-> arrayname.splice(start,deletecount, value) : Takes three paramters, namely, start (i.e., index from where to start), deletecount (i.e., no. of elements to be deleted) and value (i.e., adds this value at the start).
+			Example: This example uses the splice() method to remove the last 3 items from the fruits array.
+
+			const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+			const start = -3;
+			const removedItems = fruits.splice(start);
+			console.log(fruits);
+			// ["Apple", "Banana"]
+			console.log(removedItems);
+			// ["Strawberry", "Mango", "Cherry"]
+
+			Example: This example uses the splice() method to truncate the fruits array down to just its first 2 items.
+
+			const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+			const start = 2;
+			const removedItems = fruits.splice(start);
+			console.log(fruits);
+			// ["Apple", "Banana"]
+			console.log(removedItems);
+			// ["Strawberry", "Mango", "Cherry"]
+
+
+
+		-> arrayname.toString() : Converts the array of string into a comma seperated string. Ex: arr = ['Dhruv', 'Baghel'] ; arr.toString(); Output: 'Dhruv,Baghel'
+
+		-> stringname.split(seperator) : Converts the string into array based on the seperator given. Default seperator is white spaces.
+
+		-> arrayname.join(seperator) : opposite of split(). Default seperator is comma.
+
+		-> arrayname.flat() : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth. Example:
+			
+			let myArray = [1, 2, [3, 4]];
+			myArray = myArray.flat();
+			// myArray is now [1, 2, 3, 4], since the [3, 4] subarray is flattened
+
+		-> arrayname.sort() : Sorts the array in place. It can also take a callback function to determine how array elements are compared. The callback function is called with two arguments, which are two values from the array. The function compares these two values and returns a positive number, negative number, or zero, indicating the order of the two values. For instance:
+
+			const sortFn = (a, b) => {
+  				if (a[a.length - 1] < b[b.length - 1]) {
+    					return -1; // Negative number => a < b, a comes before b
+  				} else if (a[a.length - 1] > b[b.length - 1]) {
+    					return 1; // Positive number => a > b, a comes after b
+ 				 }
+  				return 0; // Zero => a = b, a and b keep their original order
+			};
+			myArray.sort(sortFn);
+			// sorts the array so that myArray = ["Wind","Fire","Rain"]
+
+
+
+-> We use require(modulename) to import module.
+
+
+OBJECTS
+------------
+
+	-> We create objects in JS simply through the syntax: let objectName = {key1 : value1 , key2 : value2 , and so on..}
+	
+	-> These objects can contain any key value pair whether primitive datatypes, non-primitive datatypes and even functions. For example:
+
+		const person = {
+  			name: ["Bob", "Smith"],
+  			age: 32,
+  			bio: function() {
+    			console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  			},
+  			introduceSelf: function() {
+    			console.log(`Hi! I'm ${this.name[0]}.`);
+ 			},
+		};
+	Another shorter way to write functions in objects is : bio() {console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);}
+
+	PROTOTYPES
+	------------------
+
+		-> Every object in JavaScript has a built-in property, which is called its prototype.
+
+		-> The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+		-> Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+
+		-> Prototyping resembles with inheritance. An in-built prototype is kind of super object that is implemented by our object.
+
+		-> When we try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case "undefined" is returned.
+
+		-> To find out prototype of our object, we can use the function Object.getPrototypeOf(object_name).
+
+		->  if we define a property in an object, when a property with the same name is defined in the object's prototype, the browser first looks in our object for a property with that name, and only checks the prototype if our object does not define it. So when we add a property (can be anything) to our object , then the version in our object is called. This is called "shadowing" the property.
+
+		-> There are various ways of setting an object's prototype in JS, One is described here: Object.create().
+
+			-> The Object.create() method creates a new object and allows us to specify an object that will be used as the new object's prototype. For example: 
+
+				const personPrototype = {
+			 	 greet() {
+			   	 console.log("hello!");
+				  },
+				};
+
+				const carl = Object.create(personPrototype);
+				carl.greet(); // hello!
+			Here we create an object personPrototype, which has a greet() method. We then use Object.create() to create a new object with personPrototype as its prototype. Now we can call greet() on the new object, and the prototype provides its implementation.
+
+		-> Properties that are defined directly in the object are called own properties, and we can check whether a property is an own property using the static Object.hasOwn() method:
+
+
+
+OOPS
+-------
+
+	-> We create class and its object in JS simply through the syntax: class className{ }  and let objName = new className()
+

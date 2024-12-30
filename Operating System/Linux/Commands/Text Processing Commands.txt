@@ -1,0 +1,7 @@
+TEXT PROCESSING COMMANDS
+--------------------------------------------
+
+-> sed: Edits textstreams or files by applying patterns or transformations
+
+	-> Syntax: $ sed 's/old/new/g' filename		# substitute all occurrences "old" with "new"
+			$ sed '/error/d' filename			# deletes lines containing 'error'

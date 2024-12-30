@@ -1,0 +1,12 @@
+ACCESS CONTROL METHODS
+----------------------------------------
+
+-> In general, we have two kinds of links, namely, Broadcast links and Point to Point links.
+
+-> Whenever we have Broadcast channel, either only one station should send the data or if more than one stations are sending data, there should be no collisions. To achieve this, we have access control methods.
+
+-> Following are the methods used:
+
+	-> Time Division Multiplexing: Time slots are alloted to each station. The Time interval should be atleast equal to transmission time + max propagation time for the message.
+
+	-> Polling: 

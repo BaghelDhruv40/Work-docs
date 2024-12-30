@@ -1,0 +1,28 @@
+LEVELS OF MEMORY
+
+-> The CPU is the fastest unit of a computer system.
+
+-> Then comes the main memory, then secondary memory.
+
+-> Obviously, the slowest memory unit decides the speed of the CPU processing.
+
+-> Then comes the registers which are present in the same chip where CPU lies and they becomes the fastest and nearest memory units. But their size is very small, they can just hold few instructions.
+
+-> Then the cache memory was introduced.
+
+-> Each memory can have multiple levels to it. Like multiple levels of cache memory.
+
+-> The CPU searches for the instructions in the order as Registers, then Cache, then main memory, then secondary memory.
+
+-> If the required instructions are found in cache, we call it cache hit.
+
+-> The time taken by the CPU to get cache hit is called hit latency.
+
+-> If doesn't found in cache, we call it cache miss.
+
+-> Then the time taken to get the instructions from followed memories to the cache memory is called miss latency.
+
+-> If the required thing is not present in main memory, we call it page fault.
+
+->In computer operating systems, memory paging (or swapping on some Unix-like systems) is a memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory. In this scheme, the operating system retrieves data from secondary storage in same-size blocks called pages.
+

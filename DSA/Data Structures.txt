@@ -1,0 +1,30 @@
+WHAT ARE DATA STRUCTURES ?
+
+-> Before jumping to data structures, one thing to realise is that every data structure holds data, and, every data has a type. This data type is nothing but primitive datatypes.
+Of course we can make complex data structures which may hold non-primitive datatypes too.
+
+-> Primitive datatypes are simplest datatypes and are named so as they can't be further classified into simplest form. Example: integers, float, characters,, boolean, etc.
+
+-> The term data structure basically signifies non-primitve datatypes like arrays, collections (other linear datatypes like list, tuple, etc), trees, graphs.
+
+CLASSIFICATION OF DATA STRUCTURES
+
+-> We classify datastructures broadly as Linear and Non linear.
+
+	LINEAR: These datastructures are logically linear as they store data in continuous (one-by-one or sequential) manner and traverse linearly also. They include:
+
+		-> List:
+		-> Array:
+		-> Queue:
+		-> Stack:
+		-> Tuple:
+		-> String:
+		-> Set:
+
+	NON-LINEAR: These datastructures
+
+
+
+  
+
+

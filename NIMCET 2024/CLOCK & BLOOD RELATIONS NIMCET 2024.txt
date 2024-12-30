@@ -1,0 +1,30 @@
+					CLOCK & BLOOD RELATIONS NIMCET 2024
+
+POINTS TO REMEMBER IN CLOCK
+
+1. Hour hand sweeps 0.5 degrees in 1 min.
+
+2. Min Hand sweeps 6 degrees in 1 min.
+
+3. Angle between Hour and Min hand is given by =30H - 11M/2 (absolute value).
+
+4. In 12 hours, Hour and Min hand coincides 11 times.
+
+5. They coincides after every 1: (5/11+5) hrs.
+
+6. In 12 hours, Hour and Min hand are orthogonal for 22 times.
+
+7. In 12 hours, Hour and Min hand are opposite 11 times.
+
+8. The relative angular velocity of Min hand w.r.t Hour hand is 5.5degrees/min.
+
+
+POINTS TO REMEMBER IN BLOOD RELATIONS
+
+1. Use symbol "-" for siblings/cousins.
+
+2. Use symbol "<->" for Couple/spouse/husband-wife.
+
+3. Use symbol "|" for parent-child with parent above the child.
+
+4. Male is denoted using square and female is denoted using circle.

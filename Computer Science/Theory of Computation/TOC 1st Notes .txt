@@ -1,0 +1,75 @@
+-> Theory of Computation deals with the design and analysis of computational models to solve a task.
+
+-> Some of the examples of computational devices are, general purpose computer, specific purpose computer, pen and paper.
+
+-> A computational model includes design of a model for computation purpose based on an algorithm. For example: To identify is a given number is a multiple of 2, we check the remainder of the division by 2 is zero or not. So we have two states, remainder is 0 or not. If the output lends of 0 remainder state, we accept the input otherwise not.
+
+-> Below are some definitions:
+
+	-> Alphabet : A finite set of symbols. Denoted by Summation sign. For simplicity, here E denotes summation sign.
+
+	-> String : A sequence of symbols from the Alphabet.
+
+	-> Length :  No. of symbols in the String.
+
+	-> Ei (read as Summation I) : A set of all Strings over an Alphabet with length I. Summation * would be union of set of strings of all lengths (including 0 i.e. epsilon).
+
+	-> Language : A subset of E* (Summation *)
+
+	-> DFA (Dterministic Finite Automaton) :  A pentuple (tuple of 5 objects) (Q, E, delta (&) , qo, F) .
+
+		-> Q : A finite set of states.
+
+		-> Delta : A transition function i.e. Q x Alphabet -> Q. Represents the edges of the graph and their labels. This delta is the reason we call an FA deterministic as a transition always lend to a unique state. For simplicity, delta is represented by & symbol.
+
+		-> qo : Start state (A subset of Q).
+
+		-> F : A set if accept states (subet of Q).
+
+-> Informly, a string is said to be accepted by a DFA if on reading of the given string, we end up at an accept state.
+
+-> Formly, a string W = a1a2a3...ai , ai belongs to alphabet E (summation) for all i, is said to be accepted by a DFA M= (Q, E, &, qo, F) if there exist states ro, r1, r2, r3, ... ri such that three conditions follow:
+
+	-> ro = qo. That means a start state exist.
+
+	-> ri is a result of transition function delta. That means a unique state exist for every transition.
+
+	-> ri belongs to F for all i. That means ri is an accepted state.
+
+-> Informly, a language L is said to be accepted by a DFA iff every string in L is accepted and none other.
+
+-> Formaly, a language L is said to be accepted by a DFA iff L= {w | w is accepted by M}.
+
+-> A language L is called "regular" iff there exist a DFA which accepts it.
+
+-> Below are some examples of accepted languages by a DFA.
+
+	-> L = { all strings belonging to  {0,1}* | strings contains even 1s }.
+		Ans: If we start with qo as an empty string, the transition edge to q1 will have a label of 1 denoting that if we get even no. of 1, we move to q1. Same goes for transition edge to qo with label 1, denoting that encountering 1 on q1 means even no. of 1s and so move back to qo. Along this, each state has a loop for encountering 0s. qo is the end state here.
+
+	-> L = {All strings belonging to {a,b}* | strings end with ab }.
+
+		Ans: Since L doesn't contain empty string, we have only two choices "a" and "b". Let qo be the state that "b" comes. Loop over it until "a" comes. q1 be the state that "a" comes. Just loop over it until "b" comes. When "b" comes, transit to q2. If "a" comes, come back to q1 and if "b" comes, comeback to qo. In this way, the end state will be q2.
+
+	-> L = { All binary strings that are divisible by 3 }.
+
+		Ans: Since any number divided by 3 leaves three possible remainders i.e., 0, 1 or 2, these are gonna be the states. Reading a string, if we encounter 0, we stay at qo. This is coz 0 gives 0 remainder when divided by 3. If 1 comes, we jump to q1. This is the state that remainder is 1. Getting again 1 jumps back to qo. But, if a 0 comes, we jump to q2. This is the state that remainder is 2. If again 0 comes, get back to q1. But, if 1 comes, keep looping.
+The end state will be qo.
+
+-> A "Dump state" is an unacceptable state from where there is no comeback. That means on reaching such state, we such loop over it no matter what the symbol reads. Example:
+
+	-> L = { w | w is a binary string which doesn't contains consecutive 1s }.
+
+		Ans: If we start with qo state which signifies "reads 0" and loops over it until 1 comes, a q1 state then exist which signifies "reads 1" and come backs to qo if "reads 0". But, if 1 comes, we jump to a state q2 and keep looping over it no matter what comes after that 1. This state is the dump state. The accept states are both qo and q1.
+
+	-> L = { w | lwl = 3 }.
+
+		Ans: In this case, it doesn't matter what symbol we read. There will be just 5 states namely, qo, q1, q2, q3, q4 where q4 is the dump state and q3 is the accept state.
+
+-> We can define some operations on languages called "regular operations". They are: Assume A and B are two regular languages.
+
+	-> Union Operation : AUB = { x | x belongs to A or B }.
+
+	-> Concatenation : A.B = { xy | x , y belongs to A, B resp. }
+
+	-> Star operation : A* = { x1.x2.x3....xk | k>=0 and xi belongs to A for all i } 

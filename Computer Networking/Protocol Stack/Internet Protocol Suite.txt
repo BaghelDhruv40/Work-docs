@@ -1,0 +1,64 @@
+-> The Internet protocol suite, commonly known as TCP/IP, is a framework for organizing the set of communication protocols used in the Internet and similar computer networks according to functional criteria.
+
+-> It is a model that divides protocols into 5 abstraction layers based on their scope.
+
+-> The foundational protocols in the suite are the Transmission Control Protocol (TCP), the User Datagram Protocol (UDP), and the Internet Protocol (IP).
+
+-> The layers are namely, Physical, Link (or Netwrok access) , Internet, Transport, Application; with their order from lowest to highest respectively.
+
+LINK LAYER
+----------------
+
+	-> It includes all the hosts that are accessible without traversing a router.
+
+	-> It is used to move packets between the internet layer interfaces of two different hosts on the same link.
+
+	-> The processes of transmitting & receiving packets on the link can be controlled in the device driver for the network card, as well as in firmware or by specialized chipsets.
+
+	-> These perform functions, such as framing, to prepare the internet layer packets for transmission, and finally transmit the frames to the physical layer and over a transmission medium.
+
+
+INTERNET LAYER
+------------------------
+
+	-> Internetworking requires sending data from the source network to the destination network. This process is called routing and is supported by host addressing and identification using the hierarchical IP addressing system.
+
+	-> This layer provides an unreliable datagram transmission facility between hosts located on potentially different IP networks by forwarding datagrams to an appropriate next-hop router for further relaying to its destination.
+
+	-> This layer has the responsibility of sending packets across potentially multiple networks. With this functionality, it makes possible internetworking, the interworking of different IP networks, and it essentially establishes the Internet.
+
+	-> The Internet Protocol is the principal component of the internet layer, and it defines two addressing systems to identify network hosts and to locate them on the network.
+
+		-> The original address system of the ARPANET and its successor, the Internet, is Internet Protocol version 4 (IPv4). It uses a 32-bit IP address and is therefore capable of identifying approximately four billion hosts.
+
+		-> This limitation was eliminated in 1998 by the standardization of Internet Protocol version 6 (IPv6) which uses 128-bit addresses.
+
+
+TRANSPORT LAYER
+--------------------------
+
+	-> This layer establishes basic data channels that applications use for task-specific data exchange.
+
+	-> Connectivity at the transport layer can be categorized as either connection-oriented, implemented in TCP, or connectionless, implemented in UDP.
+
+	-> The protocols in this layer may provide error control, segmentation, flow control, congestion control, and application addressing (port numbers).
+
+	-> For the purpose of providing process-specific transmission channels for applications, the layer establishes the concept of the network port. This is a numbered logical construct allocated specifically for each of the communication channels an application needs.
+
+
+APPLICATION LAYER
+----------------------------
+
+	-> This layer includes the protocols used by most applications for providing user services or exchanging application data over the network connections established by the lower-level protocols.
+
+	-> Examples of application layer protocols include the Hypertext Transfer Protocol (HTTP), the File Transfer Protocol (FTP), the Simple Mail Transfer Protocol (SMTP), and the Dynamic Host Configuration Protocol (DHCP).
+
+	-> Application layer protocols are often associated with particular client–server applications.
+
+	-> At the application layer, the TCP/IP model distinguishes between user protocols and support protocols.
+
+		-> Support protocols provide services to a system of network infrastructure.
+
+		-> User protocols are used for actual user applications. 
+
+	For example, FTP is a user protocol and DNS is a support protocol.

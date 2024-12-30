@@ -1,0 +1,76 @@
+-> After the creation of OS, a program is written with respect to 
+
+
+PROCESS
+------------
+
+-> A process in actual form is a datastructure. It's consist of space for executable file , global and static llvariables then heap and then stack.
+
+
+
+CPU SCHEDULING
+------------------------
+
+-> CPU Scheduling means picking a process from the ready queue and giving it to the CPU.
+
+-> It is done by Short Term Sheduler along with dispatcher (sometimes dispatcher is the part of STS itself).
+
+-> The task of picking and putting processes is called context switching.
+
+-> CPU Sheduling is done in the following scenarios: When a process move from
+
+	-> Run to Terminate: That means when new process in the ready queue is to be executed.
+
+	-> Run to Wait: That means when a process is sent to waiting state and so another process can be executed meanwhile.
+
+	-> Run to Ready: When preemption happens or time quantum expires.
+
+	-> New to Ready: That means when a process having higher priority, just created and entered in the ready queue and lower priority is in running state.
+
+	-> Wait to Ready: That is to moving a higher priority waiting process back to ready state and then into running state.
+
+
+SCHEDULING ALGOS
+-----------------------------
+
+-> There are many algorithms to schedule processes. They are:
+
+	FCFS
+	
+	-> Criteria: Arrival Time
+	-> Mode: Non-Preemptive
+	-> In case of tie in arrival time, pick the lower PID one.
+	-> Demerits are:
+		-> CPU starvation (Convoy effect) for the processes in te ready queue if the running process has a very large burst time.
+
+	Shortest Job First
+
+	-> Criteria: Burst Time (small to large)
+	-> Mode: Non-Preemptive
+	-> One thing must be emphasised here is that the very first process sheduled will be on the basis of its arrival time only. Also, the rest of the processes will be scheduled on the basis of this algo only when their arrival time is less then the burst time of the previous process in the ready queue.
+	-> Hence, SJF actually schedule the jobs which are already available in the ready queue after the first job.
+	-> Demerits are:
+		-> Here also, CPU starvation can occur if the very first job (earliest arrival time) is having large burst time.
+
+Note: There also exist Longest Time First algo also which is just opposite to this.
+
+	Shortest Remaining Time First
+
+	-> Criteria: Burst Time
+	-> Mode: Preemptive
+	-> What we do in this is that we first schedule the very first arrived job. After this, at every unit of time, we check for other processes (if available) on the basis of their arrival time and burst time (mean while reducing their burst time by one unit) till all processes are included in the ready queue and after that it just works as SJF. That means, if a process is running with some remaining burst time and in that time we check for some available process having burst time less than the running process, CPU preempts the running one and start running the arrived one. The burst time of the previously running process i reduced by one unit as it was processed for that much time.
+
+Note: There also exist Longest Remaining Time First algo also which is just opposite to this.
+
+	Round Robin ALGO (Time Quantum Sharing)
+
+	-> Criteria: Time Quantum or Burst Time (if less than TQ).
+	-> Mode: Preemptive
+
+	Priority Algorithm
+
+	-> It can be classified as Static and Dynamic.
+	-> Static Priority further classified into preemptive and non preemptive.
+
+	
+		

@@ -1,0 +1,29 @@
+-> Operating System is just a program to reduce the complex and repetitive tasks at the very lowest level of utilizing hardware of a computer.
+
+-> This is the very first need of thinking of an OS.
+
+-> The very first computers were for dedicated work and not a general purpose one. Being a dedicated one, a computer used to go through only limited steps and exploit only limited resouces. But, as the wave for making a general purpose computer emerged, computers were no more dedicated and managing multiple dedicated tasks become very difficult for end user. hence, a program was needed to handle atleast repitive operations and manage the tasks and resources effectively.
+
+-> OS is kind of a manager. It controls and coordinates use of hardware among various applications and users.
+
+-> A computer system can be divided into four components:
+	-> Hardware
+	-> OS
+	-> Application programs
+	-> Users
+
+-> A question comes to my mind that why we made a software for control and coordination? why this feature is not introduced into the hardware i.e., CPU itslelf?
+
+-> An OS can be view from two perspectives:
+
+	-> User View.
+	-> System View.
+
+-> From the System pov, OS is the program most intimately involved with the hardware.
+
+	-> The OS is a "Resource Allocator".
+		-> Manages all resources.
+		-> Decides b/w conflicting requests for efficent and fair resource use.
+
+	-> The OS is a "Control Program".
+		-> Controls execution of programs to prevent errors and improver use of the computer.

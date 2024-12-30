@@ -1,0 +1,67 @@
+CLIENT-SERVER NETWORK ARCHITECTURE
+------------------------------------------------------------
+
+->
+
+
+-> Socket is a software interface through with a process sends and receives messages to/from a network.
+
+-> A socket is the interface between the application layer and transport layer within a host. Also refers to as API.
+
+-> The application developer has control of everything on the application-layer side of the socket but has little control of the transport-layer side of the socket. The only control that the application developer has on the transport-layer side is:
+
+	(1) The choice of transport protocol and 
+
+	(2) The ability to fix a few transport-layer parameters such as maximum buffer and maximum segment sizes .
+
+
+RELIABLE DATA TRANSFER
+--------------------------------------
+Packets can get lost within a network due to many reasons like:
+
+	-> Overflow of a buffer in a router.
+	-> Discard by host or router due to corruption.
+
+-> The guarantee that the data sent by one end of the application is deliveredcorrectly and completely to the other end of the application is called reliable data transfer.
+
+	-> Connection-Oriented: TCP has the client and server exchange transport layer control info with each other before the app level messages begin to flow. This so called handshaking procedure alerts the client and server allowing them to prepare for coming packets. After the handshaking phase, a TCP connection is said to exist between the sockets of the two processes. It's a full duplex connection. The service is referred to as a “connection-oriented” service rather than a “connection” service because the two 
+processes are connected in a very loose manner. 
+
+TCP SERVIVE MODEL
+----------------------------
+
+-> A connection-oriented servive and reliable data transfer service.
+
+DNS (Domain Name System)
+-------------------------------------
+
+	NEED OF DNS
+	-------------------
+	-> Numbers are hard to remember.
+	-> If a company changes its server, the IP address changes and hence everyone must be told about ne IP address.
+	-> Network only understands numbers but humans easily memorize names. So, a mechanism is required in between.
+
+->  A directory service that translates hostnames to IP addresses. This is the main task of the Internet’s domain name system (DNS). The DNS is:
+
+	(1) A distributed database implemented in a hierarchy of DNS servers and 
+
+	(2) An application-layer protocol that allows hosts to query the distributed database.
+
+-> The DNS servers are often UNIX machines running the Berkeley Internet Name 
+Domain (BIND) software [BIND 2009].
+
+-> The DNS protocol runs over UDP and uses port 53. 
+
+
+E-MAIL
+----------
+
+-> We have two kinds of subsystems here:
+
+	-> User Agent: Helps the user to read and send the email. They run on the same computer on which a user reads their mail.
+
+		-> Provides a graphical or command based interface to the user to interact with the email system.
+
+		-> Includes a means to compose messages and replies to messages and displa incoming messages and organize messages by filing, searching and discarding them.
+
+	-> Transfer Agent: Moves the messages form the source to destination. Also known as Mail servers. They run in the background on mail server machines. They uses SMTP (Simple Mail Transfer Protocol)

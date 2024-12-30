@@ -1,0 +1,79 @@
+-> Java is a high-level language mainly based on OOPS and was offcially introduced in 1995.
+
+-> Parent Company was Sun Microsystems and Current Company is Oracle.
+
+-> Initally the name was not Java.
+
+-> Java is a platform independent language. By that it means there exist a intermediate member (JVM in our case) which is platform dependent and accepts a "byte code" (.class file in our case), which is a file compiled by the compiler from the source file (.java file).
+
+-> JDK (Java Development Kit) is the whole kit for Java work.
+
+-> Java programming paradigm can be understood in this way.
+
+		1. Just writing the code is a kind of declaration of the code.
+		2. The compiler while compiling checks whether you've coded correctly.
+		3. Run of this code will include the linking of all parts of the code like linking to different classes, methods etc.
+		4. The main method is the centre of this mapping. It's kind of centralised linking. No main method means no run of the program.
+
+-> Datatypes are types of data entries acceptable. But this thing not only stops here. Data entries can have many properties like "type", "length or range", "mathematical operations and logic".
+
+-> We can classify these datatypes broadly in two, namely, "primitive" and "non-primitive".
+
+-> Primitive datatypes include: Integers, Floating values, Character, Boolean.
+	1. Integer: further classified into 4 types.
+		
+		-> byte: assigned 1 byte (8bits) and so include -2^7 to 2^7 -1 values.
+		-> short: assigned 2 bytes(16bits) and so include -2^15 to 2^15 -1 values.
+		-> int: assigned 4 bytes(32bits) and so include -2^31 to 2^31 -1 values.
+		-> long: assigned 8bytes(64bits) and so include -2^63 to 2^63 -1 values.
+
+	2. Floating Values: further classified into 2 types.
+
+		-> float: assigned 4 bytes.
+		-> double: assigned 8 bytes. (default)
+
+	3. Character: char is assigned 2 bytes.
+
+	4. Boolean: boolean is assigned a bit.
+
+
+-> We have type casting and type conversion concepts.
+	1. Type Casting: when we assign the two different datatypes to each other, we explicitly change the datatype of the RHS into the LHS one.
+
+	2. Type Conversion: when the compiler itself convert the datatypes. Happens when lower range datatype is assigned to higher range datatype.
+
+-> For floating values to integers values, compiler just cut off the decimal part.
+
+-> Within Interger values, if higher values are to be assigned to lower datatype, compiler use modulus operator and divide the required number with the total range of lower datatype.
+
+-> We have the concept of "type promotion" in which if arithematic operations on two same datatypes makes them go beyond their range, they are promoted to higher range datatype and so can be stored in it.
+
+-> A class is a blueprint for different objects of it. One class will define one type of object (identical but distinguishable); By that means the object references belonging to same class can be different but they will be identical (will have same properties and methods). By same properties and method, it means that all objects of a class can have properties like name, color, height etc., but name, color, height for each object can be different. 
+
+-> To create a class, the syntax is:
+
+	classname
+	{
+		# variables (properties) declared (or can be defined) here
+		
+		# methods (behaviour) declared and defined here
+	
+	}
+
+-> There are four ways to provide default values to objects of a class.
+
+	1. By defining values to instances.
+	2. By static instances or static block.
+	3. By creating a constructor in the class itself and defining values.
+	4. By passing values in the parameterized constructor while creating the object (These values will be default to this paerticular object).
+
+-> We have the concept of abstract classes in java. An abstract class is that class which can't be instanciated. That means we can't make object of this class. Why we make such a class then? See, if we imagine a hierarchy of classes, focus on the root of this. If we create objects of this class, what will they signify? So, at the top level, we just need conceptual view of something. That concept is then implemented by real things. Abstract class helps in making that conceptual blueprint.
+
+In the simplest way possible, abstract class can be used to describe the minimum requirements to define something. It helps in making axioms for definitions.
+
+-> We can also make abstract methods in java, but they only be declared in an abstract class. But an abstract class need not to have any abstract method.
+
+
+-> We have threads in java and actually java's one of the feature is multithreading. Before threads, first let's talk about processes. A software may have many components that have specific tasks to do. Each component of a software is referred to a Process. Now Each Process can be further divided into parts called threads.
+
+So, the hierarchy is like this. When a software is activated, the OS assigns the processes of it in a queue. When one process is in the main memory being excuted, the CPU is actually executing different threads of the same process switching between them.

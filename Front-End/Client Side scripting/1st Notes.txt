@@ -1,0 +1,3 @@
+-> Client side scripting is making the website interactive to the client. In client side scripting, things are down on the webpage already download from the server.That means things happens on the client's system. 
+
+-> By contrast, Server side scripting is instructing the server for what has to be done on the server itself as a client request and before the server's response.

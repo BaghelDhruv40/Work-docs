@@ -1,0 +1,7 @@
+FILE ACCESS REQUIREMENTS
+------------------------------------------
+
+-> File Pointer
+-> File open count
+-> Disk location of a file
+-> Access Rights

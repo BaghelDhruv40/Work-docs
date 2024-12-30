@@ -1,0 +1,485 @@
+-> javac filename.java		#for compile.
+
+
+-> java classname 			#for run.
+
+
+-> public classname
+	{
+		public static void  main { string args[]}
+		{	System.out.print( "whatever we want the message");
+		}
+	}
+
+
+-> String variablename = condition? result if true: result if false; 		# benefits when we need one line condition and outputs. This operation is called a Ternary Operation.
+
+
+-> IDE for java are eclipse, Intelij, etc..
+
+
+-> Filename and classname need not to be same unless the class is public. 		# Only one class can be made public.
+
+
+-> Java has 3 types of loops that are for, while, and do while.
+
+
+-> classname() 			# It is the constructor ("default" specifically) that creates a class object and allocates its memory. 
+
+					# We use keyword "new" before the constructor name. Constructor must have the same name as that of the class of the object. 
+
+					# It is a method (function) as it has "()" which returns nothing and it is called automatically when an object is created. 
+
+					# We can define our own constructor following above rules and it must accept some signatures. 
+
+					# We can also assign initial/default values to variables(properties) through constructors.
+
+
+-> We've a concept of heap and stack memory.
+
+
+-> Stack memory stores variables and objects with thier values and reference id repsectively.
+
+
+-> Heap memory have those boxes in it. Stack memory picks data from the heap memory.
+
+
+-> Every method has its own stack memory.
+
+
+-> We've a concept of garbage collector which collects the boxes having no refernce.
+
+
+-> Variables declared and defined in method are called "local variables"
+
+
+-> Variables declared in classes (properties of objects) are called "instances".
+
+
+-> The objectname in LHS while creating an object is actually called "reference". The RHS is called the object.
+
+
+-> We use "new" keyword to create the object i.e syntax: classname objectname = new classname();
+
+
+-> "void" keyword means "it doesn't retun any value".
+
+
+-> Constructor( or constructors ) will be called every time we create an object.
+
+
+-> Objects without a name  or say with no reference are called "Anonymous objects". For ex: new.classname().
+
+
+-> We can pass the parameters in the default constructor bracket itself (unless we don't have more constructors) without necessarily assigning the parameters values afterward. For ex: new classname(variablename: "the name");
+
+
+-> The constructors with parameters in the bracket declared are called "Parameterized constructors".
+
+
+-> We can assign same name to two constructors given that we provide a signature to it. The method is called "method overloading". Similarly we can also do "Constructor overloading".
+
+
+-> The concept of having multiple constructors in the same class is called "Constructor Overloading".
+
+
+-> METHOD OVERLOADING:
+						Method overloading can be understood in this way. Overloading means "excess", so that may means a method is which overloaded. But in terms of what it is overloaded? in terms of number of parameters. Same method when defined multiple times with just the difference of number of parameters it takes, this act is called method overloading. 
+	
+	Example: Suppose, add() is a method defined as
+
+				public returntype add(p1,p2,p3,...pN) and
+
+				public returntype add(q1,q2,q3,...qM)
+
+				These two methods with same name (but can have different returntype) will be treated different even when having same name if M !=N. Otherwise error.
+				Here, p's and q's can be same or different
+
+
+-> We can make our variables private by 'private' keyword. We can acces them by creating a method that returns that variable.
+
+
+-> Private objects and instances are only available openly inside the class they are defined .
+
+
+-> The concept of making a variable private and then accesing it by creating a method is called "Encapsulation".
+
+
+-> We have "static" keyword which can be used with instances and instance methods.
+
+
+-> When static is used with instances, it signifies that this instance is same (or common) to all objects of that class.
+
+
+-> Static instances can't be used as local variables( i.e., inside instance method or as their parameter).
+
+
+-> When static is used with instance method, what it signifies is that this instance method is common to all objects of that class. Being common to all objects, we call static methods with the help of classname not with reference variable of an object.
+
+
+-> Static methods don't need an object to call them. That's why main method is static as to create an object we need to start the execution first.
+
+
+-> We use "static" keyword to point out that this object or method is same for all. This is called "class instance" or "class method" respectively. For example: static name.
+
+
+-> We can create a "static" block separately. For ex: static{ name ="dhruv"}.
+
+
+-> We can inherit different class into our class by using the keyword "extends". Syntax: public class childclassname extends parentclassname{}.
+
+
+-> We have the concept of single level inheritance and multi level inheritance. In single level inheritance, we inherit from parent to child but in multi inheritance, we inherit from super then sub then sub-sub and so on.
+
+
+-> Java doesn't support multiple inheritance.
+
+
+-> Abstraction is a concept in oops where we just declare things like class or methods which we want to be abstract. We use the "abstract" keyword for the same. 
+
+-> We have "abstract class" in java which are classes with abstract keyword in them and they can't be instantiated (can't create its object). An abstract class can have any kind of instances and methods (normal or abstract).
+
+-> Through inheritance, we can extend our class to abstract class. But, if the abstract class have abstract methods, we must define all of them in our class otherwise this class must also be declared abstract.
+
+-> We can't create of object of abstract class but can make its reference. This is because of inheritence concept that allows to create a parent class reference for child class object. But by this, we will only be able to access parent class instance and methods.
+
+-> We have the concept of "Interface". Interface is kind of similar to Abstract classes. We can declare abstract methods only and the instances are by default public static final. By default methods are public abstract.
+
+-> Interface permits multiple inheritance while abstract class doesn't.
+
+-> Interface can't be instantiate also. They must be implemented by a class and must define all of its methods otherwise the class must be declared abstract. We can also make reference of Interface.
+
+-> Interfaces don't have a constructor. Clearly, since we can't make object of an interface why would it need a constructor? But do we have constructor for abstract class?
+
+-> Abstract classes do have constructors. Why? Because unlike interface, we need not have static variables or methods here. But interfaces only have static variables. Hence the object of class extending abstract class can be used to initialize instances of abstract class.
+
+-> We use the "interface" keyword to create Interfaces.
+
+
+-> We use "implements" keyword to implement and Interface to our class.
+
+
+-> We can implements multiple Interfaces to our class.
+
+
+-> Interface extends Interface.
+
+-> Method overriding is the concept that if two variable or methods are same in two classes and we in herit, the child methods and variables will be preferred.
+
+
+-> We can create object for childclass with the help of parentclass provided number of methods or variables in parentclass is more than that in childclass i.e parentclass obj = new childclass() is meaningful.
+
+
+-> Polymorphism is the concept that the same object of a class can show different behaviour.
+
+
+-> We have two types of polymorphism:
+
+	1. Compile time: Example Method Overloading
+
+	2. Run time: Example Method Overriding
+
+
+-> Method overriding is the concept of having two different methods in two different classes but having same signature.
+
+
+-> Overloading concepts happen at compile time while overriding concepts happen at run time.
+
+
+-> We use keyword "final" to treat a variable as a constant.
+
+
+-> final with class can make it non inheritable. # final class parentclass is the syntax.
+
+
+-> final is also used to prevent method overriding. # public final parentclass is the syntax.
+
+
+-> Keyword "This" is used when we have same names for instance variable and local variable while assigning them to each other.
+
+
+-> Class overloader is the area in which class loads. It must be known that class loads first and then the object is called. Static Variables are defined inside the class not main method. For this reason we call then Static Instance.
+
+
+-> Static Instances can be called using classname in place of objectname and this way is preferred. Hence Static methods don't need object declaration.
+
+
+-> Static Block is a special block that is executed only once. It can be understand like it loads when class loads. We can't use non static 
+
+variables in static block or in static methods.
+
+
+-> We have the concept of inner class i.e class inside a class. To call an inner class, we can't create the object of it in usual way.
+
+We create the object of it using the syntax: OuterClassName.InnerClassName ObjectName = OuterClassObj.new InnerClassName();
+
+
+-> We also have the concept of static classes. Now Static things don't need any object of it and we can call them using ClassName; So for accessing Static Inner class, we use the syntax: OuterClassName.InnerClassName ObjectName= new OuterClassName.InnerClassName();
+
+
+-> Syntax for "for loop" is : for ( returntype variableName= Start Value; variableName = Stop Value; variableName increment){}
+
+
+-> Syntax for "enhanced for loop" is : for( returntype variablename1 : variableName2){}
+
+
+-> Array is defined by the syntax : returntype variableName[] = new returntype[size];
+
+If we know the elements, the syntax can be : returntype variableName[] = {e1,e2,...,eN}; or returntype[] variableName = {e1,e2,...,eN};
+
+N Dimensional array syntax : returntype variableName[][]....[] = { { { { n-1 times} } } };
+
+
+-> Drawbacks of Arrays:
+
+		-> Can't expand the size once defined. If we know the size already, arrays 				are good option.
+		-> They are linear in nature.
+		-> They contains single datatype elements.
+
+To overcome these, we have "Collections".
+
+
+-> Syntax for accepting Variable arguments is : Public methodName(returntype ...variableName){} 		# "..." signifies Varargs.
+
+
+-> We use Keyword "extends" to inherit classes. 
+
+
+-> We have method called "super method" i.e., super() in java. What it does is that it calls the constructor (default or parametrized) of parent class (depending upon if you give any parameter in it). The syntax is just: super(parameter);
+
+Now we know, default constructor of child class calls only default constructor of parent class but a parameterized child constructor can not call parameterized parent constructor. The reason is that every constructor (even for parent class) has an inbuilt super() even if we don't mention it explicity. This super() calls the constructor of super class (i.e., parent class). If no parameter is given to super(), it will call default constructor otherwise parameterized.
+
+In short, super() helps us to select which parent constructor we want to call depending upon given argument in it.
+
+
+-> The reason why we have super() in parent constructor is that every parent class in java extends a class called "Object" implicitly. 
+
+
+-> We also have "this method" i.e., this() in java. What it does is that if used in parameterized constructor of a class, it will call the default constructor too.
+
+
+-> We know the concept of Method Overriding i.e. child class methods override parent class methods (obviously having same methodName). To use both methods of child and parent class, there exist a "super" keyword. The syntax: super.methodName(); 
+
+
+-> We have four types of declaration:
+
+	1. Private ("private" keyword) : Private instances are accessible openly inside the same class 	only.
+
+	2. Protected ("protected" keyword) : Protected instances are accessible to childclasses (same package or not) and to same package classes only. Obviously they are accessible in the same class they are defined.
+
+	3. Public ("public" keyword) : They are accessible everywhere.
+
+	4. Default (No keyword) : They are accessible to subclasses (and their methods) only in same package. Obviously they are accessible in the same class they are defined.
+
+
+-> println() is a method of PrintStream class. The object of this class (out is the object) is declared in the System class as a static null variable. And this is the reason we call println() as System.out.println().
+
+
+USER INPUT
+-----------------
+
+-> User input is taken using class "Scanner" present in java.util package.
+
+-> It is a final class.
+
+-> The very first way of taking input from the user through keyboard is using System.in object.
+
+-> The input given to keyboard reaches a buffer (long array). This is done by the object System.in ; 
+
+-> This object has many methods like read() which reads one character only, hence requires a loop. Further, returns ASCII value.
+
+-> Better way than this is to use a class BufferedReader present in java.io package.
+
+-> BufferedReader constructor takes a parameter of type or class "Reader". Instead of this, we can also pass InputStreamReader class object in it.
+
+-> InputStreamReader constructor itself accepts a parameter of PrintStream which is nothing but our System.in, So we can pass this object in the constructor.
+
+-> BufferedReader object has many methods and one of them is readline(). But this returns String object only.
+
+-> The latest way of user input is using Scanner class present in java.util pacakge.
+
+-> Scanner constructor also accepts a parameter that is the source of input.
+
+-> System.in is passed into constructor of Scanner class for keyboard input.
+
+-> The Scanner class has many methods like nextInt() which takes elements from System.in and converts them into integer and then returns them so can be stored into a variable.
+
+-> We can pass any source of input in the constructor of Scanner. System.in denotes the input taken from the buffer of keyboard.
+
+
+EXCEPTION HANDLING
+--------------------------------
+
+-> Java provides a default mechanism to catch exceptional conditions in the source code and program.
+
+-> These exceptional conditions are categorised into three classes, namely, Runtime Exceptions (Unchecked) , Compiletime Exceptions (Checked) and Errors.
+
+-> Checked Exceptions are identified in the compilation process and so help in identifying the mistakes in the source code.
+
+-> Unchecked Exceptions are identified in the run time and can lead to severe consequences.
+
+-> The default catch mechanism of java halts the program if unchecked exception occurs and that means the program crashes.
+
+-> There is a hierarchy of classes in Exceptions. The root to leaves way is:
+
+	-> Throwable: A class but not interface. Only this and subclasses can throw.
+
+	-> Error, Exceptions : These are the two classes that extends Throwable.
+
+	-> IOException, ClassNotFoundException, RuntimeException, etc : These and many more classes are there that extends Exceptions. 
+
+	-> NullPointerException, ArithematicException, etc : These and many more classes extends RealtimeException.
+
+-> Except RuntimeException class, all other classes that extends Exception class are Checked Exceptions.
+
+-> NullPointerException arises when we try to access methods of such references of objects that points to null.
+
+-> Throwable class provides a String variable that can be set by the subclasses to provide a detailed message for the exception case.
+
+-> All classes of Throwable define a one parameter cosntructor that can accept the message to be displayed for the exception case.
+
+-> Throwable provides a getMessage() method to retrieve the exception message.
+
+-> So four situations can happen in exception handling:
+
+	-> Our throw and Our catch block: We explicitly throw our exception object and message and then catch them. This is the robust method.
+
+	-> Our throw and default catch block: We explicitly throw our exceptions object and message but catch defaultly. But this can halt the program.
+
+	-> Default throw and Our catch block: We can just handle the exception.
+
+	-> Default throw and Default catch block: We don't have to do anything.
+
+-> The throw keyword in second situation without try-catch block is for Runtime Exceptions only. If we use throw keyword for Checked Exceptions, compiler will throw an error to force the programmer to either handle it under try-catch block or let the compiler handle it. The throws keyword is used to let the compiler handle in this situation.
+
+
+THREADS
+-------------
+
+-> Threads are theoretically light components of a process.
+
+-> They are capabale of concurrently execute.
+
+-> Usually, a processor executes a process sequentially. So, different components of a process will be executed sequentially. But we can make them threads so that they can be executed concurrently.
+
+-> To make a component of process a thread, we have two methods in java:
+
+	-> Runnable interface: It is an interface having only one void function run(). A class can implement it and object of this class (having type of Runnable) can be passed as a parameter in the constructor of Thread class. Then a start() function can be called using Thread objects created.
+
+	-> Thread Class: It is a class also having void function run(). The process is completely same. The only difference is that in Runnable case, the class implementing it can have a parent class. Futher, we can directly create objects of the class and call start() as they are extending Thread class so they are also thread.
+
+-> Just like processes, threads have four states or stages in their life, namely New, Runnable, Not Runnable and Dead.
+
+	-> New State: A thread is in this state when the object is created but not yet start. In this state, we can only call start() or stop(). Any other method calling will cause IllegalThreadStateException.
+
+	-> Runnable State: A thread is in this state when start() has been invoked.
+
+	-> Not Runnable State: A thread is in this state if,
+
+		-> sleep() method is invoked.
+
+		-> suspend() method is invoked. resume() is opposite of this.
+
+		-> wait() method is invoked and the thread waits for the notification of a free resource or waits for the completion of another thread or wait to acquire a lock of an object. notify() or notifyAll() is opposite of this.
+
+		-> Waiting for I/O.
+
+-> Threads also have priority which is signified by numbers in the range [0,10].
+
+-> Default priority is 5 but we can set it using setPriority() and get it by getPriority().
+
+
+FILE HANDLING
+----------------------
+
+-> In java, we do file handling using java.io package.
+
+-> File class is used for the same whose object is used to store meta data about the file. The constructor of it accepts absolute path of the file. 
+
+-> Below are some functions of File class:
+
+	-> canWrite() : returns True if write permission is granted.
+
+	-> exists() : returns True if file exists.
+
+	-> createNewFile() : Creates a new file.
+
+	-> delete() : Deletes the File.
+
+-> To I/O in files, we have to use two classes, namely, FileInputStream and FileOutputStream.
+
+-> Below are the ways to write in a file:
+
+	-> FileOutputStream( File f ) : Creating the object of this class and passing File object in the constructor. The object reference then can use write().
+
+	-> FileOutputStream( String path, Boolean append) : Using this way, we can directly give the absolute path in the constructor of this class. The second parameter is optional and denotes whether we want to write or not in the file by True or False respectively. The write() is used with this object reference.
+
+-> Below are the ways to input from a file:
+
+	-> FileInputStream( File f ) : Creating the object of this class and passing File object in the constructor. The object reference then can use read().
+
+	-> FileInputStream( String path, Boolean input) : Using this way, we can directly give the absolute path in the constructor of this class. The second parameter is optional and denotes whether we want to input or not in the file by True or False respectively. The read() is used with this object reference.
+
+	NOTE: The read()/write() function actually operates character by character and hence slow.
+
+-> The faster way to I/O a file is using BufferedReader class and BufferedWriter class.
+
+COLLECTION FRAMEWORK
+------------------------------------
+
+-> It contains the interface "Collection" and class "Collections".
+-> There are further interfaces that implements Collection:
+
+	-> List : Implemented by class "ArrayList", "LinkedList", etc.
+
+	-> Queue : Implemented by class "Dequeue"
+
+	-> Set : Implemented by class "HashSet", "TreeSet", etc.
+
+		-> HashSet: Unsorted.
+		-> TreeSet: Sorted. It extends class "AbstractSet", implements interface "NavigableSet" which extends class "SortedSet".
+
+-> We also have interface "Map" which is implemented by class "HashMap", class "Hashtable". Both are nearly same but Hashtable is synchronized.
+
+-> Collection also implements an interface "Iterable".
+
+-> Iterable have a generic method "iterator()" which returns an Iterable object.
+
+	Ex: Let nums is a TreeSet. then,
+	
+		Iterator <Integer> values = nums.iterator();
+
+		while(values.hasNext())
+			System.out.println(values.next());
+
+
+-> class "Collections" has many methods like "sort()".
+
+-> sort() in Collections has its own logic to sort values, but to provide our own logic for sorting, we can use something called "Comparator".
+
+-> "Comparator" is an interface which has a method "compare()".
+
+	Ex: To sort elements based on their last digit, we can do the following:
+
+		Comparator <Integer> com = new Comparator <Integer>(){
+			
+			public int compare(Integer i, Integer j){
+
+				if (i%10 > j%10)
+					return 1;
+
+				else
+					return -1;
+
+			}
+		};
+
+-> "Comparable" is an interface implemented by class Integer. It has a method "compareTo()".
+
+
+STREAM API
+-----------------
+
+-> Stream is an interface.
+
+

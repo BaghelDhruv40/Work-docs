@@ -1,0 +1,28 @@
+if 1 is true, he can't be knave and so there can't be exactly two knights.
+
+if 2 is true, troll 1 is lying and so 1 is knave and 2 is knight. if 2 is lying, 2 must be knave and 1 must not be lying but if he is not lying he can't be knave. so 1 must be lying
+
+if 3 is true, all of them can't be knave but there can be atleast one of them is knight. 2 is already a knight and 3 can't be knave.
+
+
+Max consecutive ones
+
+nums=[111000111]
+k=2
+
+Cases:
+if consecutive zeros occurs >k, and if we are at ith index having 0, the jth should be at first index having zero in this sequence.
+
+Notes:
+zeros count will not change if we get a zero in when we shift by one index from left to right.
+
+if jith index is 1 and zero count=k, we increment the j and decrease 1s count by 1. if ith is 0, do nothing.
+
+if jth el is zero and zero count==k with ith el at 0, we just increment both idx by 1. if incomming ith el is 1, we 
+
+
+Kth Max element
+
+
+
+

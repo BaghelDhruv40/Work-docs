@@ -1,0 +1,62 @@
+				SYLLOGISM NIMCET 2024
+
+	
+
+SYLLOGISM: Some statemets are given and Conclusions are given.
+
+SYLLOGISM METHODS
+
+1. Vein Diagram method.
+2. AIE method.
+3. 100-50 method.
+4. other methods such as
+
+a) Positive-Negative method: 
+
+	- if statements are +ve and +ve then conclusions are +ve.
+	- if statements are +ve and -ve then conclusions are -ve.
+	- if statements are -ve and -ve then no conclusion.
+
+b) All-Some-Some Not-No (100-50 method) :
+
+	- All -> 100 50
+	- Some -> 50 50
+	- Some Not -> 50 100
+	- No -> 100 100
+
+c) Income-Expenditure method: Assign Income to statements and Expenditure to Conlusions.
+
+	- I=E
+	- I>E
+
+4) If two words are in same sentence, we don't merge two sentence.
+
+5) This rules help in merging two sentences. The common element through which two sentences are merged must have 100 atleast on one. Otherwise two sentence will not be merged.
+
+6) Either-Or Case: We check for this when both conclusions are wrong. We check
+1. Elements must be same in both conclusions.
+2. One must be +ve and other must be -ve.
+3. Full (All, No) and Half (Some, Some not).
+
+POINTS TO REMEMBER
+
+1. If % are used then,
+	1. 0% -> No
+	2. 100% -> All
+	3. Any percentage besides these -> Some
+
+2. If other words are used instead of All, Some, No,Some not, then
+	1. If it interprets as full -> All. For example: Each, Every, etc.
+	2. If it interprets as half -> Some. For example: Few, A few, The few, 	   	 	 	Ocassionally, Generally, little, etc.
+	3. Only -> All. for example: Only A are B -> All B are A.
+	4. Only a few -> Some or Some not. 
+	For example: Only a few cats are dogs -> Some cats are dogs or Some cats are not 	dogs.
+	5. Can never be -> No or Some not.
+For example: All cats can never be dogs -> No cats are dogs or Some cats are not dogs.
+note: Mostly "All" is used with "can never be". In that case we use "some not".
+
+
+
+
+
+

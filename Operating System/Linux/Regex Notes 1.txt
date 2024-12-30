@@ -1,0 +1,27 @@
+Regular expressions are special characters or set of characters that can be used in pattern matching for search purposes.
+
+In linux, they are used with commands like grep, sed, tr, vi.
+
+Here are some basic regular Expressions:
+
+	-> Dot (.) : Matches any one character except the new line.
+
+		example: echo 'cat filename | grep app.e`		# finds words like apple, appae, app1e
+
+	-> Caret (^) : Matches the start of the string.
+
+		example: echo `cat file | grep ^B`		# words starting with B
+
+	-> Dollar ($) : Matches the end of the string.
+
+		example: echo `cat file | grep $e`
+
+	-> Asterisk (*) : Matches zero or more occurrences of its preceedor.
+
+	-> Backslash  (\) : Escapes the following character.
+
+	-> Braces ( () ) : Matches or search for a set of regular expressions.
+
+		example: echo ` cat file | grep b{ed,all,ad}s`	#matches beds balls bads
+
+	-> Question (?) : Matches exactly one character in the string or stream. 

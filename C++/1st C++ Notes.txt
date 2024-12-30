@@ -1,0 +1,3 @@
+-> On declaring an array, if we print any of its value, the answer will be a garbage value (system generated value).
+
+-> A string is mutable  here.

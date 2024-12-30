@@ -1,0 +1,42 @@
+Memory Management
+
+Main memeory is the area where processes recide when in execution by the processors. We can estimate the efficiency of the CPU affected by the number of processes in the main memory. Consider this,
+
+Suppose a process takes 4MB of space and p= probability of process needs I/O.
+So, for the case when MM =4MB, only one process is in the memory and probability of CPU being utilised is 1-p.
+
+for MM=8 MB, we can have 2 processes in the memory and the probability that both will need I/O at the same time is p^2. So CPU utilisation chance is 1-p^2.
+
+Similarly, for n processes running in the main memory, the CPU utilisation chance is 1-p^n. 
+
+Taking limit of n to infinity, CPU utilisation tends to 1. What this indicates is that, since there's p^n chance that all processes needs I/O simultaneously and so CPU is idle, is very low, CPU is utilised maximally.
+
+CONTINUOUS MEMORY ALLOCATION
+----------------------------------------------------
+
+-> In this, we allocate the free memory by making fixed size divisions. A process having size less or equal to that division can reside there.
+
+-> The problem of non zero difference in the division size and residing process size is called internal fragmentation.
+
+-> The max size of a process that can reside is already fixed. So, it's  one of its limitation.
+
+-> The problem of getting a sum of free memory (not continuous) equal to a new process that can't be now allocated is called External Fragmentation.
+
+
+DYNAMIC MEMORY ALLOCATION
+----------------------------------------------
+
+-> In this, all the free memory is available to be allocated as per the need of the process.
+
+-> External Fragmentation is still here as the reason of it is by the rule that memory used be continuously allocated.
+
+-> Degree of multiprogramming (no. of processes in the mm) is dynamic here.
+
+-> Size of the process is not limited to partition size.
+
+Note: External fragmentation can be solved by "Compaction" in dynamic allocation which means that we push occupied memory to one corner and unallocated at one corner. But practically achieving this will be time and memory consuming in itself.
+
+DISADVANTAGES OF DYNAMIC ALLOCATION
+---------------------------------------------------------------
+
+-> Allocation and deallocation of memory : We might need datastructures to track this. 

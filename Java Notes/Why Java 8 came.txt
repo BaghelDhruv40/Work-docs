@@ -1,0 +1,30 @@
+Why Java 8 came?
+
+-> Concise and minimal code
+
+-> Utilizing functional programming 
+
+-> Enable parallel programming on multiple cores
+
+Features of Java 8
+-------------------------
+
+-> Lambda expressions
+
+-> Stream API
+
+-> Data and time API
+
+-> Base64 encoding/decoding
+
+-> Method reference and constructor reference
+
+-> Default methods in functional interface
+
+-> functional interfaces
+
+-> Optional class, Java IO imrpvements, Collection API improvements
+
+Lambda Expressions
+--------------------------
+

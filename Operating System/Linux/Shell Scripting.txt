@@ -1,0 +1,11 @@
+Shell Scripting
+-------------------
+
+-> Accessing variable value : echo "$variablename"
+
+-> Length of string variable : echo "${#variablename}"
+
+-> Concatenate Strings : var=$var1$var2$va3......$varN
+
+-> Accessing no. of parameters passed : $#
+

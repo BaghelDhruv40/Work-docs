@@ -1,0 +1,20 @@
+ERROR HANDLING (for bit loss)
+------------------------------------------
+
+-> It is of two types based on the cases that,
+	-> Error Detection: We know that a packet is corrupted but where. Generally in this, re transmission of the packets are required.
+	-> Error Correction: We know bothabout corruption and location.
+
+ERROR DETECTION METHODS
+-----------------------------------------
+
+-> Send the data with its copy. We they both doesn't match, one of them is corrupted. Demerit of this is that the size is doubled.
+
+-> Parity:
+
+
+
+CYCLIC REDUNDANCY CHECK
+---------------------------------------
+
+-> We have a CRC generator which is known by both sender and receiver.

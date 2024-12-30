@@ -1,0 +1,17 @@
+-> Following are the various Delays in computer networks:
+
+	-> Transmission delay: Time taken by the packet to come from device into transmission medium. For example: If we have a bandwidth of 1bps and we have 10bits of data to be transmitted, the total time it will take is 10s. Hence, Tansmission delay = Number of bits / Bandwidth.
+
+	-> Propagation delay: Time taken by the message to reach the destination till the last bit reaches. It is calculated by,
+propagation time = distance / speed of the signal
+
+	-> Queuing delay: Time taken by the receiver to pick all messages from the buffer queue and process it. e don't calculate it.
+
+
+FLOW CONTROL METHODS
+-------------------------------------
+
+
+ACESS CONTROL METHODS
+---------------------------------------
+ 

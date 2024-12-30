@@ -1,0 +1,25 @@
+NETWORK LAYER
+-----------------------
+Below are the functions of this layer
+
+	-> Host to Host devlivery.
+
+	-> Logical address (IP) is used.
+
+	-> Routing Protocols are used.
+
+
+IPV6
+------
+
+-> A 128bit long IP address.
+
+-> Real time data transmission.
+
+-> Authentication
+
+-> Multimedia.
+
+-> Fast processing at routers (Due to fixed length of header i.e., 40B)
+
+-> Encyption Enabled.

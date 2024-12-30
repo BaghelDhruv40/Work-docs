@@ -1,0 +1,3 @@
+-> Loops, if in ,if not in, are linear searchers.
+
+-> If an immutable input is given, try to solve problem by making it mutable. (if not restricted).

@@ -1,0 +1,17 @@
+TRANSPORT LAYER
+----------------------------
+Below are the responsibilities of this layer:
+
+	-> End to End delivery: Port to Port delivery.
+
+	-> Reliability:
+
+	-> Error Control: CheckSum
+
+	-> Flow Control
+
+	-> Cogestion Control
+
+	-> Segmentation
+
+	-> Multiplexing/ Demultiplexing

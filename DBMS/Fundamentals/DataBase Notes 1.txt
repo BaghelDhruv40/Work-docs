@@ -1,0 +1,88 @@
+Having talked about data, info and database,  now its time to talk about how to create and manipulate a database. By creating a database, we fundamentally mean to structure and organize the collected info. Technically it's called the schema of a database. Remember we talked about that there are many ways to present the info, this is what schema is. There are many more things that come into the "creation" of database, we shall see later. Coming to the manipulation part, it's a tedicious job as a database not only can be large but complex too. That's why we have evolved our technology to shift from completely manual to semi manual manipulation of database.
+
+Key Points:
+
+-> A DBMS is a bundled software of many softwares that do specific task related to fetching, maintaing and manipulating the data and the database. Further we can share it too.
+
+FEATURES OF DBMS
+---------------------------
+
+-> 
+
+I don't know up to what extent i'm actually correct but i've an analogy in my mind for relational DBMS and FMS. See, OS is provided with a FMS. We have our secondary memory. The FMS when open in a completely new computer already have some pre created folders of the system. These folders are databases. A database in relational DBMS is nothing but analogous to the root 
+
+-> A Database management system is analogous to Folder management system. We have a folder and then sub-folders or files in it. Similarly, in a Database, we have tables and those tables have fields respectively.
+
+-> Databases and DBMSs can be categorized according to the database model(s) that they support (such as relational or XML), the type(s) of computer they run on (from a server cluster to a mobile phone), the query language(s) used to access the database (such as SQL or XQuery), and their internal engineering, which affects performance, scalability, resilience, and security.
+
+FUNCTIONS OF DBMS
+------------------------------
+
+-> Existing DBMSs provide various functions that allow management of a database and its data which can be classified into four main functional groups:
+
+	-> Data definition – Creation, modification and removal of definitions that detail how the data is to be organized.
+
+	-> Update – Insertion, modification, and deletion of the data itself.
+
+	-> Retrieval – Selecting data according to specified criteria (e.g., a query, a position in a hierarchy, or a position in relation to other data) and providing that data either directly to the user, or making it available for further processing by the database itself or by other applications. The retrieved data may be made available in a more or less direct form without modification, as it is stored in the database, or in a new form obtained by altering it or combining it with existing data from the database.
+
+	-> Administration – Registering and monitoring users, enforcing data security, monitoring performance, maintaining data integrity, dealing with concurrency control, and recovering information that has been corrupted by some event such as an unexpected system failure.
+
+ADVANTAGES OF DBMS APPROACH
+------------------------------------------------
+
+-> Controlling Redundancy: DBMS reduces unnecessary redundancy unlike traditional ways of managing data like file System.
+
+-> Restricting Unauthorized Access: We can restrict data from public.
+
+-> Providing Backup and Recovery
+
+-> Providing Multiple User Interfaces:
+
+-> Enforcing Integrity Constraints: Constraints like domain, referential, key.
+
+ACTORS ON THE SCENE
+---------------------------------
+
+-> Database Administrators: In any organization where many people use the same resources, there is a need for a chief administrator to oversee and manage these resources. In a database environment, the primary resource is the database itself, and the secondary resource is the DBMS and related software. Administering these resources is the responsibility of the database administrator (DBA). The DBA is responsible for authorizing access to the database, coordinating and monitoring its use, and acquiring software and hardware resources as needed. The DBA is accountable for problems such as security breaches and poor system response time.
+
+-> Database Designers: Database designers are responsible for identifying the data to be stored in the database and for choosing appropriate structures to represent and store this data. These tasks are mostly undertaken before the database is actually implemented and populated with data. It is the responsibility of database designers to communicate with all prospective database users in order to understand their requirements and to create a design that meets these requirements. 
+
+-> End Users: They can be further classified as,
+
+	-> Casual End Users: They occasionally access the database but may use high or sophisticated queries for data fetching. They include middle or high level managers or occasional browsers.
+
+	-> Naive or Parametirc End Users: Their main job function revloves around constanlty quering and updating the database, using standard types of queirs and updates (called canned transactions). They include bank agents, airline reservation agents, etc.
+
+	-> Sophisticated End Users: They incude Engineers, Scientists, Business Analysts who familiarize themselves thoroughly to meet their complex requirements with DBMS.
+
+	-> Standalone Users: Maintain personal databases using ready made program packages that provide easy to use menu based or graphics based interfaces.
+
+-> System Analysts and Software Engineers:  System analysts determine the requirements of end users, especially naive and parametric end users, and develop specifications for standard canned transactions that meet these requirements.  Application programmers implement these specifications as programs; then they test, debug, document, and maintain these canned transactions.
+
+NETWORK MODEL
+------------------------
+
+-> Represnts data as record types.
+-> One to many relationship.
+-> DML command to locate records directly: FIND ANY <record type> USING <field list>
+-> To store: STORE <record type>
+
+HIERARCHICAL MODEL
+--------------------------------
+
+-> Represents data as heirarchical tree structures.
+-> Each hierarchy represents a number of related records.
+-> No standard language for the model.
+-> DL/1 is the DML of the IMS system.
+-> Command to locate a record: GET { UNIQUE, NEXT } <record type> WHERE <condition>
+-> It has navigational facilities e.g., GET NEXT WITHIN PARENT 
+-> Update record: INSERT <record type>
+
+RELATIONAL DBMS
+---------------------------
+
+	-> -> A Database in RDBMS consists of the objects called table. A table is composed of fields (columns) and records (rows).
+
+
+

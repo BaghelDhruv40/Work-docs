@@ -1,0 +1,44 @@
+Java can be used to create GUI for applications. Until now, we were compiling and running java programmes in the console or terminal, but now it's the time to get introduced with new concepts.
+
+We all know that HTML page can be requested over the web. But there are also interactive components which can be embedded in a html file. These interactive components are made using programming languages and Java is one of them.
+
+To achieve graphics programming, Java has two APIs:
+
+	-> AWT (Abstract Windowing Toolkit): It was the main API of java.
+
+		-> Consists of 12 packages out of which java.awt and java.awt.event are commonly used.
+		-> java.awt package contains the core AWT graphics classes.
+
+			-> We have GUI component classes: Button, TextField, Label, etc.
+			-> GUI container classes: Frame, Panel, Dialog, etc.
+			-> Layout managers: FlowLayout, BorderLayout, GridLayout, etc.
+			-> Graphic glasses: Graphics, Color, Font, etc.
+
+		-> java.awt.event package supports event handling.
+
+			-> Event classes: ActionEvent, MouseEvent, KeyEvent, etc.
+			-> Event Listener interfaces: ActionListener, MouseListener, KeyListener, WindowListener, etc.
+
+	-> Swing: It was a separate project which later then included in java by extending AWT.
+
+
+-> Applets are class files which are stored over server. The difference between applet and java file is that applet doesn't have main function. It is run by client's browser and for this, browsers must have jvm.
+
+-> We have a class Applet. The object of Applet is just a frame.
+
+STEPS TO CREATE A BASIC APPLET PROGRAM
+---------------------------------------------------------------
+-> Basic Skeleton of an applet.
+-> Create Component reference variables.
+-> Initialize Components.
+-> Adding components to the applet
+-> Setting Layout.
+
+
+EVENT HANDLING
+--------------------------
+-> We use java.awt.event package.
+-> Every component can call addActionListener( new MyClass() ) method.
+-> The parameter of this method is the object of ActionListener interface.
+-> ActionListener interface is there to be implemented by the class ( MyClass here) that contains our logic for event handling.
+-> In our class, we write the function that contains the logic. But, this function is nothing but an abstract method of the interface ActionListener. This function is actionPerformed( ActionEvent e)

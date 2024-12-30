@@ -1,0 +1,39 @@
+ER model is a way of representing the structural idea of database in graphical representation. It broadly has three parts:
+
+	-> Entity
+
+	-> Attributes: Analogous to Columns
+
+	-> Relationships: Handled by reference keys in RDBMS
+
+-> We further have Entity type and Entity, Relationship type and Relationship. Actually, By type, we mean schema or structure of that entity. For example: a person is an entity and a schema required to represent that person is the entity type. Clearly, entities can be different but their schema is unique. What that means is for that their are so many people (entity) with unique schema. So we generally use schema in the ER model.
+
+-> Talking about the Attributes, there are many types of attributes:
+
+	-> Composite and simple attributes
+
+	-> Single Valued and Multivalued attributes
+
+	-> Stored (must be stored) and derived attributes (like age can be cal from DOB).
+
+	-> Complex attributes (simply a multivalued-composite attribute)
+
+
+DEGREE OF A RELATIONSHIP: Minimum number of entities required (involved) in a relationship. 
+
+CARDINALITY RATIO: Max number of relationship an entity can participate in. Actually denotes one to many, many to one and many to many kind of relationships.
+
+
+DESIGNING RELATIONAL DATABASE FROM ER DIAGRAM
+--------------------------------------------------------------------------------
+
+Below is the algorithm to follow.
+
+-> For every entity, there will be table
+-> In case of composite attributes, its atomic attributes will only be included.
+-> No multivalued attributes will be included.
+-> In case of weak entity presence:
+
+	-> Include all the atomic attributes
+	-> Add all the prime attributes of strong entity into it.
+	-> The primary key of this table will be composite of prime keys of strong entity table + partial key of this table.

@@ -1,0 +1,115 @@
+-> Processes are supposed to use only the memory they have.
+
+-> Whenever two processes try to inter-communicate, they do so through shared memory.
+
+-> The problem may occur when the two processes are running parallely or in preemptive scheduling.
+
+Suppose we have a two processes. These processes have to work on a common variable. If so, there can be chances that may cause incorrect final value of the variable due to the order of execution of the two processes in case of preemptive sheduling.
+
+Such condition is called Race Condition. Also, the part of a program that is shared by other programs too is called critical section.
+
+Clearly, solving the race conditions in multitasking is needed. Such technique is called Synchronization. If the two processes were able to complete their own critical section separately, the output will not be dependent on the sequence in which two processes work. So synchronization means achieving this in preemptive systems.
+
+REQUIREMENTS OF SYNCHRONIZATION MECHANISMS
+-----------------------------------------------------------------------------
+
+-> PRIMARY: 
+
+	-> Mutual Exclusion: Synchronization must provide mutual exclusion. By this we mean that once one process is working in critical section, other processes are not allowed to enter in it.
+
+	-> Progress: A process not entering the critical section should not restrict other process to enter in critical section. (If critical section was idle).
+
+-> SECONDAARY:
+
+	-> Bounded waiting: This means that one process must not be given more no. of times to access critical section than the other. It should not be a situation like one process is waitng for its chance to enter critical section, but starving for it. 
+
+	-> Architectural neutrality or portability: Solutions must be platform independent.
+
+LOCK VARIABLE
+
+-> Software mechanism implemented in user mode.
+-> Busy waiting solution.
+-> Can be used even for more than two process.
+
+	So here is the theory of it. We embedd the code:	
+
+	# Entry section
+		while (Lock ==1) ;	# lock is assumed =0 initially
+		Lock=1
+
+	# Exit Section
+		Lock =0
+
+	This means that the very first process can directly enter the crititcal section but will set Lock=1. This will restrict any other process to enter CS as there is a while loop. So iff a process completes its work in the CS, it can set Lock=0. If a process in CS got preempted, it will make a door knocking situation for other processes waiting for entering in CS.
+
+Hence, lock variable solves the mutual exclusion need(doesn't gaurantees it) but doesn't solves the progress need.
+
+
+STRICT ALTERNATION APPROACH OR TURN VARIABLE
+
+-> Software mechanism implemented at user mode.
+-> Busy waiting Solution.
+-> 2 process solution.
+-> Doesn't solve progress problem
+-> Provide Bounded waiting
+
+	So, here is the theory. Below is the code for:
+
+	P0:	# Entry Section
+
+			while (turn ==1);
+
+		# Exit Section
+
+			turn =1;
+
+
+	P1:	# Entry Section
+
+			while (turn ==0);
+
+		# Exit Section
+
+			turn =0;
+
+
+PETERSON'S METHOD
+-------------------------------
+
+-> Software mechanism at user mode.
+-> Busy waiting Solution (door knocking)
+-> Two process solution
+-> It uses two variables (turn + interested).
+
+	So, here is the pseudo code.
+
+	#Set n=2 as constant
+	#Assign 1 toTrue and 0 to False
+	int interested[n] =False;
+	int turn;
+
+	void EntrySection(int process){
+	
+		int other = 1-process;
+		interested[process]=True;
+		turn=process;
+		while (interested[other]==True and turn==process);
+
+	}
+
+	void ExitSec(int process){
+
+		interested[process]=False;
+
+	}
+
+
+SEMAPHORES
+-------------------
+-> They are variables that store the condition that whether one process should sleep instead of busy waiting. So process in the CS can put a sleep condition for the NCS process and then those process can look in the semaphore to check if they can go to sleep or not.
+
+-> This concept was introduced by Dijkstra to solve CPU efficiency while a process is busy waiting coz of while loop.
+
+-> The problem is that, semaphore is now a shared section for two or more processes and hence race condition may occur. To solve this, semaphores are handled at kernel mode.
+
+-> Counting Semaphore and Binary Semaphore are two types.

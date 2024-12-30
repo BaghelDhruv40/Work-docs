@@ -1,0 +1,10 @@
+RELATIONAL CONSTRAINTS
+---------------------------------------
+
+-> Domain Constraints: Once defined for an attribute, fields must follow it. Also mutlivalued, composite or complex attributes are not allowed.
+
+-> Key Constraints:
+
+-> Entity Integrity Constraints: Once defined key, it must not be null.
+
+-> Referential Integrity Constriants: Reference keys must exist as prime key in parent table.

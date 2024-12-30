@@ -1,0 +1,6 @@
+As data sharing is the key need for a communication, it is necessary to convert the data into a transferable form. Here we gonna discuss Digital data to Digital Signal Conversion.
+For this, we have three techniques, namely Line Encoding, Block Encoding and Scrambling.
+
+LINE ENCODING
+
+-> It is the fundamental and compulsory encoding for the digital data to become digital signal

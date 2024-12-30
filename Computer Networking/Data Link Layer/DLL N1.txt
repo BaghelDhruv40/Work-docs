@@ -1,0 +1,148 @@
+DATA LINK LAYER
+-------------------------
+Below are the functionalities of this layer:
+
+	-> Hop to Hop transmission of frames.
+
+	-> Flow control, Error control (CRC particularly) and Access control.
+
+	-> Uses MAC address.
+
+FLOW CONTROL
+----------------------
+Below are some methods:
+
+	STOP AND WAIT
+	-----------------------
+
+		-> Sender waits for acknowledgement before sending next frame.
+
+		-> Sender window size and Receiver window size are both 1.
+
+		-> Efficiency = 1 / (1+2a) where a = tp/tt.
+
+		-> Retransmission is 1 frame.
+
+
+	GO BACK N
+	---------------
+
+		-> Multiple frames can be sent.
+
+		-> Sender window size is 2^k -1 or N-1 where k is bits.
+
+		-> Receiver window size is 1.
+
+		-> Efficiency = (2^k -1) / (1+2a).
+
+		-> Retransmission is 2^k -1.
+
+		-> Cummulative acknowlegement is used. That is once received all frames, the acknowledgement is sent asking for next frame.
+
+		-> Only in order frames can be accepted as receiver has window size 1
+
+
+	SELECTIVE REPEAT
+	--------------------------
+
+		-> Mutiple frames can be sent.
+
+		-> Sender and Receiver window size is 2^(k-1).
+
+		-> Efficiency = 2^(k-1) / (1+2a).
+
+		-> Retransmission is 1.
+
+		-> Both cummulative and independent acknowledgement is used.
+
+		-> Out of order frames can also be accepted as the receiver window has sufficient size.
+
+		-> Negative acknowledgement is also sent if error is found, hence, reducing the timeout wait.
+
+ERROR DETECTION
+---------------------------
+Below are some methods:
+
+	SINGLE BIT PARITY CHECK
+	-------------------------------------
+
+		-> Can detect single bit change.
+
+		-> We try to make even parity. That means, if 1s are odd in dataword, we append 1 to make 1s even. If 1s are alread even, we append 0. Now, if single bit error occurs, either 1s will be change or 0s will be change. Suppose odd 1s now become even, then parity bit in the actual code word will be 1 but received code word will have even 1s. If this was the correct code word, the parity bit would be 0. Hence, receiver will know that code word is corrupted.
+
+		-> Actually, this method can detect odd bits errors.
+
+
+MEDIUM ACCESS CONTROL PROTOCOLS
+-------------------------------------------------------
+-> We have three types of protocols:
+
+	-> Random Access Protocols
+
+		-> ALOHA: Further classified as Pure and Slotted ALOHA
+		-> CSMA/CD, CSMA/CA
+
+	-> Control Access Protocols
+
+		-> Polling
+		-> Token Passing
+
+	-> Channelization Protocols
+
+		-> FDMA
+		-> TDMA
+
+
+-> PURE ALOHA
+
+	-> Transmission by a station can be started any time.
+
+	-> Acknowledgement is sent by the Receiver on accepting the frame. If collision occurs, the channel wait for some random time.
+
+	-> As it's LAN based, only transmission time is effective here.
+
+	-> We calculate vulnerable time. It is the max time required for a channel for succesful transmission of the frame. It can be understood as the sum of the transmission time of the station and max of the transmission time of other stations.
+
+	-> Efficiency is given by G*e^(-2G) where G is number of stations wanting to transmit in a given time. For max efficiency, differentiate with respect to G. Turn out to be 18.4%
+
+-> SLOTTED ALOHA
+
+	-> Time is slotted into fixed periods generally transmission time.
+
+	-> A station can only start transmission at its alloted slot.
+
+	-> If more than one station starts transmission at same time, there will be a collision.
+
+	-> Vulnerable time is reduced to just Transmission time.
+
+	-> Efficiency is doubled.
+
+
+-> CSMA/CD (Carrier Sense Multiple Access/Collision Detection)
+
+	-> Used in wired shared networks.
+
+	-> No acknowledgement is used. Instead, the resultant signal due to collision of signals is used as a detection mechanism.
+
+	-> Each node senses the signal in their small neighbourhood to assure if they can send the frame or not.
+
+	-> Detection is only possible by a station if it receives the collsion signal while still transmitting the frames. Otherwise, it will not be able to understand if it is a collision signal of the message sent by itself.
+
+	-> Depending upon the behaviour and mechanism of this assurance, we have three classifications:
+
+		-> 1-persistent: Continuously checks for signal in the neighbour.
+
+		-> 0-persistent: randomly checks.
+
+		-> p-persistent: 0<p<1. It is mix of both.
+
+	-> Transmission time should be >= twice of propagation time for worst cases.
+
+	-> Efficiency is 1 / (1+6.44a)
+
+
+-> CSMA/CA (Carrier Sense Multiple Access/Collision Avoidance)
+
+	-> Used in Wireless networks like Wi-Fi.
+
+	

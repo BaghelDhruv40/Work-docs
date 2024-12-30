@@ -1,0 +1,274 @@
+$(document).ready(function(){
+		$(".comment-editor").hide();
+		$(".Er").hide();
+		$(".loading").hide();
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+		var cid = 0;
+		var comm_type = '';
+		$('body').on('click', '.comment', function(e){
+			if(!is){
+				$("#msgbody").html("You must have logged in to perform this action.");
+				$("#cmodal").modal('show');
+				return false;
+			}
+			e.preventDefault();
+			var action = this.id;
+			var op = action.split("-");
+			cid = op[1];
+			switch(op[0]){
+				case 'delete':
+					comm_type = op[2];
+					$("#del-modal").modal('show');					
+					break;
+
+				case 'edit':
+					$(".comment-editor").hide();
+					$("#add_comment_div").show();
+					$("#edit-modal").modal('show');
+					$("#text-edit").val($("#comm_body-"+op[1]).html());
+					break;
+
+				case 'qedit':
+					$(".comment-editor").hide();
+					$("#add_comment_div").show();
+					$("#qedit-modal").modal('show');
+					$("#qus_head-edit").val($("#qus_head").html());
+					$("#qus_details-edit").val($("#qus_details").html());
+					$("#qus_tags-edit").val($("#qus_tags").html());
+					init('edit');
+					break;
+
+				case 'reply':
+					$(".comment-editor").hide();
+					$("#add_comment_div").show();
+					$("#comment_editor-"+op[1]).show(200);
+					$('html,body').animate({
+					        scrollTop: $("#comment_editor-"+op[1]).offset().top},'slow');
+					init(op[1]);
+					break;
+
+				case 'upvote':
+					var upvote = $("#upvotes-"+op[1]).html();
+					var vt = 1;
+					if(this.className == 'comment'){
+						$("#upvotes-"+op[1]).html(++upvote);
+						$(this).removeClass('comment').addClass('commented');
+						if($("#downvote-"+op[1]).attr('class') == 'commented'){
+							var downvote = $("#downvotes-"+op[1]).html();
+							$("#downvotes-"+op[1]).html(--downvote);
+							$("#downvote-"+op[1]).removeClass('commented').addClass('comment');
+							vt = 2;
+						}
+					}else if(this.className == 'commented'){
+						$("#upvotes-"+op[1]).html(--upvote);
+						$(this).removeClass('commented').addClass('comment');
+						vt = 3;
+					}
+					vote(vt, $("#upvotes-"+op[1]).html(), $("#downvotes-"+op[1]).html());
+					break;
+
+				case 'downvote':
+					var downvote = $("#downvotes-"+op[1]).html();
+					var vt = -1;
+					if(this.className == 'comment'){
+						$("#downvotes-"+op[1]).html(++downvote);
+						$(this).removeClass('comment').addClass('commented');
+						if($("#upvote-"+op[1]).attr('class') == 'commented'){
+							var upvote = $("#upvotes-"+op[1]).html();
+							$("#upvotes-"+op[1]).html(--upvote);
+							$("#upvote-"+op[1]).removeClass('commented').addClass('comment');
+							vt = -2;
+						}
+					}else if(this.className == 'commented'){
+						$("#downvotes-"+op[1]).html(--downvote);
+						$(this).removeClass('commented').addClass('comment');
+						vt = -3;
+					}
+					vote(vt, $("#upvotes-"+op[1]).html(), $("#downvotes-"+op[1]).html());
+					break;
+			}
+		});
+
+		$('body').on('click', '.commented', function(e){
+			if(!is){
+				$("#msgbody").html("You must have logged in to perform this action.");
+				$("#cmodal").modal('show');
+				return false;
+			}
+			e.preventDefault();
+			var action = this.id;
+			var op = action.split("-");
+			cid = op[1];
+			switch(op[0]){
+				case 'upvote':
+					var upvote = $("#upvotes-"+op[1]).html();
+					var vt = 1;
+					if(this.className == 'comment'){
+						$("#upvotes-"+op[1]).html(++upvote);
+						$(this).removeClass('comment').addClass('commented');
+						if($("#downvote-"+op[1]).attr('class') == 'commented'){
+							var downvote = $("#downvotes-"+op[1]).html();
+							$("#downvotes-"+op[1]).html(--downvote);
+							$("#downvote-"+op[1]).removeClass('commented').addClass('comment');
+							vt = 2;
+						}
+					}else if(this.className == 'commented'){
+						$("#upvotes-"+op[1]).html(--upvote);
+						$(this).removeClass('commented').addClass('comment');
+						vt = 3;
+					}
+					vote(vt, $("#upvotes-"+op[1]).html(), $("#downvotes-"+op[1]).html());
+					break;
+
+				case 'downvote':
+					var downvote = $("#downvotes-"+op[1]).html();
+					var vt = -1;
+					if(this.className == 'comment'){
+						$("#downvotes-"+op[1]).html(++downvote);
+						$(this).removeClass('comment').addClass('commented');
+						if($("#upvote-"+op[1]).attr('class') == 'commented'){
+							var upvote = $("#upvotes-"+op[1]).html();
+							$("#upvotes-"+op[1]).html(--upvote);
+							$("#upvote-"+op[1]).removeClass('commented').addClass('comment');
+							vt = -2;
+						}
+					}else if(this.className == 'commented'){
+						$("#downvotes-"+op[1]).html(--downvote);
+						$(this).removeClass('commented').addClass('comment');
+						vt = -3;
+					}
+					vote(vt, $("#upvotes-"+op[1]).html(), $("#downvotes-"+op[1]).html());
+					break;
+			}
+		});
+
+		function vote(vote, up, dw){
+			$.ajax({
+		   		url:"../../../comment/vote",
+		   		data : {post_id : cid, vote : vote, upv : up, dwv : dw},
+		   		method:"POST",
+		   		success:function(Rs)
+		   		{
+		   			//successfully recorded
+		   		}
+		   	});
+		}
+
+		$("#edit-comm").click(function(e){
+			e.preventDefault();
+			var post_txt = $("#text-edit").val();
+			if(post_txt.length < 10){
+				$("#Er-edit").show(100);
+				return false;
+			}
+			$(".Er").hide();
+			$.ajax({
+		   		url:"../../../comment/edit_post",
+		   		data : {cm_id : cid, dt :  post_txt},
+		   		method:"POST",
+		   		beforeSend:function(){
+		   			$("#loading-edit").show();
+		   		},
+		   		success:function()
+		   		{
+		   			$("#loading-edit").hide();
+		   			$("#edit-modal").modal('hide');
+		   			$("#comm_body-"+cid).html(post_txt);
+		   		}
+		   	});
+		});
+
+		$("#del-comm").click(function(e){
+			e.preventDefault();
+			$.ajax({
+		   		url:"../../../comment/del_post",
+		   		data : {cm_id : cid, cm_ty :  comm_type},
+		   		method:"POST",
+		   		beforeSend:function(){
+		   			$("#loading-del").show();
+		   		},
+		   		success:function()
+		   		{
+		   			$("#del-modal").modal('hide');
+					$("#comment-"+cid).hide(200);
+		   		}
+		   	});
+		});
+
+		$("#add_comment").click(function(){
+			$(".comment-editor").hide();
+			if(!is){
+				$("#msgbody").html("You must have logged in to perform this action.");
+				$("#cmodal").modal('show');
+				return false;
+			}
+			$("#add_comment_div").hide();
+			$("#comment_editor-0").show(200);
+			$('html,body').animate({
+				scrollTop: $("#comment_editor-"+0).offset().top},'slow');
+			init(0);
+		});
+
+		$(".new_comment").click(function(){
+			var ty = this.id;
+			tyc = ty.split('-');// 1 type 2 parent_id
+			var post_txt = $("#text-"+tyc[2]).val();
+			if(post_txt.length < 10){
+				$("#Er-"+tyc[2]).show(100);
+				return false;
+			}
+			$(".Er").hide();
+			$.ajax({
+		   		url:"../../../comment/set_post",
+		   		data : {tab : tab, page : id, parent : tyc[2], typ : tyc[1], dt :  post_txt},
+		   		method:"POST",
+		   		beforeSend:function(){
+		   			$("#loading-"+tyc[2]).show();
+		   		},
+		   		success:function()
+		   		{
+		   			location.reload();
+		   		}
+		   	});
+		});
+
+		$("#text-edit").one("click", function(){
+			init('edit');
+		});
+
+		// Auto Resize textarea
+
+		var observe;
+		if (window.attachEvent) {
+		    observe = function (element, event, handler) {
+		        element.attachEvent('on'+event, handler);
+		    };
+		}
+		else {
+		    observe = function (element, event, handler) {
+		        element.addEventListener(event, handler, false);
+		    };
+		}
+		function init (e_id) {
+		    var text = document.getElementById('text-'+e_id);
+		    function resize () {
+		        text.style.height = 'auto';
+		        text.style.height = text.scrollHeight+5+'px';
+		    }
+		    /* 0-timeout to get the already changed text */
+		    function delayedResize () {
+		        window.setTimeout(resize, 0);
+		    }
+		    observe(text, 'change',  resize);
+		    observe(text, 'cut',     delayedResize);
+		    observe(text, 'paste',   delayedResize);
+		    observe(text, 'drop',    delayedResize);
+		    observe(text, 'keydown', delayedResize);
+
+		    text.focus();
+		    text.select();
+		    resize();
+		}
+	});

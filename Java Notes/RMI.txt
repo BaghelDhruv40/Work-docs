@@ -1,0 +1,13 @@
+-> The package for rmi is java.rmi
+-> It contains an interface "Remote"
+-> We must extend this Remote interface to make our interface remote.
+
+STEPS TO FOLLOW
+--------------------------
+-> Create the remote interface.
+-> Implementation of remote Interface
+-> Compile, stub and skeleton (rmic)
+-> start the registry (rmiregistry)
+-> create and start server
+-> create and start client
+

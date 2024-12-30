@@ -1,0 +1,21 @@
+FILE CONTENT AND VIEWING COMMANDS
+-----------------------------------------------------------
+
+-> tac: Displays file content in reverse order (upside down)
+
+-> more: Displays large files one page at a time
+
+-> less: Similar to more with additional features like backward navigation
+
+-> tr: Translates or deletes characters from input
+
+	-> Syntax: $ cat filename | tr 'a-z' 'A-Z'		# lower to upper case
+			$ cat filename | tr -d ' '			# remove spaces
+
+-> tee: Saves the output from standard output to given file while showing it on terminal too
+
+	-> Syntax: $ echo "any message" | tee filename 	# saves the output of echo in file
+
+			$ echo "new one" | tee -a filename	# appends new one
+
+	-> $ > : This is same as tee.

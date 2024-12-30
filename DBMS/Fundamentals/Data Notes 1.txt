@@ -1,0 +1,13 @@
+The fundamental definition of data comes from the history of communication and memory. Whatever can be shared in a communication and can be stored is data. Data need not be meaningful and make sense. But if it is, we call it information. Not only this, even if data doesn't make any logic and sense as seen individually, it may if we see it collectively or from a wider pov. For example, In a communication between two people, they may alternatively dictating vowels to each other. Vowels are nothing but sounds. These sounds as if heard doesn't make any sense and meaning but still they are separately classified as vowels as they collectively makes sense are necessary in a language.
+
+In the world of computer science we use data and information interchangebly but they are indeed different. We are at the point already where we can modulate information into signals which are physical quantities that can physically travel from one point to another. As we took the example above, the data was shared through sound. So, it is a point to remember that information needs a way to convey itself (that is obviously acceptable by us). Pictures, audios, videos are ways to convey information or even data.
+
+Further, collection of related information is called a database (infobase to be specific). But again, not evey collection of information means a database fundamentally. We can think of it as the same analogy between just data and meaningful data (info). Info obviously has a purpose and extracting info out of collection of data is a skill as it requires finding pattern or relation. At the least, info is, to be just stored, or to make an attention. Similary, collecting information has a purpose. That purpose is the actual pillar holding the definition of database. For example, collection of all the meaningful text in a book may indeed make sense, but is not a database as the purpose is vague. While, authors make Index of the book and with a good purpose which is navigation and so is a database.
+
+NOTE: Throughout the notes, i will try to generalize the concepts and make them as fundamental as possible, but, the Key points may majorly contain the technical pov of the same.
+
+Key Points:
+
+-> Data can be thought of anything that can be stored.
+
+-> A data can be of many types like, images, videos, text, numbers, etc.

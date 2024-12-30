@@ -1,0 +1,13 @@
+I've explored the tags in html and found that there are basically very few tags only. Many of the tags are just derived out of these tags. The list of actual tags is:
+
+	-> text element tag: This includes the <p> tag and all other text formatting tags like for bold, italic, underline and so on.
+
+	-> list tag: Used to create list.
+
+	-> division tag: Used to create divisions in the document. This includes the <div> tag and all other sematic tags related to it.
+
+	-> hyperlink tags: Used to navigate to different pages or attach files on the page. This includes <a> tag, <img> tag, etc.
+
+	-> table tag: Used to add table in the document.
+
+	-> forms and button tags: The fundamental tags for user interaction. These includes <button> tag, <input> tag, etc.

@@ -1,0 +1,77 @@
+WHAT ARE APPLICATION LAYER PROTOCOLS?
+
+-> Application layer protocols are standards for the communcation of application level resources. By application level, we mean digital resources available to client.
+
+HOW DO WE COMMUNICATE ON THIS LAYER?
+
+-> Communication needs atleast two ends and a communication channel. Ofcourse every step in the establishment of communcation if become the responsibilty of the client, it would be so difficult for them. We have different abstraction layers which play this role. At application layer, we have been provided some ways to signal below layers to start and establish a connection. It must be noted that inter-communication is different from intra-communication.
+
+-> A web browser is a software that searches for URLs. What is a URL? A URL is the identity for a server where we have the resource. But not only this. A server is nothing but a system and a system need not only do one task. For that reason, a server is further divided using port numbers, which are identity for the sub-divisions of that server. As of my present knowledge, i imagine a server as a multiprocessing system having a big storage where deployed sites exist, and the ports as different cores of the server which do the work on these sites as a client is communicating with the server.
+
+-> Our pc is itself a server at the very first point. A web browser can communicate with the local server itself. The domain will be local host in this case with only one port number.
+The web browser can also just search for the html file and so acting as just file locator.
+
+-> HTTP is for web resource sharing. If the resources are on a distinct system, 
+
+
+
+WHAT IS DNS?
+
+-> Below application layer, many layers are there to help us establishing the connection between two nodes and share resources. But, we at the application layer, need to give address of the destination and the message we want to send. First, talking about the address part, we have IP addresses. If we can give IP address of the destination, we move one step a head. Remembering this IP address is hard. So we usually have URL of the destination. This URL must be mapped with the necessary IP address. This work is done by DNS (Domain Name System). In early days, this work was done manually by having a simple text file with IP addresses and corresponding computer names. A user may first download this file called hosts.txt then may be browser could fetch the IP address from this file. But now, we have dedicated servers which keep up to date IP address and URLs mapping.
+
+WHAT DNS ACTUALLY IS?
+
+-> DNS was an attempt for the analogy of postal addresses. A postal address have many layers of hierarchy. We hav country name, then state, then city, then district and so on. Just like this, DNS has a hierarchy of name layers. We call it DNS Namespace. Along with this, DNS uses a distributed DBMS to store and map host names with IP address.
+
+	-> Root Layer: It is the top level managed by ICANN. It is represented by dot (.). For example: www.example.com. (. after .com).
+
+	-> 1st Top level: Below root level, we have what we call top level which is divided into two flavours: generic domains (.com, .net, etc) and country domains (.in, .jp, etc).
+
+	-> 2nd domain level: Below top level, we have 2nd domain level which is for "names". That is, the name we want for our service.
+
+	In this manner, we may have more layers. ICANN has registrars for each top level domain. A user may approach them and lease a name (name + top level domain) by giving an annual fee.
+
+->  Each domain is named by the path upward from it to the (unnamed) root. The components are separated by periods (pronounced ‘‘dot’’). Thus, the engineering department at Cisco might be eng.cisco.com., rather than a UNIX-style name such as /com/cisco/eng. Notice that this hierarchical naming means that eng.cisco.com. does not conflict with a potential use of eng in eng.washington.edu., which might be used by the English department at the University of Washington.
+
+->  Domain names can be either absolute or relative. An absolute domain name always ends with a period (e.g., eng.cisco.com.), whereas a relative one does not. Relative names have to be interpreted in some context to uniquely determine their true meaning. In both cases, a named domain refers to a specific node in the tree and all the nodes under it.
+
+-> Domain names are case-insensitive, so edu, Edu, and EDU mean the same thing. Component names can be up to 63 characters long, and full path names must not exceed 255 characters.
+ 
+-> A domain name can be associated with mutiple IP addresses and vice versa. That's how different servers of Big companies like google even being at different locations are accessd with same domain. The DNS server assigns us the nearest IP address of the server.
+
+WHAT IS DOMAIN RECORDS?
+
+-> Every domain, whether it is a single host or a top-level domain, can have a set of resource records associated with it. These records are the DNS database. For a single host, the most common resource record is just its IP address, but many other kinds of resource records also exist.
+
+->  When a resolver gives a domain name to DNS, what it gets back are the resource records associated with that name.Thus, the primary function of DNS is to map domain names onto resource records.
+
+-> Aresource record is a five-tuple. Although they are encoded in binary for efficiency, in most expositions resource records are presented as ASCII text, one line per resource record. The format we will use is as follows:
+ 								Domain name Time_to_live Class Type Value
+
+	-> Domain name:  The Domain name tells the domain to which this record applies. Normally, many records exist for each domain and each copy of the database holds information about multiple domains. This field is thus the primary search key used to satisfy queries.
+
+	-> Time_to_live: The Time to live field gives an indication of how stable the record is. Information that is highly stable is assigned a large value, such as 86400 (the number of seconds in 1 day). Information that is highly volatile is assigned a small value, such as 60 (1 minute).
+
+	-> Class: The third field of every resource record is the Class. For Internet information, it is always IN. For non-Internet information, other codes can be used, but in practice these are rarely seen.
+
+	-> Type: The Type field tells what kind of record this is. There are many kinds of DNS records. The most important record type is the A (Address) record. It holds a 32-bit
+ IPv4 address of an interface for some host. The corresponding AAAA, or ‘‘quad A,’’ record holds a 128-bit IPv6 address.  CNAME records allow aliases to be created.
+
+
+WHAT IS THE ARCHITECTURE OF EMAIL?
+
+-> The architecture of the email system consists of two kinds of subsystems: the user agents, which allow people to read and send email, and the message transfer agents (or mail servers), which move the messages from the source to the destination.
+
+	-> The user agent is a program that provides a graphical interface, or sometimes a text- and command-based interface that lets users interact with the email system. It includes a means to compose messages and replies to messages, display incoming messages, and organize messages by filing, searching, and discarding them.
+
+	-> The message transfer agents are typically system processes. They run in the background on mail server machines and are intended to be always available. Their job is to automatically move email through the system from the originator to the recipient with SMTP (Simple Mail Transfer Protocol). This is the message transfer step.
+
+		-> Message transfer agents also implement mailing lists, in which an identical copy of a message is delivered to everyone on a list of email addresses. Other advanced features are carbon copies, blind carbon copies, high-priority email, secret (i.e., encrypted) email, alternative recipients if the primary one is not currently available
+
+	-> Linking user agents and message transfer agents are the concepts of "mailboxes" and a standard format for email messages.
+
+		-> Mailboxes store the email that is received for a user. They are maintained by mail servers.
+
+		-> User agents simply present users with a view of the contents of their mailboxes. To do this, the user agents send the mail servers commands to manipulate the mailboxes, inspecting their contents, deleting messages, and so on. 
+
+	NOTE: The act of sending new messages into the mail system for delivery is called mail submission.

@@ -1,0 +1,39 @@
+-> We can understand the applications modeling requiring JDBC in following steps:
+
+	-> Import the package
+	-> Load and Register the Driver
+	-> Make the connection
+	-> Create the statement
+	-> Execute the Query
+	-> Process the results
+	-> Close
+
+-> The package required is java.sql.*
+
+-> Loading the driver means downloading the connector jar file and configuring its path.
+
+-> To register the driver, we use forName() which is a method of class "Class". The driver to load depends upon which DBMS we are working on. For RDBMS, the driver is, "com.sql.jdbc.Driver".
+
+-> To make the connection, we use an interface "Connection" which is implemented by a class "DriverManager". We use its getConnection(url, username, pass) (a static method). The url is "jdbc:mysql://localhost:portNumber/databaseName"
+
+-> To create statement, we use an interface "Statement" reference and assign like this:
+
+	Statement st = con.createStatement();	# con is reference created for Connection interface
+
+-> The statement reference created in previous step is used for executing the query. We use st.executeQuery(query);
+
+-> Previous method returns the result of the executed query in different formats. To handle the structed/tabulated formats of executed query, we use ResultSet interface. The pointer of its reference variable is at the header of the table (column names). So we have to use rs.next() to come to first row. 
+
+-> ResultSet has different 'get' methods for different objects and datatypes which accepts index number (as a column id) or directly the column name as parameter.
+
+-> At th end, we close the Statement and Connection.
+
+
+PREPARED STATEMENTS
+----------------------------------
+
+-> Prepared Statement is nothing but a way to handle a particular scenario. Let's consider the scenario first.
+
+	The query to be executed is actually stored in a variable or directly passed but as a literal. It's a string inside double quotes. Now incase the query have to include variables to be manipulated or inserted, it will be a tedicious task to do that as we will have to use + operator and open and close the quotes again and again. This task can be simplified using prepared statement.
+
+-> PreparedStatement provide us methods to put values of variables in the query later. We just use ? in place of variable in the query and then set it later.

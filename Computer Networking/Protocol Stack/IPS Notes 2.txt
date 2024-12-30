@@ -1,0 +1,129 @@
+FUNCTIONS IN NETWORKING
+
+-> We can classify functions for two processes to inter-communicate with each other in following way:
+
+	MANDATORY: Minimum requirements. Below are some of them
+
+		-> Error control: Surety of correct message delivery.
+		-> Flow control: Buffer sizes shouldn't overflow.
+		-> Access control
+		-> Multiplexing and Demultiplexing
+		-> Addressing
+
+	OPTIONAL: Required for specific situations. Few are listed below
+
+		-> Encoding/Decoding: For privacy purposes.
+		-> Check pointing: Required for large files.
+		-> Routing: Alternative way (flooding) is default choice.
+
+
+ISO-OSI MODEL
+-----------------------
+
+-> This is a standard model that describes how all the networking function should be implemented.
+	-> Provides Encapsulation.
+	-> Provide Abstraction
+	-> Based on Divide and Conquer Strategy.
+	-> Testing of functionalities is easy.
+
+-> There are seven layers. They are listed below in "top to bottom":
+
+	-> Application Layer: For user interface.
+	-> Presentation Layer: For user interface.
+	-> Session Layer: For user interface.
+	-> Transport Layer: Contains most number of functionalities.
+	-> Network Layer: Complex Calculations.
+	-> Data-link Layer: Deals both on H/W and S/W.
+	-> Physical Layer: Deals only on hardware.
+
+DATA-LINK LAYER
+-------------------------
+-> Hop to Hop connectivity.
+
+
+NETWORK LAYER
+------------------------
+
+-> This layer takes the responsibilities of:
+
+	-> Host to Host connectivity: How one host can be connected to another host.
+
+	-> Logical addressing: Addresses that are valid throughout the world.
+
+		-> In TCP/IP, it is the IP address.
+		-> At data-link layer, we use physical address which are limited to the hosts in a network.
+
+	-> Switching: Simply means the logical or algorithm to connect all devices and the decision to send the packets to correct user with less physical medium.
+
+	-> Routing: A procedure of building routing table. In contrast, using the routing table (or some other method) is called switching.
+
+	-> Congestion control
+
+	-> Fragmentation: Fragmenting the frame size if it exceeds certain limit of transfer frames.
+
+-> Below is the detailed discussion of above topics in NL.
+
+	SWITCHING
+	------------------
+	-> It is of three types:
+
+		-> Circuit Switching
+
+		-> Packet Switching
+
+			-> Virtual circuits
+			-> Datagram
+
+		-> Message Switching
+
+	-> Circuit switching is not the part of Network layer. It was used since way before OSI model.
+
+		CIRCUIT SWITCHING
+		------------------------------
+
+
+TRANSPORT LAYER
+---------------------------
+
+-> This layer has the following responsibilities:
+
+	-> End to End Connectivity: Process to process connectivity. Requires Port Numbers.
+
+	-> Flow Control: The way we control sender to send the packet more than the receiver's capacity. SR is the protocol for that.
+
+	-> Error Control: Check Sum is used.
+
+
+	-> Segmentation:
+
+	-> Multiplexing/De-multiplexing
+
+	-> Congestion Control
+
+
+SESSION LAYER
+-----------------------
+
+-> This layer has the following responsibilities.
+
+	-> Authentication & Authorization.
+
+	-> Checkpointing: Used in Large data.
+
+	-> Synchronization
+
+	-> Dialogue Control
+
+	-> Logical grouping
+
+
+PRESENTATION LAYER
+-----------------------
+
+-> This layer has the following responsibilities.
+
+	-> Character Translation: Translating text encoding for two computers communicating.
+
+	-> Encryption/Decryption.
+
+	-> Compression

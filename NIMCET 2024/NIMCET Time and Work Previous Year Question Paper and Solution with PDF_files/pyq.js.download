@@ -1,0 +1,94 @@
+$(document).ready(function(){
+    var id = $("#id").val();
+    var view = $("#view").val();
+    var key = $("#key").val();
+    var psgs = [];
+    var ans = [];
+    var URL = $("#URL").val();
+    var exam = $("#exam").val();
+    var yrs = $("#yrs").html();
+    var qid = '';
+
+    $("#qus-pallete button").click(function(){
+        var bid = this.id.split('-');
+        var rans = $("#rans-"+bid[2]).html();
+        if($.inArray(bid[2], ans) != -1)
+            return false;
+        if(bid[1] == rans){
+            $("#cir-"+bid[1]+"-"+bid[2]).html("<i class='fas fa-check-double'></i>");
+            $("#cir-"+bid[1]+"-"+bid[2]).addClass('Correct');
+        }else{
+            $("#cir-"+bid[1]+"-"+bid[2]).html("<i class='fas fa-times'></i>");
+            $("#cir-"+bid[1]+"-"+bid[2]).addClass('Wrong');
+            $("#cir-"+rans+"-"+bid[2]).html("<i class='fas fa-check'></i>");
+            $("#cir-"+rans+"-"+bid[2]).addClass('Correct');
+        }
+        ans.push(bid[2]);
+    });
+
+    $(".heading").click(function() {
+        $(".glyphicon-menu-down").toggleClass( "Rotate180" );
+      });
+
+      if($(window).width()<=767){
+         $('#Snav').addClass('collapse');
+         $('#Snav .heading').hide();
+      }
+
+    var nav = [];
+    var get_nav = function(){
+        $.ajax({
+            url:"../../get_pyq_nav",
+            type:"post",
+            data : {exam_id : id, view : view},
+            dataType:"json",
+            async:false,
+            success: function(Rs){
+                $.each( Rs, function(key, val){
+                    if($.inArray(val[view], nav) == -1)
+                        nav.push(val[view]);
+                });
+            }
+        });
+        $.each(nav, function(ky, val){
+            var cls = '';
+            if(val == key)
+                cls = "class='act'";
+            $("#Snav").append("<li "+cls+"><a href='"+URL+"library/pyq/"+id+"/"+exam+"?view="+view+"&key="+val+"'>"+val+"</a></li>");
+        });
+    }
+    if(view != 'year'){
+        $.each(JSON.parse(yrs), function(ky, val){
+            $("#yr-"+val.qus_id).html(val.year);
+            $("#yrl-"+val.qus_id).attr("href", URL+"library/pyq/"+id+"/"+exam+"?view=year&key="+val.year);
+            $("#delete-"+val.qus_id).attr("id", "dlt-"+val.id);
+            $("#qus-"+val.qus_id).attr("id", "qus-"+val.id);
+        });
+    }
+    
+    get_nav();
+
+    $(".fa-trash").click(function(){
+        $("#inf-modal").modal('show');
+        $("#inf-modal-body").html("Are you really want to remove qus from this previous Year?");
+        qid = this.id.split('-')[1];
+    });
+
+    $("#inf-modal-footer").on('click', '#delete', function(){
+        $.ajax({
+            url:"../../delete_pyq",
+            type:"post",
+            data : {qid : qid},
+            dataType:"html",
+            beforeSend:function(){
+                $("#inf-modal-body").html("Processing...");
+            },
+            success: function(Rs){
+                $("#inf-modal-body").html("The Qus is Successfully Removed From Previous Year.");
+                $("#inf-modal").modal('hide');
+                $("#qus-"+qid).slideUp(500);
+            }
+        });
+    });
+
+});

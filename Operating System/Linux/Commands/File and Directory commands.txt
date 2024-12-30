@@ -1,0 +1,68 @@
+FILE AND DIRECTORY COMMANDS
+-----------------------------------------------
+
+-> tree: Shows a pictorial representation of the hierarchy of a directory.
+
+	-> Syntax: $ tree path/to/directory
+
+
+-> basename: Extracts name of the file from the given full path
+
+	-> Syntax: $ basename fullpath
+
+
+-> dirname: Extracts the directory part from the given full path
+
+	-> Syntax: $ dirname fullpath
+
+
+-> stat: Gives full stats of the required file.
+
+	-> Syntax: $ stat filename
+
+
+-> realpath: Returns absolute path from the given relative path
+
+	-> Syntax: $ realpath ./filename
+
+
+-> file: Identifies the type of the given file
+
+	-> Syntax: $ file filename
+
+
+-> diff: Compare the contents of two given files line by line and highlight differences
+
+	-> Syntax: $ diff file1 file2
+
+
+-> cmp: Compare two or more given files byte by byte and shows where they differ
+
+	-> Syntax: $ cmp file1 file2
+
+
+-> sort: Sorts the content of given file lexicographically or numerically.
+
+	-> Syntax: $ sort filename
+
+
+-> uniq: Filters duplicate lines from the given file
+
+	-> Syntax: $ uniq filename
+
+-> find: Finds file or firectory based on given criteria
+
+	-> Syntax: $ find / -name filename
+			$ find / -size +1M
+
+-> df: Displays used and free diskspace on file system
+
+	-> Syntax: $ df -h
+
+	-> -h : Human friendly format
+
+
+-> du: Summarizes disk usage for a file or directory
+
+	-> Syntax: $ du -sh path/to/file
+	

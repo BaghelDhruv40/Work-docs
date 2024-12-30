@@ -1,0 +1,218 @@
+Ans 14 or 60.
+
+#!/bin/bash
+
+# Prompt the user for a word
+echo "Enter a word:"
+read word
+
+# Check the first character using case
+case $word in
+    [A-Z]*)
+        echo "$word starts with upper case"
+        ;;
+    [a-z]*)
+        echo "$word starts with lower case"
+        ;;
+    [0-9]*)
+        echo "$word starts with digit"
+        ;;
+    *)
+        echo "$word does not start with upper, lower, or digit"
+        ;;
+esac
+
+
+Ans 13 or 59.
+
+#!/bin/bash
+
+# Check if exactly one argument (file name) is provided
+if [ $# -ne 1 ]; then
+    echo "Error: Please provide exactly one file as an argument."
+    exit 1
+fi
+
+# Get the file name from the argument
+file=$1
+
+# Check if the file exists
+if [ ! -e "$file" ]; then
+    echo "Error: The file '$file' does not exist."
+    exit 2
+fi
+
+# Check if it's a regular file
+if [ ! -f "$file" ]; then
+    echo "Error: '$file' is not a regular file."
+    exit 3
+fi
+
+# Get the file size using stat -c
+file_size=$(stat -c %s "$file")
+
+# If the file size is zero, delete it
+if [ "$file_size" -eq 0 ]; then
+    rm "$file"
+    echo "The file '$file' was empty and has been removed."
+else
+    # Otherwise, display the file's details using stat -c
+    stat -c "File Name: %n | File Size: %s bytes | Hard Links: %h | Owner: %U | Last Modified: %y" "$file"
+fi
+
+
+Ans 57.#!/bin/bash
+
+# Read password from user input
+echo "Enter your password:"
+read -s password
+
+# Check if password length is at least 8 characters
+if [ ${#password} -lt 8 ]; then
+    echo "Weak Password: Password must be at least 8 characters long."
+    exit 1
+fi
+
+# Check if password contains at least one alphabet
+if ! echo "$password" | grep -q '[a-zA-Z]'; then
+    echo "Weak Password: Password must contain at least one alphabet."
+    exit 1
+fi
+
+# Check if password contains at least one number
+if ! echo "$password" | grep -q '[0-9]'; then
+    echo "Weak Password: Password must contain at least one number."
+    exit 1
+fi
+
+# Check if password contains at least one lowercase letter
+if ! echo "$password" | grep -q '[a-z]'; then
+    echo "Weak Password: Password must contain at least one lowercase letter."
+    exit 1
+fi
+
+# Check if password contains at least one uppercase letter
+if ! echo "$password" | grep -q '[A-Z]'; then
+    echo "Weak Password: Password must contain at least one uppercase letter."
+    exit 1
+fi
+
+# If all checks pass, it's a strong password
+echo "Strong Password."
+
+
+Ans. 16
+
+#!/bin/bash
+
+# Check if exactly one argument (file name or directory) is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <file-or-directory>"
+    exit 1
+fi
+
+# Get the file or directory name from the argument
+input=$1
+
+# Check if the input is a valid file or directory
+if [ ! -e "$input" ]; then
+    echo "Error: '$input' does not exist."
+    exit 2
+fi
+
+# Function to convert filenames to lowercase
+convert_to_lowercase() {
+    for file in *; do
+        if [ -f "$file" ]; then
+            new_name=$(echo "$file" | tr 'A-Z' 'a-z')
+            if [ "$file" != "$new_name" ]; then
+                mv "$file" "$new_name"
+                echo "Renamed: $file -> $new_name"
+            fi
+        fi
+    done
+}
+
+# Function to convert filenames to uppercase
+convert_to_uppercase() {
+    for file in *; do
+        if [ -f "$file" ]; then
+            new_name=$(echo "$file" | tr 'a-z' 'A-Z')
+            if [ "$file" != "$new_name" ]; then
+                mv "$file" "$new_name"
+                echo "Renamed: $file -> $new_name"
+            fi
+        fi
+    done
+}
+
+# Check if the input is a file or a directory
+if [ -f "$input" ]; then
+    # If it's a file, rename it to lowercase or uppercase
+    if [[ "$input" == ${input^^} ]]; then
+        # Convert from uppercase to lowercase
+        new_name=$(echo "$input" | tr 'A-Z' 'a-z')
+        mv "$input" "$new_name"
+        echo "Renamed: $input -> $new_name"
+    else
+        # Convert from lowercase to uppercase
+        new_name=$(echo "$input" | tr 'a-z' 'A-Z')
+        mv "$input" "$new_name"
+        echo "Renamed: $input -> $new_name"
+    fi
+elif [ -d "$input" ]; then
+    # If it's a directory, process each file inside the directory
+    echo "Converting filenames in directory '$input'..."
+    cd "$input"
+    # Ask user whether to convert to uppercase or lowercase
+    read -p "Do you want to convert to (u)ppercase or (l)owercase? " choice
+    case $choice in
+        [Uu]*)
+            convert_to_uppercase
+            ;;
+        [Ll]*)
+            convert_to_lowercase
+            ;;
+        *)
+            echo "Invalid choice. No conversion done."
+            exit 3
+            ;;
+    esac
+else
+    echo "Error: '$input' is neither a valid file nor a directory."
+    exit 4
+fi
+
+
+
+Ans. 40
+
+#!/bin/bash
+
+# Check if the input is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <number>"
+    exit 1
+fi
+
+# Validate if the input is a number
+if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+    echo "Error: Please provide a valid positive number."
+    exit 2
+fi
+
+# Get the input number
+number=$1
+
+# Reverse the number
+reverse=0
+while [ $number -ne 0 ]; do
+    remainder=$((number % 10))         # Get the last digit
+    reverse=$((reverse * 10 + remainder)) # Build the reversed number
+    number=$((number / 10))           # Remove the last digit
+done
+
+# Print the reversed number
+echo "Reversed number: $reverse"
+
+

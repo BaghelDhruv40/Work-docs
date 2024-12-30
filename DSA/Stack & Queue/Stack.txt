@@ -1,0 +1,9 @@
+-> A Stack is a SLDS (Static Linear Data Structure) abstraction that works on LIFO.
+
+-> It is implemented on arrays using some functions:
+
+	-> pop(index) : Deletes the given index element and returns it. Default behaviour is to pop last element (i.e., top element or front).
+
+	-> push(element) : Appends the given element.
+
+	-> top() : Returns the top element.

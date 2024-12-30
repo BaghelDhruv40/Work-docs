@@ -1,0 +1,9 @@
+-> Below is the list of some well known protocols on Application Layer:
+
+	-> ECHO: Same as ping but ping works for ICMP and this works for TCP/UDP.
+
+		-> Port No. is 7.
+
+		-> It helps in identifying the connectivity with a server and also tells round trip time.
+
+	-> FTP: 

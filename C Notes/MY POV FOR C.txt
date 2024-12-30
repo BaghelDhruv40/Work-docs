@@ -1,0 +1,9 @@
+WHAT IS C LANGUAGE? Why it is the best language to start with?
+
+-> C language is a programming language developed for low level designing like system design and so on. That's why this language makes a programmer feel so close to the CPU. C language is best for fundamentals because the objective for the devlopment of C was this itself. This objective is the key point that C is so great language. Other features that may not exclusive to C but makes it good for programming logic development is its static and compiled nature. This feature make a programmer feel that everything is in their own hands, even when they might not be doing everything from scratch. Obviously, software programming doesn't mean start from the scratch everytime. Repetitive tasks are always likely to be replaced by helpers. That's why we have concepts of libraries, modules, packages, APIs. 
+
+WHY HIGH-LEVEL LANGUAGES SHOULDN'T BE FIRST CHOICE?
+
+-> High level languages are nothing but tonnes of predefined modules. They are extremely good to reduce the work load, but not to develop programming skills. This is again because of the objective of them. High-level languages are made with the objective of reducing repetitive tasks or help in innovation rather than hard codig. The more a language is high, the more it keeps the programmer away from the low level working, at the surface. So while working on high level languages, we may not feel the need of knowing what is the deep inner working.
+
+-> A low level language with easy syntax can will be the best choice. For ex, C++ not only includes more features but tried to reduce the syntax complexity of C language too. C++ is a god language as it is low level language with easy syntax, it is complete and fast.

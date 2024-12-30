@@ -1,0 +1,55 @@
+The relational model is mathematically related to set theory. It must consist of operation to manipulate and fetching the data. Relational Algebra and Relational Calculus is the concept behind it.
+
+-> Relational Algebra focuses on what and how to be fetched while Relational Calculus focuses on the first one only.
+
+-> RA have these fundamental operations:
+
+	-> Selection (small sigma): A uniary operation, used to fetch tuples from the relation based on required conditions. It is also called horizontal partitioner of the relation. However, selection operation is different from the SELECT keyword of SQL. 
+
+		-> Syntax: sigma <condition> (RelationName or an RA expression that results a relation)
+
+		-> Nested selection operations are associative.
+
+		-> Nested selection expression is eqivalent to a selection expression with multiple conditions with AND between them.
+
+		-> In conditions, either we can compare attributes with constants or with other attributes but of same domain. These attributes which are compared can be from one tuple or made into one tuple using cross product operation.
+
+		-> The number of tuples in best (max) and worst (min) conditions are |R| and 0 resp.
+
+
+	-> Projection (pi) : A uniary operation, used to fetch columns from the relation based on the required conditions. It is also called vertical partitioner of the relation. Projection in RA is equivalent to SELECT DISTINCT. 
+
+		-> Syntax: pi <attributes> (RelationName)
+
+		-> Nested projection operation is not commutative.
+
+		-> Attributes mentioned in the projection expression in outer of nested expression must be in attributes in the inner of expression.
+
+		-> If the nested expression contains only single attribute in each expression, this expression is valid only if attribute in outer exp is a subset of that in inner exp. Overall, we will get the most outer attribute as a result. Hence we can simply write a single expression with this attribute.
+
+		-> The no. of columns (i.e. degree of relation) may change.
+
+		-> The no. of tuples may not be same as that of relation. It will always be same when attributes mentioned in the syntax is a superkey.
+
+		-> -> The number of tuples in best (max) and worst (min) conditions are |R| and 1 resp.
+
+	-> Cross Product (X) : A uniary operation, used when we want to make a single instance out of columns from multiple relations for the required purpose like comparison. It cross products each tuple of one table to each tuple of other table.
+
+	-> Union (U) : A binary operation, used when we have to append tuples of one relation to other relation. Clearly, the restriction is that schema of both relations  (no. of columns and corresponding datatypes) must be same.
+
+	-> Minus (-) : It is the same operation used in set theory that is also known as set difference. when operated on two relations, we get a relation with tuples except those in second relation. It is a binary operation.
+
+	-> Rename (Rho) : It is used to rename attributes or relations.
+
+-> Apart from above operations, there are more operations but they can be made from above fundamental operations:
+
+	-> Intersection : Can be done using A-(A-B). That is, minus operation can be used to achieve this. It is used to fetch common tuples between the relations. A Binary operation.
+
+	-> Join: Can be achieved with selection and cross product operations. It is used to combine tuples of one relation to relevent tuples of other relation only.
+
+	-> Division: Can be achieved with projection, cross product and minus operations.
+
+TYPES OF JOINS
+------------------------
+
+	-> Natural Join (*): Used when two tables have common attributes. We can also obtain this by applying selection operator on cartesian product with condition A = A. If no attribute is same between the tables, output will be same as cartesian product.

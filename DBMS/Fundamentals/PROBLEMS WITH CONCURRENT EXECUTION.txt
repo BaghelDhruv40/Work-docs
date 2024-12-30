@@ -1,0 +1,71 @@
+PROBLEMS WITH CONCURRENT EXECUTION
+-------------------------------------------------------------
+
+-> Lost Update Problem ( w-w conflict ) : It is one of the race condition situation where before one transaction writes the output to the memory, another transaction starts working on the same variable. In such problem, we will always see two consecutive write statements on the same variable and so the name.
+
+-> Dirty Read Problem ( w-r conflict ) : Suppose a transaction is working on two variables. It completes the write operation on 1st variable and working on the 2nd variable. Now consider a 2nd transcation which started working on the 1st variable of 1st transaction. If 1st transaction rolls back at some point, 2nd transaction is then now working on a variable whose updation is cancelled. So, in total, transaction 2 becomes invalid also.
+Hence in this situation, the 2nd transaction operations are lost due to roll back of 1st transaction.
+
+-> Non-repeatable Read Problem ( r-w conflict ) : Suppose we have two transactions. 1st one just reads the variable. 2nd one reads and updates the value of that variable. 1st one again reads that and now the value it see is updated one. Hence without any operations done by 1st one, it see an updated value. This breaks the ACID rules that each transaction must works in isolation.
+
+-> Phantom Tuple Problem (Phantom Phenomenon) : Same as the previous one but just explained using outputs.
+
+
+SCHEDULE
+----------------
+
+A Schedule represents the order in which the operations of transactions are executed.
+
+TYPES OF SCHEDULES
+-------------------------------
+
+-> Serial Schedules : 
+
+	-> If we don't have any interleaving then that type of schedules are called Serial Schedules.
+
+	-> When transactions are executing serially, they always ensured the consistency.
+
+	-> If there are n-transactions in a serial schedules, the possible number of serial schedules are factorial n.
+
+
+-> Complete Schedules :
+
+	-> If the last operation of each transaction either abort or commit.
+
+
+-> Recoverable Schedules :
+
+	-> Based on the placement of commit and abort, we can judge if a schedule is recoverable or not.
+
+	-> Suppose T1 and T2 are two transaction working on a variable. If T2 commits all the changes but T1 tries to rollback, it can't be done as already committed. Hence unrecoverable.
+
+	-> So the solution is, whoever is assumed to be copying from the other, they can't commit unless 1st one commits. Hence, recoverable in this case if changes rolled back.
+
+-> Cascading Rollback : 
+
+
+-> Cascadless Schedules:
+
+	-> If there are a pipline like dependency of transactions on each other, if consequent transaction can only read a variable if previous one commited the changes, this type of schedule is called Cascadeless Schedule. Because, If 1st one committed, there no chance of changes now, and this follows consequently. 
+
+-> Strict Schedules:
+
+	-> Same as Cascadeless but condition is on write operation. That is a transaction can write only if previous transaction has committed the changes.
+
+SERIALIZABILITY
+-------------------------
+-> A schedule is serializable if it is equivalent to a serial schedule.
+-> We have tests for serializabilty:
+
+	-> Result Equivalent: If the final result of a transaction is same as that for a serial scheduled transaction.
+
+	-> Conflict Equivalent: We compare the ordering of conflict operations in both scheduling. Conflict operations are those who follows these:
+
+		-> They operate on same variable.
+		-> Atleast one of them is write.
+
+	-> View Equivalent: Two schedules who obey the following:
+
+		-> Whoever reads first in one schedule must do the same in other.
+		-> Whoever writes first in one schedule must do the same in other.
+		-> There must be write to read dependency in both schedules, i.e., one transaction should read from the written value of other transaction within a schedule.

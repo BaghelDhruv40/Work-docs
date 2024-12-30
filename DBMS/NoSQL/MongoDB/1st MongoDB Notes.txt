@@ -1,0 +1,49 @@
+-> A DBMS is a software to manage database. It can be either installed in a computer or in a server. Most DBMS are serverbased as they are for managing huge databases.
+
+-> MongoDB is a company (just like facebook app and the company) that offers much more than just mongoDB. Below is a list.
+
+	-> Community/Enterprise : MongoDB.
+
+	-> Atlas : A cloud based service.
+
+	-> Mobile : A dedicated app for mobiles only.
+
+	-> Compass : A GUI.
+
+	-> Robomongo or Robo 3T : A GUI.
+
+-> MongoDB is also a server based DBMS.
+
+-> It accepts JSON objects but internally converts them into BSON (Binary JSON which is fast).
+
+-> It is not like SQL where we have to first create the structure (Schema) i.e., Columns and strictly follow that while inserting the data. It is pretty flexible in terms of Schema as we can skip certain column names while inserting the data. 
+
+-> The following are the stages of fetching info from mongoDB server.
+
+	1. The file (any kind of file) stored in the server is preprocessed into mongoDB understandable form by an engine (default engine is "wiredtiger storage engine"). This engine is changable.
+
+	2. Next, it goes to the application which connects to the mongoDB server. This application can be mongoDB shell or a supportable programming language or node js. In case of node js, we use mongoose, which is a framework that handles mongoDb API's easily.
+
+	3. The file is displayed to the client.
+
+-> MongoDB stores databases, where a database is a collection of collections and each collection is an object of objects. Feel this with the analogy that collections are tables in MySQL.
+
+-> Following are the commands of mongoDB:
+
+	-> show dbs : Show the databases.
+	
+	-> use databasename : Used to declare our newdatabase or enter into pre-exist database. This command will not create our new database unless we insert a collection (equvalently table) in it. The syntax will be db.collectionname.crudoperation (where crudoperation must be substitued by any crud operation). Below are the crud operations.
+
+	-> insertOne( object ) : insert the given object in the collection.
+
+	-> insertMany( object1, object2, ... ) : insert multiple objects.
+
+	-> findOne(conditions) : return the first object that obey the conditions.
+
+	-> find(conditions) : return all objects in the collection.
+
+	-> updateOne( conditions, object) : updates given object based on criteria.
+
+	-> updateMany( conditions, objects) : updates given objects.
+
+-> Mocha is a testing framework based on node js .

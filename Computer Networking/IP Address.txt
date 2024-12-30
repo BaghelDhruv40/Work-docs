@@ -1,0 +1,79 @@
+-> In order to reach a service of some server present in some other network(i.e., in some other country), our device must follow atleast 3 steps:
+
+	-> Reach the network of the server.
+	-> Reach the server from its network
+	-> Reach the service (process) on the server.
+
+Note: the very first step is actually reaching the DNS by our system to convert domain name into IP Address. Then this is cached in our system.
+
+-> To locate the server and the process, we require IP address and port number.
+
+-> IP Address consist of two parts, first is Network ID and second is Host ID. Easily understandable that, NID is used to reach to the network an HID to the host.
+
+NETWORK NUMBER (Sometimes called Network ID)
+--------------------------------------------------------------------
+
+-> This NID is not what we talked about in IP Address.
+
+-> It is just a number used to represent a network.
+
+-> NID consists of two parts, namely, class and HID.
+	Example: 11.0.0.0 . Here, 11 is class A and rest is NID.
+
+Note: i) The example used above is special. An address is represented using 32 bits in which 8 bits are for NID and 24bits are for HID. Now, why above example is special is that "0.0.0" HID is always reserved for the very first host of the network (that means it is the host that creates its own network by being a Network service provider).
+
+	ii) All zeros in HID of NID and all ones in HID of NID are reserved and can't be assigned to any node of the network.
+
+	iii) The number of nodes we can have with unique addresses are 2^n -2 where n is number of bits used to denote NID.
+
+
+
+CASTING
+--------------
+
+-> The process of sending data from one host to other is called casting.
+-> It is of two types, namely, Unicasting and Broadcasting.
+
+	UNICAST
+	--------------
+
+		-> To send a packet from one host to another, we put data, Source's address and Destination's address in the packet in this order.
+
+	BROADCAST
+	-----------------
+
+		-> It is of two types namely, Limited and Directed.
+		-> Suppose a host in some network wants to send packets to all nodes either in same network or different, then it would require 2^24 = 16 million packets. This will definitely hurt the host. To achieve such task, we do following broadcating.
+
+		LIMITED BC
+
+			-> It is used when a host want to send packets to all nodes of the same network.
+
+			-> In this, the packet contains data, source id and then 255.255.255.255 as a destination id.This will mean that host want to send the packet to all nodes in the network.
+
+		DIRECTED BC
+
+			-> Used when a host from some netwrk wants to send packets to all nodes of different network.
+
+			-> Nearly same mechanism is used here. The packet contains data then source id and then x.255.255.255 as a destination id. Here x is actually a number denoting class type.
+
+			Example: A host 11.1.2.3 wants to send packets to nodes of the network 20.0.0.0 then DID will be 20.255.255.255
+
+
+SUBNETTING
+-------------------
+
+-> Dividing a big network into smaller network to easily handle the network and security purposes.
+
+-> To divide the big network into two parts, we use leftmost 1 bit of the HID part of the network number. By this we mean that, if HID is represented by 8 bits and hence 256 addresses out of which only 254 can be hosts, 0-127 addresses comes into one subnet and 128-255 comes into other subnet.
+
+-> Here the first address of each subnet is the reserved address to represent the subnet and the last address of each subnet is the DBA.
+
+-> A question arises due to the following confusion. The 1st id of the first subnet is the id for the NSP also and the last id of the last subnet is the DBA for the entire network also. So how when sending packets, we determine that we want to send the packet to the NSP or subnet and when we want to broadcast, how do we know that broadcast will be in last subnet only or the entire network?
+
+-> The answer of the above question depends on the perspective of the sender. If a outside router is trying to send the packet to the router(NSP), it will use the very first id and same for broadcast puspose. But if a host from inside the big network wants to send the packet, the NSP address will actually be seen as NSp of the 1st subnet and last id of this subnet as its LBA and so on.
+
+
+VARIABLE SUBNET MASKING
+----------------------------------------
+

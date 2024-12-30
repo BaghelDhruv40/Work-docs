@@ -1,0 +1,22 @@
+Idempotent law: a+a+a+...+ n times = a and a.a.a.... n times = a.
+
+Complement law: a + a' = 1 and a.a' = 0
+
+Distributive law: a+(b.c) = (a+b).(a+c) and a.(b+c) = a.b + a.c
+
+Absorption Law: a + a.b = a = a.(a+b)
+
+
+
+
+
+My Observations
+----------------------
+
+-> If an expression contains only two variables, it is obvious that they are mutually exclusive. Hence their intersection should always be 0. Also, the complement of one var will be equal to the other.
+
+	Ex: Given, A + (AB). This will simply be equal to A.
+
+		Given, (A+AB).(A+A'B).(A+A'). So RHS will be A.(A+B) = A.
+
+-> In case of more than two variables, absorption and idempotent laws are most useful.

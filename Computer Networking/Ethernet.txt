@@ -1,0 +1,32 @@
+-> One of the LAN Technology. Used popularly in 1980s.
+
+-> Standard Ethernet was proposed by IEEE 802.3
+
+-> Topology used was Bus. Now switch is used.
+
+-> Acces control method used is CSMA/CD.
+
+-> No acknowledgement is used.
+
+-> Data rate was 10Mbps initially. Then we got 100Mbps (called fast ethernet) and then 1Gbps (called Gigabit Ethernet).
+
+-> Encoding technique used is Manchester.
+
+-> Operates at Data link layer.
+
+ETHERNET FRAME FORMAT
+--------------------------------------
+Below is the description and correct sequence of components of the frame:
+
+	-> Preamble: A 7 Bytes long bit stream of 101010....
+
+		-> This is added by Physical Layer.
+
+		-> The reason it is so long is that it was assumed that it would not match with any data.
+
+	-> SFD: A 1 byte long bit stream 10101011. It is also added by Physical Layer.
+
+
+
+
+

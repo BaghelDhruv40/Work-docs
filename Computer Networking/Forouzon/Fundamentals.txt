@@ -1,0 +1,24 @@
+EFFECTIVENESS OF DATA COMMUNICATION
+--------------------------------------------------------------
+
+-> It depends upon four factors:
+
+	-> Delivery: The system must deliver data to the correct destination. Data must be received by the intended device or user and only by that device or user.
+
+	-> Accuracy:  The system must deliver the data accurately. Data that have been altered in transmission and left uncorrected are unusable.
+
+	-> Timeliness: The systemmust deliver datain a timely manner. Datadelivered late are useless. In the case of video and audio, timely delivery means delivering data as they are produced, in the same order that they are produced, and without significant delay. This kind ofdelivery is called real-time transmission.
+
+	-> Jitter: Jitter refers to the variation in the packet arrival time. It is the uneven delay in the delivery ofaudio or video packets. For example, let us assume that video packets
+ are sent every 3D ms. Ifsome ofthe packets arrive with 3D-ms delay and others with 4D-ms delay, an uneven quality in the video is the result.
+
+
+NOTE: There are five must components for communication. They are Message, Sender, Receiver, Medium, Protocol.
+
+
+PROTOCOLS AND STANDARDS
+-----------------------------------------
+
+	-> Protocol: Protocol means rules.
+
+	-> Standard: Standard means "agreed upon" rules.

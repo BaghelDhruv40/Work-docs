@@ -1,0 +1,45 @@
+STRATEGIES FOR HANDLING DEADLOCK
+--------------------------------------------------------
+
+-> Deadlock Ignorance: Ignoring deadlock scenario coz of its rarity of occurrence in real life.
+
+-> Deadlock Prevention: 
+
+-> Deadlock Avoidance: 
+
+> Deadlock detection and recovery
+
+
+DEADLOCK PREVENTION
+----------------------------------
+
+	Condition						Approach
+
+->	Mutual Exclusion				Spool Everything
+
+-> 	Hold and wait					Request all resources initially
+
+-> 	No preemption					Take Resources away
+
+-> 	Circular wait					Order resources numerically
+
+
+DEADLOCK DETECTION
+--------------------------------
+
+-> Banker's algorithm in case of muti instance resuources.
+
+
+DEADLOCK RECOVERY
+----------------------------
+
+-> RESOURCES
+
+	-> preempt
+	-> Rollback
+
+-> PROCESSES
+
+	-> Kill
+	-> Kill all
+

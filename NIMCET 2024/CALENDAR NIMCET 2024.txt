@@ -1,0 +1,36 @@
+							CALENDAR NIMCET 2024
+
+TYPES OF YEARS
+1. Leap Year: 366 Days = 52 Weeks + 2 Extra days
+2. Normal Year: 365 Days = 52 Weeks + 1 Extra day.
+
+
+POINTS TO LEARN
+1. 100 Years -> 5 Odd days : Any 100 years can be divided by 4 to find the number of leap years but in that the years having 00 in the end will only be leap year if they are divisibe by 400. So, In 100 years, there are only two possibilities, 24 and 25 leap years.
+Out of 100 years, say 24 are leap years and 76 are normal. So odd days will be given by 24*2 + 76*1 =124 = 5 odd days.
+
+2. 200 Years -> 3 odd days: Same Logic.
+
+3. 300 Years -> 1 Odd day.
+4. 400/800/1200/1600 and so on Years -> No Odd days.
+
+REPETION OF CALENDAR
+1. Leap Year Calendars are repeated in every 28 years.
+2. Normal Year Calendars are repeated in every 6 or 11 years.
+
+
+ALGORITHM TO FIND THE DAY ON THE GIVEN COMPLETE DATE
+Step 1: Assume the initial year as 1 AD.
+Step 2: Subtract 1 from the given year and then count number of leap years.
+Step 3: Find number of odd days in that.
+Step 4: Come to given year and calculate number of odd days in each month till given month (exclude given month).
+Step 5: Calculate Odd days by given date.
+Step 6: Add all odd days and then find final odd days number.
+
+
+ALGORITHM TO FIND THE DAY ON THE GIVEN DATE WHEN RELATIVE TO ANOTHER GIVEN DATE
+Step 1: Assume the 2nd date given is true.
+Step 2: Find number of odd days in that year.
+Step 3: Find number of odd days in following years till given year.
+Step 4: Find the overall odd days.
+Step 5: Add these odd days in the given date day.

@@ -1,0 +1,14 @@
+QnA in my find for Java
+
+Q1. There are many classes in java as it's a OOP lang. What should be the name of the java file whether I've single or multiple classes ?
+
+A1. Even though java file can have multiple classes in it, there's no compulsion on the matching of file name and class name. But, we can make only a single class "public"; The name of the file should match this class name. Remember, Java is a case sensitive lang.
+
+
+Q2. Why we need classes?
+
+A2. Suppose we want to store multiple properties and behaviour of an entity. Obviously we can do this with creating multiple variables and functions. Now the problem arise that these variables may not be same in data type and how will we convey that they belong to same entity. This will be tedious but possible task. The concept of classes and objects is for this case. An object is a resemblance of entities having properties and behaviour. So, object will be a structure declaring and/or defining properties and behaviour of an entity. Objects solves one of our problem. It is a collection of variables and methods and so we got our own way of storing data. But one problem still remain is creating all these variables and methods again and again for each entity. 
+
+Where do classes lies here? We got entities. But every entity can be thought of a member of some classification. Classes helps in organizing objects which feels similar in their structure. As an examples, a boy and a girl will have something common. In a broader view, both comes in the category of humans. But boy and girl are also a classification. we have can entities of boys and girls. These categories are what we call classes intuitively. So classes helps in organising different objects together. But in programming, definition of classes is used to solve our last remaining problem too. Classes not only helps in referring that the object belongs to them but also used to structure the properties and behviour of objects in them. This is done because, we will define class only once. Ans so using their definition to declare and defining the structure of objects also helps reducing the work of again and again doing same thing for each object. So whenever we create an object in programming, internally the structure is assigned to it.
+
+All of the things discussed in this answer is a concept named encapsulation. Encapsulation is enclosing or organising things together which share something common.
