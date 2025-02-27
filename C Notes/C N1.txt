@@ -1,0 +1,98 @@
+-> C language obeys procedural programming paradigm.
+
+-> main() function is the starting point of the execution of program.
+
+-> Every library (i.e. header files including the standard one) has to be included (imported) first.
+
+-> The syntax for including header files is #include<header_filename.h>
+
+-> All lines that start with # are processed by a preprocessor which is a program invoked by the compiler. # is called a "preprocessor directive" here.
+
+-> {} are used for the code to be written inside the function (no indentation required). Basically creates a block.
+
+-> semicolon is used at the end of a statement of a code.
+
+-> printf() is a builtin function used to print string results only and it is defined in stdio.h headerfile.
+
+-> To print different results like numbers, we specify the type of result to be printed in the printf() using "%d".
+
+	-> "%d" : For integers.
+	-> "%u" : For unsigned integers.
+	-> "%ld" : For long (or long int).
+	-> "%lu" : For long unsigned.
+	-> "%c" : For characters.
+	-> "%p" : For addresses.
+	-> "%s" : For strings.
+	
+
+-> clrscr() function is used to clear the screen having previous outputs.
+
+-> getch() function (means get character) is used to hold the output screen until a key is pressed.
+
+-> getch() belongs to conio.h header file. So we have to include this.
+
+-> & just before a reference variable acts as an operator (called "address of this") which returns address of the reference variable.
+
+-> "pointers" are special variable declared using *variablename. They are used to store addresses of other reference variables and fetch the value of them. In same way, we can make pointer to pointers using **variablename.
+
+-> Pointers need datatype (even though they stores addresses, generally in hexadecimal) while declaring because when they are dereferenced, the compiler know how to manipulate the stored value. 
+
+-> Function call by value means the formal parameter of the function is actually a new reference variable which assigns to value of the argument we provide. That means any change in the formal paramter by the function doesn't change the argument.
+
+-> Function call by reference means the formal parameter (datatype* variablename) of the function is actually a pointer to the argument (&variablename) we provide. That means any change in this pointer value affects the argument value. Note here that we pass address of a variable as an argument when function call by reference.
+
+-> The name of an array is a pointer of the zeroth index.
+
+-> An array of characters is different from string. A string is an array of characters with '\0' as the last element. We declare a string the same way as for an array.
+
+-> Another way of defining a string is to just write the word or para in double quotes. Null character will be appended internally.
+
+-> for printing string, we give the format specifier and just the name of string variable not &variablename. This is because the name of an array is itself a pointer.
+
+-> Since strings are arrays, they can also be defined using pointer notation (i.e., char *stringname). The benefit of using this notation is that it makes the string mutable. But, array notation while defining string doesn't make it mutable.
+
+-> string.h is the headerfile for string operations. some of the useful functions are:
+
+	-> strlen(stringname) : returns the length of string.
+
+	-> strcpy(newstringname, oldstringname) : assigns the value of oldstring to newstring and returns it.
+
+	-> strcat(firststringname, secstringname) : concatenate the two strings.
+
+	-> strcmp(firststringname, secstringname) : compares the two strings. returns 0 if same, returns positive value if first> second and returns negative value if first< second.
+
+
+-> scanf() can't input multiword strings (i.e., after the first space, it stops). To overcome this problem, we can use fgets(variablename,length,headerfile) to suer input and puts(variablename) to print it.
+
+-> We can also use scanf("%[^\n]%*c",variablename). But it works only when there's no string or character being inputed. In that case, use scanf("\n") before it.
+
+-> typedef keyword is used to alias datatypes (usually helpful for structure names). Syntax: typedef struct name{} aliasname;
+
+-> To work with files, we need to create the pointer for FILE structure (i.e., FILE *pointername;). Then we can use the following functions:
+
+	-> fopen("filename", "mode") : Used to open the required file with mode ("r" for read, "w" for write) given. The syntax will be : pointername = fopen("filename", "mode");
+
+	-> fclose(pointername) : To close the file.
+
+	-> fscanf(pointername, format specifier, &variable) : Used to read a file where "variable" is a variable first declared.
+
+	-> fprintf(pointername, format specifier, variable): used to write in file where variable is declared already and defined as the charcter we want to write.
+
+	-> fgetc(pointername) : returns a character in file. Hence this function can be assigned to some variable and print it.
+
+	> fputc(variable, pointername) : Takes the character to be written through variable.
+
+-> EOF is the end character of the file.
+
+
+DYNAMIC MEMEORY ALLOCATION
+
+-> Dynamic memory allocation is a way to change the memory requirements in runtime.
+
+-> We have four functions for it, namely, malloc(), calloc(), free(), realloc(). <stdlib.h> have to be included first.
+
+	-> malloc() : malloc(number of bytes require) is a function that accepts number of bytes required and returns a pointer to that location of type void.
+
+	-> calloc() : calloc(number of locations, per location size) is same function as 	malloc() but it allocates memory in continuous fashion (array) with all values as zeros.
+
+	-> free() : free(pointername) is the function to free the dynamically memory allocated through malloc() or calloc().

@@ -1,0 +1,24 @@
+JavaScript is the heart of websites. It manages the http request and responses and is the soul of interativeness. Focusing here about the interativeness part only, the UI or frontend has become more intimate with JS. It is obvious that developers make a library specialized for this task. React if one such library but emerged due to a major reason. The UI fault story in the facebook page is all been taught when comes to introduction of React.
+
+JS is the base, so nothing magical is happening in React. But, how things are implemented definitely amuses at the first sight.
+
+React has many concepts and one of them is of components. Every html element and elements made out of combination of them is a component. So, a component can be as small as a button and as big as a whole page. Components are just javascript functions and there are rules to identify a function is a component.
+Then comes the manipulation of these components. Here comes the major issue that led to development of React and so React has its own way of handling it. Hence, attempting to manipulate components through user interactivity using vanilla js may not work. For all such purposes, we have the concept of "hooks".
+
+Hooks are predefined functions for different purposes. We have useState() to intitialise and update a variable, useContext() for state propagation to one component from another effectively and efficiently, and manymore.
+
+Then comes the most famous use of React in building single page sites. This is not the domain of core React. It is achieved by another module "react-router-dom".
+
+-> React is a js library. The main purpose of this library was to handle and manage UI manipulation as the user interacts with the page.
+
+-> There's a basic project structure:
+
+	-> node_modules: a folder containing all required files for node.
+
+	-> public: a folder that contains every file that is meant for public including main file.
+
+	-> src: a folder that contains the actual code files of project.
+
+	-> package.json: it is a configuration file.
+
+	-> build: a folder created when we run build script. This is the folder which is shared not the above one in production.

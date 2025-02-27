@@ -1,0 +1,13 @@
+-> We have a __str__ method  that is used to return a string. For example, when we print any non reserved keyword, python tries to retun it in a string format. But for instances, it returns the memory address. A class can implement this __str__ function to override the default behaviour of this function when python implicitly calls it.
+
+	Ex: class Person:
+		def __init__(self,name,age,height):
+			self.name=name
+			self.height=height
+			self.age=age
+
+		def __str__(self):
+			return "fPerson({self.name},{self.age},{self.height})"
+
+
+		print(Person('Dhruv', 21, 5.4))	#output: Person(Dhruv,21,5.4)

@@ -1,0 +1,26 @@
+Hibernate is an  ORM (Object-Relational-Model) implementation. An ORM is a concept of converting Object into relations. In this way, we don't need sql. The ORM will provide us its own tools to do the same and rest of the stuff will be managed by it.
+
+
+HIBERNATE TUTORIAL
+--------------------------------
+-> Create a Maven Project through eclipse.
+	-> Catalog: Internal
+	-> Filter: quickstart
+	-> Group Id: This can be set same as the package name.
+	-> Artifact Id: This is the Project name.
+
+-> The above steps will create a project directory and structure. Inside the src/main directory will be the package we created. this package will have the main java file (App.java). So, in this package, we can create our files.
+
+-> Let's say we made a class in a separate file and in the App.java, we create the object of it and set the properties and all. Now to save this object in our database, we need to do following steps within App.java:
+
+	-> we call the save() method with our object as its parameter. But, what is save() method? and to whom it belongs? The save() method belongs to hibernate package which we will have to add as dependency.
+
+	-> Once done adding dependency, we need to import the package or its items.
+
+	-> The save() is a method of interface "Session". Being, an interface, we need a class that implements it to create its object.
+
+	-> There's no class that implements Session, but, what we actually do is call a function "openSession()". But now whom this function belongs to?
+
+	-> This function belongs to another Interface "SessionFactory". Being an interface, we have to create its object. Again, there's no direct class that implements SessionFactory.
+
+	-> We finally have a class "Configuration" at the top. Creating the object of it, we can use that to call a function "buildSessionFactory()" and assign the reference of SessionFactory to it.

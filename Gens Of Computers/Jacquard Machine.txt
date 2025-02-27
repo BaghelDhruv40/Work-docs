@@ -1,0 +1,7 @@
+Jacquard Machine
+
+1. It was the first programmed analytical machine that was used for textiles.
+
+2. It was a device attatched with a loom.
+
+3. The term "Jacquard" is not specific or limited to any particular loom, but rather refers to the added control mechanism that automates the patterning.

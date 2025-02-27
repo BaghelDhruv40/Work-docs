@@ -1,0 +1,5 @@
+-> Docker is a kind of Virtual Machine but not exactly. The points that differ it are:
+
+	-> Docker only virtualises the application layer (layer above kernel where app resides). While, VM virtualises both OS kernel and app layer. That means VM doesn't care about on which machine it is installed as it has its own kernel, but, docker relies on system's kernel.
+
+	-> Docker was made to run on linux only. They can use only linux kernel. But, we need to download docker desktop that acts as a thin hypervisor.

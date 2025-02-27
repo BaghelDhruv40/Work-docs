@@ -1,0 +1,1 @@
+Libraries: ShadCn, Malentine, Tailwindcss, Bootstrap, Material UI

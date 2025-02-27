@@ -1,0 +1,11 @@
+-> Typescript can be more beneficial when:
+
+	-> we have parametric functions.
+	-> we have to return something from function.
+
+-> Primitive datatypes are string, number, boolean, void, never.
+
+-> TS doesn't force explicit annotation every place. For cases:
+
+	-> If we are assigning a literal to the variable.
+	-> The parameter of map() in arrays.

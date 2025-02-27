@@ -1,0 +1,137 @@
+-> CSS stands for Cascade Style Sheet.
+
+-> What happens if a browser encounters a CSS selector or declaration it doesn't recognize? The answer is that it does nothing, and just moves on to the next bit of CSS!
+
+-> CSS can be used in html doc in 3 ways, namely "inline method", "Style tag" and "External CSS".
+
+-> Inline method is that in which we use "style" attribute in html tags.
+
+-> Style Tag is a tag in html and it is written in head.
+
+-> External CSS means we make an new file with ".css" extension and then link it with our html document in the head tag.
+
+-> To link, we use "link tag". The syntax is < link rel="stylesheet" href="filename.css" >
+
+-> Style tag syntax is: 
+
+	<style>
+			tagname{
+					property : value ;
+			}		
+	</style>
+
+
+-> Below are some properties
+
+	-> color (for foreground i.e elements or say content) : They are used to change the color of any kind of texts.
+	-> height, width, border, border-radius (for rounded corners), padding, margin.
+	-> text alignment ( right (or end), left (or start), centre).
+	-> text tranform ( capitalize, uppercase, lowercase, none, etc.).
+	-> text decoration ( underline, overline, line-through, none, etc.).
+	-> font-weight (bold, bolder, light, lighter, etc.).
+	-> font-family, font-size. line-height (for spacing b/w text lines).
+Note: properties set on parent tags may implicitly affect their child tags.
+
+-> Size units are in pixels (96px = 1in).
+
+-> There are mainly two families of font, namely, Generic font families and Specific font families.
+
+-> Below are shorthands for some properties
+
+	-> padding: top, right, bottom, left;
+	-> margin: top, right, bottom, left;
+	-> border: border width, style, color;
+
+-> There are following display properties:
+
+	-> inline : Takes only the space required for element (no margin and padding).
+
+	-> block : Takes full width space.
+
+	-> inline-block : Similiar to inline but padding and margin can be adjusted.
+
+	-> none : To remove element from document flow.
+
+-> Below are the flexbox properties:
+
+	-> justify-content: alignment of html elements along the main axis.
+	-> align-items: alignment of elements along cross axis.
+	-> align-content: used to manipulate space around and between the elements along cross axis.
+	-> align self: manipulate alignment of the element on which it is applied.
+
+-> Media Queries: Helps to make webpage responsive. The syntax to use it:
+ 
+	@media(property : value ) { Html element { property : value; } }
+
+example1: @media ( width : 600px ) { div { background-color : green } }. This will change the color of the div background when width of the screen is exact 600px.
+
+example2: @media ( min-width : 200px ) and ( max-width : 300px ) { div { background-color : blue } }. This will keep the div color blue when the screen width is in the given range.
+
+-> Pseudoclass : It is a way to define the state of a html element. Changing state simply means changing properties or function of html element. For example: we can make a div element to change its color when we hover over it as:
+
+	div : hover { background-color : red ; color : white }
+
+TRANSITIONS : Transitions are the different ways that takes place in changing the state of an element. They are:
+
+	-> transition-duration : time (in s, ms etc.). Denotes the time period to complete the transition
+
+	-> transition-timing-function : value . These are some time functions like cubic, linear, etc. Denotes how the transition should be through out the duration.
+
+	-> transition-delay: time. Denotes the time period after which the transition should start once an element is interacted.
+
+	Shorthand notation for transition is : transition: property duration time-function delay;
+
+CSS TRANSFORM : One step above transitions. They are used to make dimensional animations. They are:
+
+	Rotate:
+		-> rotate : deg. Used to rotate the element(content inclusive) by required degrees.
+		-> rotate: x deg. To rotate about x axis.
+		-> rotate: y deg.
+		-> rotate: z deg. The screen is in X-Y plane.
+	Scale:
+		-> transform : scale(x, y, z). Linearly changes the dimension of element.
+		-> transform : scaleX(x). Only along x axis.
+
+	Translate:
+		-> transform : translate(x (in px), y, z). Shifts the element this much pixels.
+
+ANIMATION: They are like transitions. We first make a key frame which declares our initial and final state for an element.
+
+	-> @keyframe anyName { from { property : value ; } to { property : value ; } }. The "anyName" in the syntax is basically the name of our animation given by us.
+
+	-> Then, to apply animations, we use animation properties to the element just like transition properties. The properties are: 
+
+		-> Animation-name: Same name used in @keyframe.
+		-> Animation-duration: Time period of animation.
+		-> Animation-time-function: Same as transition functions.
+		-> Animation-delay: Same as transition delay.
+		-> Animation-iteration-count: Number of times the animation has to repeat. We can write "infinite" here.
+		-> Animation-direction:
+
+		Shorthand for animation is: animation: animation-name duration time-function delay iteration-count direction;
+
+	-> Difference between transition and animations are that transitions are used to represent interactivity on the occurence of some event, whereas, animation are just for representational purpose.
+
+
+CSS BASIC BOX MODEL
+--------------------------------
+-> Every element is represented as a rectangle i,e., when laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard CSS basic box model. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.
+-> Every element has four parts (or area) : content area, padding area, border area, and margin area. These areas are bounded by their respective edges.
+
+	Content Area
+	-----------------
+	-> contains the "real" content of the element, such as text, an image, or a video player. Its dimensions are the content width (or content-box width) and the content height (or content-box height). It often has a background color or background image.
+
+	-> If the box-sizing property is set to content-box (default) and if the element is a block element, the content area's size can be explicitly defined with the width, min-width, max-width, height, min-height, and max-height properties.
+
+
+CSS DATATYPES
+----------------------
+-> <data-ident> : denotes an arbitrary string used as an identifier.
+
+	-> Syntax: The syntax of <dashed-ident> is similar to CSS identifiers (such as property names), except that it is case-sensitive. It starts with two dashes, followed by the user-defined identifier.
+
+		
+
+
+

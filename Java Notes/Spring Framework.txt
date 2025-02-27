@@ -1,0 +1,36 @@
+-> Spring is a framework for the backend programming through java.
+
+-> Spring handles object creating and their management for us.
+
+-> See, a full stack structure is like, we have controllers (interactive part or say frontend), services (backend part) and we have database.
+So, to use services, the controllers require the objects of services, and same for the services to use database, they require objects of them. In this way, we may have multiple objects to take care of like their creation, deletion etc. Spring helps us in that.
+
+-> We have two concepts namely, IOC and DI. IOC stands for Inversion Of Control and DI stands for Dependency Injection.
+
+-> So, IOC is a concept that we are handing over the control to someone and that someone here is Spring.
+
+-> How Spring helps us is by providing us DI ways. DI is basically the implementation of IOC.
+
+-> Spring provides three ways of DI:
+
+	-> Constructor Injection: What we do here is that, we just declare a service object first in the controller class and creates the parameterized constructor of controller that accepts the reference of a service object. Then we just assign this parametered reference to the reference of the object we created in this class.
+
+	-> Setter Injecttion: What we do here is that, we make a function in controller class and do the same we do in Constructor Injection.
+
+	-> Field Injection: We just write an annotation @Autowired just above where we declared the reference of the service object in controller class.
+
+-> Spring boot is a part of spring framework which can be assumed to lying above spring and so providing an upper layer for specific task. Basically, spring boot helps a programmer to not worry about server configuration. Actually, to use spring, we need a server (like tomcat) and configure it. That process takes a long time. That's why spring boot reduce that work for small or experimental purposes so that we can learn faster.
+
+-> We can visualize spring boot having a IOC container in JVM and in that container it manages the objects we require.
+
+-> The obvious way of using the service will be creating the object of it in controller and calling the functions. But, we want spring boot to take care of it. So, what we assume here is that spring boot might be having the object in the container, we just need the reference of the container to get the object required.
+
+-> Reference of the container? Yes, the container is an object of the class ApplicationContext. That means, we can get the reference of the container by creating the object of ApplicationContext? But that means we are creating the object ourself which we wanted to get rid off. Actually, not! Spring boot has a way to give us this object without us creating it.
+
+-> The SpringApplication.run(Your_Application_Name) returns an object of ApplicationContext. So, we can just assign this to the right hand side of the reference for Container. And we are good to go!
+
+-> Now, we can assign the reference of the service object to context.getBean(ServiceName.class); Note here that "context" is just the reference of the object of the container.
+
+-> Now if we call any method of service, we get an error. This error says that service object is not found. Does that means the object is not in the container? Yes, and this is because, we have to specify which objects we want spring to handle otherwise, spring would handle all of them.
+
+-> We can specify that by an annotation, @Component just above our definition of service class in its file.

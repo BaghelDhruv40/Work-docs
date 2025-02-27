@@ -1,0 +1,7 @@
+Suppose we need to find the sub array with the max Sum. One approach is that we choose an index as the starting index and find the prefix sum of all the sub arrays possible. This approach will take O(n^2). So, can we find a better approach?
+
+Let's analyse, we are at the starting index. The next element may either decrease the sum or increase it. If it increases, that must be a positive number. Further, adding negative numbers continuously have no benefit. Why? We may think that what if after some negative values, we may get better positive values and so the sum will increase! But note that, a sub array having those negative values and positive values will sum up to less than that of only positive values!
+
+That means, if our Sum is negative we should change our starting index and look for the index which will result in positive sum! Whenever we will encounter negative Sum, we will reset it to zero and move the index one step forward. Further we will also store the max value of the Sum.
+
+This approach is known as Kadane's Approach! and is of O(n). 

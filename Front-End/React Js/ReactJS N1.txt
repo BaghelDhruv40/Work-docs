@@ -1,0 +1,17 @@
+ROUTE
+----------
+-> It helps in rendering the components without page loading.
+-> We replace "a" and "href" with "Link" and "to" in anchor tag. But befor it.
+	-> We need to download a package "react-router-dom" first. To do so, we use npm install react-router-dom.
+	-> Then we import: import { browserRouter as Router, Switch, Route, Link} from react-router-dom;
+	-> Then we use
+
+UseState
+------------
+-> To change the value of a variable (particularly DOM) dynamically (say on an event) by vanilla JS, we just used an event handler. But, React doesn't undertand this. Infact, it restrict the changes. React takes the control of DOM manipulation and so handles it in its own style. It uses the "usestate" for the same.
+
+	-> First, we import usestate as follows: import { useState } from 'react';
+	-> Then, we define our variable to be changed as: let [variable, setprop] = useState( initial val );
+	-> Then we use handle the event and call setprop( final val ) in it. This will change the value of variable.
+
+-> useState() is a hook. It renders the changes done in UI.
