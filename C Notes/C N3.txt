@@ -1,0 +1,42 @@
+VARIABLES
+----------------
+
+-> We have two concepts related to variables. One is declaring a variable and another is defining it.
+
+	DECLARING A VARIABLE
+	----------------------------------
+
+	-> This means allocating an address in stack memory to the variable.
+	-> No two variable declarations can have same variable name.
+	-> Every variable declaration (for primitive datatypes) allocates new address in stack memory.
+
+	DEFINING A VARIABLE
+	--------------------------------
+
+	-> This means assigning value to the declared value in the RHS of the equality.
+	-> Multiple definition is allowed for a variable.
+	-> Mutating the definition of a variable doesn't alters its address unless it has been assigned to another variable in the RHS of the equality. Simply, mutating the literals doesn't alter the address.
+
+-> To print the address of a primitive variable, we  use the "&" just before the variablename. This "&" therefore acts as a "value at" operator.
+
+	-> For example: int a = 10;
+				printf("%p", &a);
+-> If we want to print the value stored there, we use "*" just before "&variablename". This "*" therefore acts as a "dereferencing" or "value of" operator.
+
+	-> For example: printf("%d", *(&a)); //output: 10
+
+
+POINTERS
+-------------
+
+-> To store the address of a variable, we don't have any primitive datatype. What we have in C language is the concept of "pointers".
+
+-> A pointer is a special variable that can store the address of a declared variable. It is declared as usual but the variable name in LHS of equality starts with an asterisk.
+
+	-> For example: int a;
+				int *ptr = &a;
+				printf("%p", ptr); //output: the address of "a".
+				printf("%p", &ptr); //output: the address of ptr itself.
+				printf("%d", ptr); //output: the address of "a" as an integer.
+
+-> We can also directly assign a literal to the pointer variable. By doing so, this doesn't signify that the literal is stored by the pointer. Instead, this signifies that th literal is stored at the address the pointer has stored (or points to).

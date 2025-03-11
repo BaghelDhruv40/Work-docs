@@ -1,0 +1,2 @@
+-> In traditional web applications, the client used to send request to the server for some data and that data used to be sent in a html file. But, the actual cycle was like:
+The client made the request --> The server recieves the request and look for the file --> If not present, the server has to made that and for that it asks to an xml file which contains the reference of the function that will do the task and the mapping of the function with the path requested.

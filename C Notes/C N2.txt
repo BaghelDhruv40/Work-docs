@@ -1,0 +1,38 @@
+PROGRAM AND PROCESS
+---------------------------------
+
+-> A program (or software) is a completed piece of code for the desired task (or tasks). But besides just the code, the processor has to allocate some memory for the program and all the declarations and definitions in the program. This memory is mainly the RAM unless the program also has the task of storing info into the non-volatile memory. So, the picture of a program as just a piece of code for the processor is not enough. The processor requires the status of many more thing like memory, program counter etc. Hence, we need a way to make this picture for the processor that contains all these stuffs the processor must be aware of to run the program. This picture or abstraction is what we call "process".
+
+-> A process is an abstraction for a set of all the requirements the processor needs to run the program. Not knowing this abstraction in much depth, i've a fair summary of it. A process is just a block of memory and it mainly consist of three parts. 
+
+	-> One part is the memory allocated to the program (the code itself). 
+
+	-> The second part is another memory portion what we call "Stack memory". 
+
+		-> This memory is responsible to carry the content of variables and functions. 
+
+		-> It is a static memory and so its size is fixed within its life cycle. 
+
+		-> The memory is allocated by the operating system and so varies OS to OS and CA to CA.
+
+	-> The third part is the rest of the RAM space available and is called "Heap memory".
+
+		-> This memory is responsible to carry the dynamically allocated memory (when size of memory needed to allocate is given at the runtime) for objects.
+
+VARIABLES AND REFERENCES
+-----------------------------------------
+
+-> Interesting thing is in the realization that variables, on printing, gives the value (and not the address) in case of primitive datatypes. This is different from the case when a variable is a reference of an object. In that case, printing the variable will give the address where it points to. First i thought that in case of primitive datatypes, there is an extra step being performed to get its value but this is not what actually happens. The two behaviours are because primitive variables and object variables are different entities. In case of primitive, variables directly hold the literals whereas in non-primitive they hold the address.
+
+-> So mutating a primitve variable only changes the value it hold and not the address.
+
+-> The mechanism behind this is that, declaring a variable allocates an address in the stack memory. Defining the variable just assigns the literal to it (for primitve).
+
+-> We can't declare same variable more than once but we can define them multiple times and every definition points to same location until we assign a literal and not another variable.
+Assigning a variable to another variable changes the address of the whichever was the last defined.
+
+-> In case of non-primitve variables (or just say references), No matter how many declarations of the object, if the RHS is same (either same literal of another reference pointing to same literal), they all refer to same address. Further, assigning different literals to same reference results into mutation of the address (because a new object is created everytime). These behaviour is just opposite to primitive variables.
+
+
+
+

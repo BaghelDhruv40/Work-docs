@@ -1,0 +1,6 @@
+ASYNCHRONOUS PROGRAMMING
+---------------------------------------------
+
+-> The execution of a process is done sequentially as governed by the stack execution model. Asynchronous programming is a way to bypass a line before its completion. Why to do such thing? A part of code may require large amount of time to be completed and so blocks the execution of the subsequent lines. Multithreading is yet another way to achieve this. The similarity between asynchronous and multithreading programming is that they are here to solve the same issue. But, the difference between them is how they are achieving this.
+
+-> Asynchronous

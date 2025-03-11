@@ -1,0 +1,69 @@
+PROCESS
+------------
+
+-> A process is an abstraction for the program and other things the process must need to execute the program in correct way.
+
+-> It can be understood as a datastructure that has several parts:
+
+	-> One part that stores the code of the program being executed.
+
+	-> One part is Stack memory.
+
+	-> One part is Heap memory (Remaining RAM).
+
+	-> Other opened files and further info.
+
+
+PROCESS CYCLE
+---------------------
+
+-> Process cycle is the complete cycle of a process which consists of all the possible stages a process can be in, at the time of its execution. They are:
+
+	-> New state: This state depicts the creation of the process.
+
+	-> Ready state: This state depicts that the process is in the ready queue (means about to run by the processor).
+
+	-> Running state: When the process is in the RAM and being executed and operated by the processor. That means, in this state, processor is interacting with the process.
+
+	-> Waiting state: This state depicts that the process is in RAM but not interacting with the processor. The processor is in idle state (or may be handling other stuffs). In this state, the process is at a point where it may be providing an interface to user for I/O.
+
+	-> Suspended waiting state: Another state just like waiting state but for the lower priority processes.
+
+	-> Suspend ready state: This state depicts that 
+
+
+SINGLE CORE
+-------------------
+
+-> Single core means there's ony one processor (CPU) to execute all the programs (better call processes) in the ready queue.
+
+-> The most basic way of handling the process in the ready queue is to complete them one by one.
+
+	-> What happens when a process is in waiting state?
+	Ans. Being a single core, the procssor can't perform anything outside of the instructions of the process in execution. But if the process reaches a point where it requires external intervention, the role of the processor ends there for the time being. The processor will be in idle state (a truly single core ). Now any external intervention will mean an interrupt for the processor to handle that task. So the processor, instead for the process in waiting state, handles all the external intervention. Once they are done, an interrupt may be triggered to signal the processor to continue the process in waiting state. Hence, a true single core can interact with single event only, otherwise idle.
+
+-> A truly single core is the most basic structue of computer. It can consist of many components, but the processor can't interact with them simultaneously. To interact with one, it must hault the other in execution (if possible). So a complex software like an operating system is not possible in single core unless we adopt some techniques.
+
+-> We can move on from the basic way of handling the processes in ready queue to advance one. We study them under the topic "Process Management".
+
+
+PROCESS MANAGEMENT - SINGLE CORE
+-------------------------------------------------------
+
+-> Processor is the fastest component of a computer system and being idle is our biggest loss in the completion of a task efficiently.
+
+-> This idle time is because of the basic way of process handling that the processes in the ready queue must be completed one by one only. Even if we can't remove this constraint, we can still introduce some algorithms to increase the efficiency.
+
+	-> We may schedule the processes in the ready queue based on some criteria. Based on them we have following algorithms:
+
+		-> FCFS: It stands for First Come First Serve. It means that the scheduling order will be on the basis of the arrival order of the processes in the ready queue.
+
+		-> SJF: It stands for Shortest Job First. It means that the scheduling order will be on the basis of the burst time order of the processes present in the ready queue at the moment. Smaller burst time will be given preference. The opposite of it can be LJF.
+
+		-> Priority Scheduling: It is based on some priority flags assigned at the New state of each process.
+
+-> If the constraint that the processes in the ready queue must be completed one by one only is removed, we may open the gates for many more algorithms to enhance the processor efficiency. Some of them are:
+
+	-> Round Robin: In this, the processor uniformly switch contexts randomly at fixed intervals to give every process in the ready queue a fair chance of being executed.
+
+	-> SRJF: It stands for Shortest Remaining Job First. The processor checks that whether the remaining burst time of the running process is greater than those in ready queue. If so, it switches the context.

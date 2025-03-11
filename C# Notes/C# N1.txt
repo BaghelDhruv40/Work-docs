@@ -1,0 +1,21 @@
+CONSOLE APPS
+---------------------
+-> Console apps are basically those apps that runs in console. 
+
+-> They are basically for learning purpose.
+
+-> To print the output, we use Console.Write() method.
+
+-> To print each output in new line, we use Console.WriteLine() method.
+
+-> What C# does is that it writes the output in console and close it after the completion of the task itself. And since this process is so fast, we can't even see the output. So, to stop the console from closing, we use Console.ReadLine() method.
+
+-> Actually, the Console.ReadLine() method is for taking input from the console.
+
+-> We have the concept of type casting and type conversion.
+
+	-> Type conversion: Implicit type promotion(can't perform demotion) by the compiler.
+	-> Type casting: Explict type demotion by the programmer. To achieve that we have two ways:
+
+		-> Just write the datatype in paranthesis after the equal sign in RHS.
+		-> Use the method Covert.ToInt32(), etc

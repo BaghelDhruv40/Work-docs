@@ -1,0 +1,25 @@
+-> Authentication and Authorization are two concepts used to verify the identity of a user to give it access to a protected location and using the resources there by first checking if they are eligible to do so respectively.
+
+AUTHENTICATION
+--------------------------
+
+-> Authentication is a practice to ask for the credentials from the user and verifying them so that they can enter into the restricted or protected route. There are few questions that may arise:
+
+	-> Do we have to authenticate only once? 
+	Ans. To answer this, we have to focus on how we route to different resource over web. If we know the URL to a resource, we can just type it in the search bar and get access to it. So, anyone can just type the url of the resources that present after the authentication step. This can potentially bypass the authentication step unless we check for every route request. Therefore, we need to keep checking for all the routes followed by authentication.
+
+	-> After the successful authentication, do we need to check any further?
+	Ans. After the successful authentication, the backend requires a way to know that the request of protected routes is done by an authenticated user. Otherwise, the user would need to keep verify him/her for each protected resource they request.
+
+	-> How to retain the authentication status of the user?
+	Ans. One way is to turn a flag on and send it in the request header. If so, the user would require to authenticate only once and remain authenticated for the whole session.
+What about multiple session? For that, 
+		-> The flag can be stored in the browser localstorage and will be deleted only if the user explictly log out. Or,
+		-> Instead of localstorage, the flag is stored in the backend database. When a user visit the site, the backend may ask them to enter their credentials one by one instead of all at ones, so that, the backend can check if the flag for the provided username or email is turned on, the password step can be bypassed. This could be the reason we used to be told to always logout (to turn the flag off).
+All these ways may be good but not secure as they relies on just the credentials of the user. Anyone with just the half knowledge of credentials can breach.
+
+	-> What are session tokens?
+	Ans. Session tokens are a way to solve the problem of retaining the status of the authenticated user. After the successful authentication, certain tokens can be generated which then can be verified by the backend. But, how are they different from authentication flag method? The tokens carry many info about the user and their verification is made much more secure by better algorithms. Further, the backend signs the tokens and any alterations besides those done by the backend itself leads to change of signature and so the backend identifies that the user is not authenticated one.
+
+	-> Are session tokens for a session only?
+	Ans. It depends. They can be for just a session or multiple session. In case of multiple session, the backend has to store the token for the user so that they are sent with the request and then get verified. This is done using session cookies.

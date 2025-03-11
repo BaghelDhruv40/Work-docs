@@ -1,0 +1,1 @@
+-> Express is a backend framework for NodeJS. This means, it provides a basic backend project structure with minimal required files to start with.

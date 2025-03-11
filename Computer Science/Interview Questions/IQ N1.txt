@@ -1,0 +1,7 @@
+INTERVIEW QUESTIONS
+-----------------------------------
+
+Q1. Why did you choose X if Y can also be used?
+Ans. The choice depends upon the target to achieve. For Example, We can choose any vehicle to reach at a place and in that case we might need to think regressively to make the best choice. But, if we just want to explore the functionalities of one vehicle, obviously we will choose that. The uncertain part can be how will we know that our choice will lead to the target, or, is it even easy to reach target with our choice?
+
+Q2. An hiring process is just like an optimization problem where we need to select the best ones. What DSA approach could have been used here?

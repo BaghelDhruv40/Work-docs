@@ -1,0 +1,74 @@
+-> One of the characteristics of data is its type. Such type is also called primitive datatype. 
+
+-> Variables are used to reference (or in simple terms to store) data. But they can contain conly single unit of data.
+
+-> In the search of complex containers that can store multiple units of data, we introduced a concept of Abstract datatypes.
+
+-> Abstract datatypes are theoretical containers to store data. Based on different requirements, we can have different Abstract datatypes.
+
+-> With variables, we have certain number of operations to perform on the data. But one thing is not required and that is to search for the data, because, variables are themselves the identifiers of the data units. But when we have a collection of such units, we indeed require more operations besides the primitive one.
+
+-> So ADT not only store data but allow us to perform data fetching operations on them. No matter what ADT, it must provide a way to locate desired data unit and to perform crud over it.
+
+-> At the core of the concept of memory, we have physical quantities used to depict a state. So a memory can be imagined as a collection os variables (references). But, each variable can only store one of the two states, and, an information may require more than those states. Instead of making new states, we can use the existing states, to depict a new state. Now it's upto us how to use these states in efficient way to depict new states and so an information.
+
+-> One way is to utilize the concept of boolean algebra. And if so, new states are just linear sequences of the two states.
+
+-> Now is the time to use the concept of ADT. We need to store an information which is nothing but collection of primitive states. How to store it and on what criteria?
+
+
+WHAT ARE DATA STRUCTURES ?
+
+-> Data structures are implementations of ADT (Although these terms are used interchangeably). For same ADT, we can have mutliple data structures.
+
+-> Some examples of DS are arrays, linkedlist, Hashtable, etc.
+
+
+CLASSIFICATION OF DATA STRUCTURES
+
+-> We classify datastructures broadly as Linear and Non linear.
+
+	LINEAR: These datastructures are logically linear as they store data in continuous (one-by-one or sequential) manner and traverse linearly also. They include:
+
+		-> List:
+		-> Array:
+		-> Queue:
+		-> Stack:
+		-> Tuple:
+		-> String:
+		-> Set:
+
+	NON-LINEAR: These datastructures
+
+
+LINEAR ADT
+-----------------
+
+-> Suppose we need to store a number of data items. Below are some questions may arise:
+
+	-> How to store these data items?
+	Ans. To store these items:
+		-> We can book a continuous block of locations.
+
+			CHARACTERISTICS:
+
+			-> Knowing the location of just first block location reveals all the items on iterating over it sequentially.
+			-> The number of blocks (or say locations), that may be called the size or length of the structure, should be specified in the start (that means must be known).
+			-> Knowing the first and last location (or a relative position called index) of the blocks, we know the range over which we can iterate.
+
+			MERITS:
+
+			-> If index is known, CRUD on an item randomly is possible. Therefore constant time complexity.
+			
+			LIMITATIONS:
+			
+			-> The size is static.
+			-> Inserting an item may require O(n) time.
+
+
+		-> We can discontinusouly assign them to locations.
+			-> Being discontinuous, we may require to track the location for each. How? If storing the location is a way then we may come into a loop. So, will have to think of a way to preserve the coonection.
+			-> 
+  
+
+

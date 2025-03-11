@@ -1,0 +1,32 @@
+-> The Stats branch of Science can be maily divided into two parts: Descriptive and Inferential.
+
+-> Descriptive Stats mainly focus on describing the characteristics of the data, finding ways of concisely present the meaningful insights from the raw data and finding the extend of variations in the data. 
+
+-> Inferential Stats mainly focus on making predictions out of the analysis of the data.
+
+DESCRIPTIVE STATS
+-----------------------------
+
+-> Suppose we are given a raw data. What type of data can it be (not in the context of datatypes)? The data can be either composed of discrete items or continuous items or mixed. So if we separate them, we can say that data can be either a collection of discrete items or continuous items.
+
+-> Formaly, we have three ways of classifying the data actually:
+
+	-> Individual : Distinguishable and distinct items (having unique occurrences).
+	-> Discrete : Distinguishable items (having multiple occurrences).
+	-> Continuous : Non-distinguishable items (lies in ranges).
+
+DESCRIPTIVE STATS: INDIVIDUAL AND DISCRETE DATA
+-------------------------------------------------------------------------------
+
+-> Given a raw data, how can we organise it in the first place to study it? Of course we need to organise it. Here are some ways:
+
+	-> Just iteratively pick items one by one and note it down somewhere. If the item in hand has already been noted just increase its count by one. In this way, we may get a frequency distribution of items. Tally mark is one of the way to denote the count of an item.
+
+	# Just organising the raw data in this way is not sufficient. This technique won't many any effect if the data turned out to be individual!
+
+-> As we seen that getting the frequency table is better than raw data but it's not sufficient. What we can do more? One intuition is to sort the data by the value of items.
+
+
+MEDIAN OF CONTINUOUS DATA
+----------------------------------------------
+-> The formula of it feels so non-intuitive but actually it is!. See, given the total frequency, we can definitely find the mid position of the distribution. By cumulative frequency, we can find the median class. Now, the element at mid index lies in this class but we have to find the value of it. First we have to realise that how far we are from the last element of previous class. To find it, just subtract the mid index from the cumulative frequency of the previous class. We get a number which denotes a range. Now notice that, if "f" elements are present in "h" width of class, then 1 element is present in h/f range! our job is done. We already found the number of elements we are from the previous class last element. So, just multiply (N/2 - c) * (h/f). if we just add this in lower bound of the median class, we get the desired element. Here c= cumulative fre of previous class.

@@ -1,0 +1,40 @@
+-> I should start with the basics here. A web project is all about Http request and responses. The separation of concerns divides the project into three modules, namely, Model, View and Controllers. We can understand it as three subfolders in the backend folder.
+
+	-> Model is related to modeling of database. Here we structure the files related to the schema designs of the database for different entities.
+
+	-> View is related to what is presented to the user. It is basically the interface for the user through which the user interacts with the web.
+
+	-> Controllers are the logics. Logic for everything in the backend is written here.
+
+-> View is different from the frontend. It is indeed depicting user interface but is actually created and rendered by the backend. View is a part of server side rendering which means that server creates new html document with requested data and send them over the http responses and the client side machine renders the whole page. Therefore, it is quite different from the API based web development where we now handles the responsibility of sending the data and files (but not html files) only and rendering of html documents for updated data will be handled completely on the client machine.
+
+-> So, MERN can be thought of relying on MCA model (Model, Controllers and API). And now we can divide the whole project mainly in two parts: Frontend and Backend.
+
+BACK-END DEVELOPMENT
+-----------------------------------
+
+-> Backend development is all about developing a software for the server machines (simply called server). So, a server is just a machine capable of running this software.
+
+-> There should be a main point where all the parts starts connecting and things start working.
+
+-> This main point of execution at its minimum must provide these features:
+
+	-> A service that act as a gateway at some port for the http requests by the client.
+
+	-> A service that directs the upcoming client requests to the correct handler of them. This directing will depend upon the requested resource (url path) by the client.
+
+-> Once we have created this main point of execution, we are left with fulfilling rest of the logic and modeling of the backend. As already discussed above, we achieve this by creating various sub folders based on their roles. A basic backend project structure can be like this: Inside the backend folder,
+
+	-> Route Folder: This folder consist of files where each file may handles the routes of specific entity. For example: AdminRouteFile may consist of mapping of the routes related to admin stuff, UserRouteFile may consist of mapping of the routes related to user routes, ProductRouteFile and so on.
+
+		-> This Folder is not necessary but actually is a good practice to achieve modularity in big projects. Instead of defining all the routes in the main execution file (usually called server or index file), we just direct all type of requests to Route folder.
+
+		-> Inside the Route folder, we again need a file that will direct the right request to right file. We usually call this file as route.js
+
+	-> Model Folder: This folder consist of files that describe the schemas of databases for entities and apps.
+
+	-> Controller Folder: Having directed the requests to correct listener of the request, next step is to fulfill that request. For that, the logic of completing the task of the request is written in this folder. The functions are actually imported in the Route folder and then used as a call back of the request listener.
+
+	-> Middleware Folder: There can be cases where we need to perform certain operations on the request before start fulfilling it. So the middle menn that perform these middle work are logics written in this folder.
+
+	-> The list goes on. But these are easily found in backend structure.

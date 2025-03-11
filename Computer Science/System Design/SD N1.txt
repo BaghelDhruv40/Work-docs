@@ -1,0 +1,3 @@
+-> "System" is a term used by programmers that refers to "large scale" or "complex" softwares that may contain many integrating parts. So, System design is more about designing softwares and not hardware.
+
+-> The development of system undergoes a process, called "system life cycle". It generally consists of "requirements", "analysis", "design", "coding" and "verfication" phases.
