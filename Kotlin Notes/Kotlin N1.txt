@@ -1,0 +1,19 @@
+-> The syntax of defining a function is:
+	#obeys camelCase.
+	fun functionname() : returntype {
+		println("hello World!")
+		return
+	} 
+
+-> Datatypes are String, Int, Double, Float (ends with f or F), Boolean(true and false).
+
+-> The syntax for defining a variable is: val variablename : datatype = value #obeys camelCase
+This syntax is much similar to typescript and yes it obeys some of its behaviour like omitting datatype when assigning a literal!.
+
+-> We have the concept of "string template" similar to "template literals" in JS. Through this, we can embed variables in a string. For example:
+
+	val name : String = "Dhruv"
+	val age = 21
+	println("My name is ${name} and I'm ${age} age old")
+
+-> Unlike in some languages, such as Java, where a function can change the value passed into a parameter, parameters in Kotlin are immutable. You cannot reassign the value of a parameter from within the function body.

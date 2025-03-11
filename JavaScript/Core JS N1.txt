@@ -242,3 +242,13 @@ OOPS
 
 	-> We create class and its object in JS simply through the syntax: class className{ }  and let objName = new className()
 
+
+ASYNCHRONOUS PROGRAMMING
+----------------------------------------------
+
+-> Web handling is one of the major task JS is used for.
+
+-> To make a request over the web for some resource, JS provide an API which is the fetch() API.
+
+-> fetch() 
+

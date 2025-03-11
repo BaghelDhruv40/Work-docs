@@ -1,4 +1,4 @@
-JavaScript is the heart of websites. It manages the http request and responses and is the soul of interativeness. Focusing here about the interativeness part only, the UI or frontend has become more intimate with JS. It is obvious that developers make a library specialized for this task. React if one such library but emerged due to a major reason. The UI fault story in the facebook page is all been taught when comes to introduction of React.
+JavaScript is the heart of websites. It manages the http request and responses and is the soul of interativeness. Focusing here about the interativeness part only, the UI or frontend has become more intimate with JS. It is obvious that developers make a library specialized for this task. React if one such library but emerged due to a major reason. The UI fault story in the facebook page is all been taught when comes to introduction of React. ReactJS was first created by Jordan Walke, a SE at facebook.
 
 JS is the base, so nothing magical is happening in React. But, how things are implemented definitely amuses at the first sight.
 
@@ -22,3 +22,9 @@ Then comes the most famous use of React in building single page sites. This is n
 	-> package.json: it is a configuration file.
 
 	-> build: a folder created when we run build script. This is the folder which is shared not the above one in production.
+
+-> In 2015 and 2016, ahuge number of popular tools like React Router, Redux and Mobx came on the scene to handle tasks like routing and state management.
+
+-> In 2017, React Fiber was released. Fiber was a rewrite of React's rendering algorithm that was sort of magical in its execution.
+
+-> In 2019, Hooks and Suspense were released.

@@ -38,9 +38,9 @@
 
 
 -> We have type casting and type conversion concepts.
-	1. Type Casting: when we assign the two different datatypes to each other, we explicitly change the datatype of the RHS into the LHS one.
+	1. Type Casting: when we assign the two different datatypes to each other, we explicitly change the datatype of the RHS into the LHS one. Basically explicit type demotion.
 
-	2. Type Conversion: when the compiler itself convert the datatypes. Happens when lower range datatype is assigned to higher range datatype.
+	2. Type Conversion: when the compiler itself convert the datatypes. Happens when lower range datatype is assigned to higher range datatype. Basically implicit type promotion.
 
 -> For floating values to integers values, compiler just cut off the decimal part.
 

@@ -2,7 +2,7 @@
 
 -> Some of the examples of computational devices are, general purpose computer, specific purpose computer, pen and paper.
 
--> A computational model includes design of a model for computation purpose based on an algorithm. For example: To identify is a given number is a multiple of 2, we check the remainder of the division by 2 is zero or not. So we have two states, remainder is 0 or not. If the output lends of 0 remainder state, we accept the input otherwise not.
+-> A computational model includes design of a model for computation purpose based on an algorithm. For example: To identify is a given number is a multiple of 2, we check the remainder of the division by 2 is zero or not. So we have two states, remainder is 0 or not. If the output lends to 0 remainder state, we accept the input otherwise not.
 
 -> Below are some definitions:
 
@@ -45,7 +45,7 @@
 -> Below are some examples of accepted languages by a DFA.
 
 	-> L = { all strings belonging to  {0,1}* | strings contains even 1s }.
-		Ans: If we start with qo as an empty string, the transition edge to q1 will have a label of 1 denoting that if we get even no. of 1, we move to q1. Same goes for transition edge to qo with label 1, denoting that encountering 1 on q1 means even no. of 1s and so move back to qo. Along this, each state has a loop for encountering 0s. qo is the end state here.
+		Ans: If we start with qo as an empty string, the transition edge to q1 will have a label of 1 denoting that if we get odd no. of 1, we move to q1. Same goes for transition edge to qo with label 1, denoting that encountering 1 on q1 means even no. of 1s and so move back to qo. Along this, each state has a loop for encountering 0s. qo is the end state here.
 
 	-> L = {All strings belonging to {a,b}* | strings end with ab }.
 
@@ -56,7 +56,7 @@
 		Ans: Since any number divided by 3 leaves three possible remainders i.e., 0, 1 or 2, these are gonna be the states. Reading a string, if we encounter 0, we stay at qo. This is coz 0 gives 0 remainder when divided by 3. If 1 comes, we jump to q1. This is the state that remainder is 1. Getting again 1 jumps back to qo. But, if a 0 comes, we jump to q2. This is the state that remainder is 2. If again 0 comes, get back to q1. But, if 1 comes, keep looping.
 The end state will be qo.
 
--> A "Dump state" is an unacceptable state from where there is no comeback. That means on reaching such state, we such loop over it no matter what the symbol reads. Example:
+-> A "Dump state" is an unacceptable state from where there is no comeback. That means on reaching such state, we just loop over it no matter what the symbol reads. Example:
 
 	-> L = { w | w is a binary string which doesn't contains consecutive 1s }.
 
@@ -72,4 +72,6 @@ The end state will be qo.
 
 	-> Concatenation : A.B = { xy | x , y belongs to A, B resp. }
 
-	-> Star operation : A* = { x1.x2.x3....xk | k>=0 and xi belongs to A for all i } 
+	-> Star operation : A* = { x1.x2.x3....xk | k>=0 and xi belongs to A for all i }
+
+-> If we analyse all of this, we will find that we are just parsing the input linearly.

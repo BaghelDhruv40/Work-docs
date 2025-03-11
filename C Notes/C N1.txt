@@ -68,6 +68,10 @@
 
 -> typedef keyword is used to alias datatypes (usually helpful for structure names). Syntax: typedef struct name{} aliasname;
 
+
+FILE HANDLING
+----------------------
+
 -> To work with files, we need to create the pointer for FILE structure (i.e., FILE *pointername;). Then we can use the following functions:
 
 	-> fopen("filename", "mode") : Used to open the required file with mode ("r" for read, "w" for write) given. The syntax will be : pointername = fopen("filename", "mode");
@@ -86,6 +90,7 @@
 
 
 DYNAMIC MEMEORY ALLOCATION
+------------------------------------------------
 
 -> Dynamic memory allocation is a way to change the memory requirements in runtime.
 

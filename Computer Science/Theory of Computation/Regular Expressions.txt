@@ -1,0 +1,7 @@
+-> A language is a set of all permutations of symbols, of all lengths, taken from the Alphabet. So we represent L the way we represent Set. But, we also have another way of denoting the language and it is the regular expression.
+
+-> A regular expression is an algebraic expression that is used to denote a language. Also, a regular expression denotes a unique language (but the inverse is not true. That means, a language can have more than one regular expressions).
+
+-> So definitely, we requires some rules to write that algebraic expression.
+
+-> Some applications of regex is to search for a pattern in the given input. So what genrally the procedure is that we have an input (like a document) and we give the pattern to search. So, the model may just search for the extact pattern or all possible ways in which the pattern may occur. That means, the model is checking if the items in the given input exists in the language related to pattern. Instead of assuming that there will be a set of all possible languages and the items are getting checked one by one for each language, there can be just a regular expression that denotes the whole set of languages and the items are just checked that if the obey the expression.

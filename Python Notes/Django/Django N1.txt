@@ -1,0 +1,23 @@
+PROJECT STRUCTURE
+------------------------------
+-> The Django project has the following Project Structure (Assume Demo is the Project name):
+
+	-> manage.py
+	-> demo folder
+		-> __init__.py : Indicates that this folder is a package.
+		-> settings.py
+		-> urls.py : This file can be thought of as index.js, in routes in express, in which we declare the route and its corresponding handler file which contain all the handlers of that route. So here, we declare the route and corresponding app that contains the handlers for that route.
+		-> wsgi.py
+
+-> The above structure is the fundamental one that we get when a project is created. We now create other apps and they all resides at top level (the level same as for manage.py). Each created app has to be mapped with the demo (which is the actual project). The app structure (assume the name is demoapp) is as follows:
+
+	-> migrations folder
+	-> __init__.py
+	-> admin.py
+	-> apps.py
+	-> models.py
+	-> tests.py
+	-> views.py
+
+-> Now to route, we need a file that contains them. For that we have to create one file named "urls.py" in the app. In this file, we specify the route handlers and state the routes corresponding to them.
+We also need the views.py file of the app in which we define the route handlers.
