@@ -1,5 +1,0 @@
--> A Queue is a SLDS (Static Linear Data Structure) abstraction that works on FIFO.
-
--> It is implemented on arrays using some functions. Below are some functions that works different from stack.
-
-	-> top() : Returns the left-most (starting or front) element.

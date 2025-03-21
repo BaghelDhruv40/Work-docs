@@ -1,7 +1,0 @@
-A Tree is a hierarchical datastructure.
-
--> A binary tree is an inverted tree with root on the top and leaf on the bottom.
-
--> Binary tree is a special type of tree data structure where a node gives only two branches. Left branch conventionally contains lower value node and Right branch contains greater than value node.
-
--> -1 denotes null node.
