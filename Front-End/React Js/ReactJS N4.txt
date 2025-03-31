@@ -1,0 +1,41 @@
+-> React is introduced as a JS library but there are many things that React restrict to the developers. Unlike JS, where we have the most freedom and freely manipulate the DOM, React is restrictive as it is doing its job. So,
+
+    -> What React is doing in Web development?
+    Ans. React is trying to handle the UI management, its efficient rendering and manipulation at its core. It is helping in managing complex UI updation and manipulation. By complex means not only a heavy UI related work but such UI related work also where simultaneous manipulation of components happens.
+    React is not only handling the mess usually created by JS but also handling the mess created by the browser in handling http responses and page rendering.
+
+-> Being a library, we can just import it and start our desired work. But, once imported, React takes things in its own hand. Now the file is not a simple JS file where we can create mess, we have to obey the React norms! To say that our page is a React page, we must hand over all the responsibilty that is taken by the browser usually to the React.
+
+    -> The very first task of the browser is to render the page and so this task has to be handed over to React. What does this exactly means? See, the actual matter, that is for the user, exists in the body tag. So we handed over the responsibiltyof managing things in body tag to the React. How?
+
+    -> The body tag of index.html file is left blank. But, in order for JS to work on the html, it must be linked to that file through script src tag. This thing can be done by us, but is done automatically. Who does this? it is done by someone which is installed when we create a React project using npm. Hence, this "someone" gets installed within node modules.
+
+    -> Once injected, the main JS file which is usually named as "index.js" is coded for the responsibilty of creating and managing the content within body tag. As this is th most dynamic part of a web page, React handles the DOM manipulation and rendering of it.
+
+    -> Since the main part of the web page is under the control of React, we are now dealing with something protected and supervised by React. We have to obey React norms in order to work on it. That's how we transit from usual JS to React JS.
+
+-> Since React page is highly protected by React norms, do we have usual DOM functionalities or we have completely different ways for DOM manipulation? Fortunately, we have all DOM elements in React i.e., all DOM elements are known to React. But, we are not free to use them in whatever way we like. For example: we can't conditional render something in usual way of JS. We have to obey React as React is responsible for DOM rendering and updation. So, things must be done in their way of understanding.
+
+-> We have the concept of hooks in React. They are utility functions provided to developers for working on React pages (components to be general). There are 18 such functions available currently in React-19. They are explored in detail under the hooks topic below.
+
+
+REACT HOOKS
+-----------
+
+-> What are hooks is already been discussed above. We shall directly jump into each of them in detail.
+
+    -> useState(intial value): This hook accepts an initial value and assign it to a variable. It also provide another function for the manipulation of that variable.
+
+        -> Syntax: const [variable, setVariable] = useState(intial value);
+
+        -> setVariable function updates the variable and triggers a re render.
+
+        -> We can't directly update the variable. Doing so won't be reflected wherever this variable is used. This variable must be manipulated by the setVariable function only. 
+
+        -> calling setVariable multiple times sequentially (within the same block) won't work. It will be called only once. This behaviour is handled by React. In order to manipulate the variable sequentially, we have to use another function inside the setVariable that will accept the current value of Variable and operate over it as described in the function. React documentation mentions that "set" function don't update the variable within the same block. And that's why, sequential same calls will return the results as if they are called only once. set function doesn't return anything.
+
+        -> So, useState() is used to define state for components.
+
+        -> What is the difference between props and state?
+        Ans. Props are parameters given to the components. They are pass by value. Hence, they can be treated as usual JS variables. While, state can't be manipulated freely using JS. We need useState() hook for its definition and manipulation. States are pass by reference and that would also mean that if we reuse a component where states are defined, the two states will be different for each reuse of the component! In order to achieve a behaviour of simultaneous manipulation of a state for all the reused components, we need to define the state at the parent level of that component and pass that as a prop to the component.
+

@@ -1,0 +1,30 @@
+-> Backend is indeed a field of study itself as we have a quite long history of it.
+
+-> What actually backend is? Well the backend has taken various forms in its history but we can define it fundamentally (or say foundationally) as a part of the web project that handles all the workings and interactions (made by the client). This definition is very much zoom out version.
+
+-> Since the above definition is quite zoom out, we can make a good definition of backend by thinking of the role of a client.
+
+-> What bare minimum a client can do with the web resource? A client can perceive the resource, like read, hear, watch, etc. Other than these, the client can also interact with the resource. Like exploring the resource on its own, touch (or click) different parts of the resource.
+
+-> There should be ways to provide all the things mentioned above to the client. And this part comes under the frontend.
+
+-> So, frontend is the part of the project that present the resource to the client in a way that they can percieve it; And, provides ways to interact with it.
+
+-> Besides all what frontend does, comes under the responsibility of the backend.
+
+-> This approach of introducing backend feels much better than a foundational definition of it, but it lacks crucial thing. What are the other things that are besides those of frontend? This is the reason backend is a field of study.
+
+-> The role of backend part in a project is considered much heavy than the frontend part and so, backend is generally done (or say setup) on dedicated computers called servers. Frontend must be as light as possibile as at the end, the content has to be presented on the client machine (which may not be a powerful one, but yes may require a base threshold limit to consume the resource).
+
+-> One more thing worth mentioning here is that, the content to be consumed by the client need not be same for all (which we call static). And for this purpose, we may feel frontend has to take care of this dynamic content. But, is it really the job of frontend part? If the defintion we used to introduce frontend is correct, this should not be the task of frontend. This thing comes under backend.
+
+BACK-END (Formal section)
+--------
+
+-> Having informal introduction of backend, we can now do a formal one.
+
+-> Backend consists of various parts:
+
+    -> Servers: They are the central part of the backend. It control and co-ordinates further parts of the backend and also acts as a gateway for the request made by the client and responses (to be sent) by dfferent parts of the backend. Servers can be dedicated machines or softwares.
+
+    -> Mapper or Router: They are actually that part of the backend that act as a navigator for all requests and responses because in a complex project, it is important that correct thing reaches correct destination.

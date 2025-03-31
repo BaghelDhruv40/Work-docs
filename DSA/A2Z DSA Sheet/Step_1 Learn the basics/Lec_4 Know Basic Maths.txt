@@ -1,0 +1,90 @@
+PROBLEM STATEMENT: Given an integer (n), count number of digits in it.
+
+    APPROACH 1 : BRUTE FORCE
+
+    -> Dividing the given number by 10, the remainder signifies the last digit and quotient signifies the number with that last digit.
+
+    -> So we keep counting the remainders and updating the number to the quotient.
+
+    -> The process will end up in finite steps because the number of digits are reducing when replaced by the quotient.
+
+    -> The terminating case will be the one when quotient becomes one (and so the number itself).
+
+        IMPLEMENTATION
+
+        -> Copy the given number in a variable (say temp).
+        -> Make a loop. This loop condition will be while temp!=0.
+        -> In this loop, we can just count the number of iterations and update temp to temp//10.
+
+        ANALYSIS
+
+        -> Time complexity will be O(k) where k denotes the number of digits which is nothing but log base 10 of N.
+
+    APPROACH 2: OPTIMAL
+
+    -> Since we just need the number of digits, this means we can compare the given number with powers of 10.
+
+    -> Therefore, the log base 10 of the given number will give the number of digits 1 less.
+
+        ANALYSIS
+
+        -> Time complexity is O(1).
+
+
+PROBLEM STATEMENT: Reverse the given number.
+
+    APPROACH 1: BRUTE FORCE, OPTIMAL
+
+    -> Clearly we can extract the digits from right one by one and store it in an output variable.
+
+    -> On each extraction of a digit, we make the following move:
+
+        ans = ans*10 + (temp%10)
+        temp//=10
+
+    
+        ANALYSIS
+
+        -> Time complexity will be O(k) where k is log base 10 of N.
+
+
+PROBLEM STATEMENT: Check if the given number is palindrome.
+
+    APPROACH 1: BRUTE FORCE, OPTIMAL
+
+    -> Just find the reverse of the number and check for the equality. The negative numbers will never be palindromic
+
+
+PROBLEM STATEMENT: Check if the number is an Armstrong number.
+
+    APPROACH 1: BRUTE FORCE, OPTIMAL
+
+    -> We just need to extract the digits and summing up their cubes.
+
+    -> Check if the sum is equal to the given number.
+
+
+PROBLEM STATEMENT: Find all the divisors of the given number.
+
+    APPROACH 1: BRUTE FORCE, OPTIMAL
+
+    -> Since divisors are the positive intergers which completely divides the given number, we need to check all the positive integers upto the given number, that divides it.
+
+    -> Instead of checking till the number itself, we can reduce the scope to the square root of the number.
+
+    -> We may obtain two divisors in an iteration. One is the denominator itself and second is the quotient.
+
+        IMPLEMENTATION
+
+        -> We make a loop with the condition while denominator is less than square root of the number.
+
+        -> Store the divisors in an output data structure (preferrably be set to avoid duplication).
+
+        ANALYSIS
+
+        -> Time complexity will be O(n**0.5) and space complexity O(n) of the output structure.
+
+
+PROBELEM STATEMENT: Find the GCD of a given number.
+
+    APPROACH 1: BRUTE FORCE

@@ -1,0 +1,84 @@
+-> A Stack is a SLDS (Static Linear Data Structure) abstraction that works on LIFO.
+
+-> Stack is different from static-arrays / linkedlist in a way that:
+
+	-> The elements can be deleted only from one side.
+
+	-> The elements can be deleted sequentially, only in the reverse order of their insertions.
+
+	-> Since insertion/deletion to random indices is not allowed, operations like shifting of indices to fill the voids in between are not required.
+
+-> No matter how we implement this, we must have these fundamentals functions:
+
+	-> pop(): Deletes the top (or say latest inserted) element and returns it (optional).
+
+	-> push(element): Appends the given element.
+
+	-> top(): Returns the top (or say latest inserted) element.
+
+	-> size(): Returns the pre-allocated size of the structure.
+
+	-> length(): Returns the number of the elements present in the structure.
+
+	-> print(): Prints all the elements in the structure. This might be a necessary function as we have no way to iterate over the stack.
+
+-> Since a stack is a linear ADT, we always have two fundamental linear data structures to implement it: Static Arrays and Linked List.
+
+
+IMPLEMENTATIONS
+---------------
+
+	USING STATIC ARRAYS:
+
+		PYTHON CODE:
+
+			class Stack:
+
+				def __init__(self,size):
+					self.arr=[None]*size
+					self.length=-1
+					self.size=0
+					
+				def push(self, val):
+					if self.length==self.size:
+						print("stack is full!")
+						return
+					self.length+=1
+					self.arr[self.length]=val
+
+				def pop(self):
+					if self.length==-1:
+						print("stack is empty")
+						return
+					temp=self.arr[self.length]
+					self.arr[self.length]=None
+					self.length-=1
+					return temp
+
+				def top(self):
+					return self.arr[self.length]
+
+				def print(self):
+					for node in self.arr:
+						print(node, end = " ")
+
+	USING LINKED LIST:
+
+		PYTHON CODE:
+
+			class Node:
+
+				def __init__(self,data):
+					self.val = data
+					self.next = None
+
+			class Stack:
+
+				def __init__(self,data):
+					self.
+
+	USING QUEUE:
+
+		PYTHON CODE:
+
+			

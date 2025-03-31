@@ -1,0 +1,132 @@
+PROBELEM STATEMENT: Largest element in the given sequence.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Sort the sequence in descending order
+
+    -> Return first element.
+
+        ANALYSIS
+
+        -> Time complexity will depend upon the technique of sorting used.
+
+        -> No auxiliary space used.
+
+
+    APPROACH 2: BETTER (Optimal according to Striver and better doesn't exist.)
+
+    -> Take a variable that will represent the max value and assign it the minimum value possible (can be chosen from the range given).
+
+    -> As we iterate in the sequence, we update this max value when we encounter a value larger than this.
+
+    -> In this way, we get the larget value of the sequence.
+
+        ANALYSIS
+
+        -> Linear time complexity as we iterate over the complete sequence.
+
+        -> Constant space complexity.
+
+
+    APPROACH 3: OPTIMAL
+
+    -> In the first approach, we attained O(nlogn) time complexity.
+    -> In second approach, we attained O(n) time complexity.
+    -> So we need an approach lower than the second one. Possibilities is logarithmic approach. We can use Max heap or priority queue for this.
+
+PROBLEM STATEMENT: Find second largest element in the sequence without sorting.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> We can use the approach 2 of the previous problem two times to find the second larget element.
+
+
+    APPROACH 2: BETTER, OPTIMAL
+
+    -> We can use two variables instead of iterating two times the sequence.
+
+    -> One variable will be for Largest and second will be for second largest.
+
+    -> We initialize second largest variable with -1 (if sequence is of positive values) or with a minimum value.
+
+    -> On each movement, we check if the value is greater than first variable, we update it. Before that, we assign the value of largest variable to second largest one.
+
+    -> Now, if the value at a movement is not greater than largest but greater than second largest, we just update second largest.
+
+        ANALYSIS
+
+        -> Linear time complexity.
+
+        -> Constant space complexity.
+
+PROBLEM STATEMENT: Check is the given sequence is sorted.
+
+    APPROACH 1: BRUTE FORCE, OPTIMAL
+
+    -> Traverse through the sequence and keep checking the two consecutive elements. If the order breaks, just return the result.
+
+PROBELEM STATEMENT: Find the longest subarray of an array of positive integers with the given sum.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Since we have to find subarray, we first find all the subarrays possible.
+
+    -> Consider each subarray sum and check if it is equal to given sum.
+
+    -> Take the length of this array in a variable and update it only if a longer subarray is found satisfying the criteria.
+
+        ANALYSIS
+        --------
+
+        -> The time complexity to find all subarrays will be O(n^2).
+
+        -> The time complexity of finding the sum of each subarray will be O(n).
+
+        -> Overall time complexity will be O(n^3).
+
+        -> Space is used to store each subarray. Hence O(n^2) space complexity.
+
+
+    APPROACH 2: BETTER (OPTIMAL for arrays having whole numbers)
+
+    -> Instead of finding subarrays, we can use sliding window approach.
+
+    -> Using two pointers and directly summing the values for the verification reduces the space complexity.
+
+    -> Difference of positions of the two pointers will give he length of the sub array.
+
+    -> The procedure can be repeated unless the sum of subarray exceeds the given sum or the subarray with given sum is found. In that case, move the left pointer one step forward and start again.
+
+        ANALYSIS
+        --------
+
+        -> Time complexity becomes O(n^2) as the procedure to sum up is changed.
+
+        -> Constant space complexity.
+
+
+    APPROACH 3: BETTER
+
+    -> Consider two pointer approach and prefix sum.
+
+    -> As the right pointer is moving forward, we are calculating the prefix sum.
+
+    -> If at any point, we just check that did we find x - k as a sum (where x is prefix sum at current position of right pointer and k is the given sum) and it present, we can conclude that there's a subarray with sum = k.
+
+    -> To find the length, we just gonna subtract right pointer from the index where the x - k as a prefix sum was found.
+
+    -> Moreover, update the max length accordingly.
+
+        ANALYSIS
+        --------
+
+        -> Linear time complexity.
+        -> Linear space complexity (to store prefix sum).
+
+        LIMITATIONS
+        -----------
+
+        -> The approach is optimal for arrays having non zero elements. This is because there will not be a unique subarray with prefix sum x - k with zeros are involved.
+
+        -> To tackle that, we will store the left most index of subarray that resulted in x - k prefix sum.
+

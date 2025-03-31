@@ -1,0 +1,35 @@
+-> A Tree is a non-linear (hierarchical) datastructure. The way to visualize a tree is to think of an inverted real tree where the ends of a branch are called nodes.
+
+-> The smallest tree is single node structure. We call this the "root" or "head" of the structure. Based on the number (at most) of branches, we classify trees as:
+
+    BINARY TREE
+    -----------
+
+    -> A binary tree is an inverted tree with root on the top and leaves on the bottom.
+
+    -> Every node can have at most two branches (links to two nodes).
+
+    -> Each node is a user defined data type (usally named Node) that carry three attributes: The value, the pointer to left next node, the pointer to right next node.
+
+    -> We can further classify binary trees in the following ways:
+
+        BASED ON HEIGHT (levels) AND BREADTH: Perfect binary tree, complete binary tee, Full binary tree.
+
+        -> Perfect binary tree: Contains maximum number of nodes possible per level.
+
+        -> Full binary tree: Each node has either 0 or 2 childs.
+
+        -> Complete binary tree: Moving from left to right in the second last level, the ith node can have childs (left and right) only if the (i-1)th node has both childs. Note i>=1.
+
+        -> In-complete binary tree: Any binary tree except the above two.
+
+
+        BASED ON THE PATTERN (criteria) OF STORING VALUES: BST, Heaps.
+
+        -> Binary Search tree
+
+-> No matter how we implement binary trees, it must have these fundamental functions:
+
+    -> 
+
+-> -1 denotes null node.

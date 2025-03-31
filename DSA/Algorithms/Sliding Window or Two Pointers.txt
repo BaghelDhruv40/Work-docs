@@ -1,0 +1,43 @@
+-> When iterating over a sequence, we have one pointer (the iterator) which is moving step by step.
+
+-> Having one pointer gives us the information of only one thing. It can be:
+
+    -> The position of the iterator in the sequence.
+    -> The type of data present there and its value.
+    -> The chance to manipulate that value.
+
+-> Having two pointers can lead to many more feature extraction about the data. Indeed, having two pointers means having that much for each pointer what a single pointer provides atleast.
+
+-> Problems related to monitoring atleast two members of the sequence simultaneously requires two pointers (unless we have a constraint that reduces the need of two pointers to one pointer). A window is nothing but the the members enclosed between two pointers. The minimum window an have a single element when the two pointers are overalapping.
+
+PROBLEM STATEMENT 1: Find all pairs (relative order maintained) possible in a sequence.
+
+    -> Since a pair requires two elements, we will need two pointers.
+
+    -> One will be fixed (say left) and the other (say right) moving forward.
+
+    -> Once the right pointer reaches the end of the sequence, we have found all the pairs formed by first element of the sequence with the others. Now, we need to move one step forward the left pointer to find all the pairs made by that with rest of the members.
+
+    -> We don't need to consider the first element as the statement says relative order must be maintained. And so, such pair already be considered. Hence, this time we will start with point the pointers at the second index.
+
+    -> In this way, we can use the two pointers to solve this problem.
+
+
+-> Two pointers and so sliding window are necessity for such problems. So we would have to first figure out the problem. But, the approach to solve the problems using them vary depending upon the problem. Indeed, we may categorize such problems if possible.
+
+PROBLEM STATEMENT 2: Find all the subarrays of the given array.
+
+    -> Since subarrays contains one or more elements, we definitly be required to use two pointers.
+
+    -> We again use left and right pointers and iterate as follows:
+
+        -> The iteration will always start with both the pointers overlapping (this case will give us single element subarrays).
+
+        -> Fix the left pointer and just move the right pointer. Each step forward will give us new subarray (a window is created) starting from the element at "left" pointer. Just store the window in the output structure.
+
+        -> Once right pointer reaches the end, we move left pointer one step ahead and overlap the right pointer with it. And continue the same way.
+
+        -> Hence, we will be able to find all subarrays.
+
+        -> The time complexity will be O(n^2) and space complexity will be O(n^2).
+

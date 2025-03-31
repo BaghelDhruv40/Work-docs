@@ -1,0 +1,29 @@
+-> What is SE?
+Ans. It is a,
+
+    -> Modeling Activity: Software engineers deal with complexity through modeling, by focusing at any one time on only the relevant details and ignoring everything else.
+    In the course of development, software engineers build many different models of the system and of the application domain.
+
+        -> Many methods that have been successfully applied in the natural sciences and humanities can be applied to the sciences of the artificial as well. One of the basic methods of science is "modeling".
+
+        -> A model is an abstract representation of a system that enables us to answer the questions about the system.
+
+
+    -> Problem-solving Activity: Models are used to search for an acceptable solution. This search is driven by experimentation. Software engineers do not have infinite resources and are constrained by budget and deadlines. Given the lack of a fundamental theory, they often have to rely on empirical methods to evaluate the benefits of different alternatives.
+
+    -> Knowledge acquisition Activity: In modeling the application and solution domain, software engineers collect data, organize it into information, and formalize it into knowledge. Knowledge acquisition is not sequential, as a single piece of additional data can invalidate complete models.
+
+    -> Rationale-driven Activity: When acquiring knowledge and making decisions about the system or its application domain, software engineers also need to
+    capture the context in which decisions were made and the rationale behind these decisions. Rationale information, represented as a set of issue models, enables software engineers to understand the implication of a proposed change when revisiting a decision.
+
+
+SE CONCEPTS
+-----------
+
+-> This section is about the main terms and concepts in SE. An overview is as follows:
+
+A "Project", whose purpose is the develop a software system, is composed of many "Activities". Each "Activity" is in turn composed of a number of "Tasks". A "Task" consumes "Resources" and produces a "WorkProduct". A "WorkProduct" can either be a "System", a "Model" or a "Document". "Resources" are either "Participants", "Time" or "Equipment".
+
+    -> Participants: Developing a software system requires the collaboration of many people with different backgrounds and interests. The client orders and pays for the system. The developers construct the system. The project manager plans and budgets the project and coordinates the developers and the client. The end users are supported by the system. All the persons involved in the project can be referred as "participants".
+
+    -> Role: A set of responsibilities in the project or the system.

@@ -1,0 +1,20 @@
+-> SE is formal or standard or matured or systematic procedure for system development. While system development, many criteria are concerned to develop a robust system within the deadline and under the budget.
+
+-> The life cycle of system development involves following stages:
+
+    -> Planning/ Requirements: Fixing the aim and requirements for the project.
+
+    -> Define/ Analysis: Fixing the constraints of time and money.
+
+    -> Designing: Schematical or theoretical development of the project.
+
+    -> Coding/ Implementation: Implementing the design through actual resources.
+
+    -> Testing: Checking the working of every part of the system.
+
+    -> Deployment/ Maintainance: Deploy if everything is fine otherwise repeat.
+
+-> Having understand the life cycle of SD, we have to know what is the actual work flow in this cycle. For that we have many models which depict the practices or work flow used in the history of SE. They are:
+
+    CLASSICAL WATERFALL MODEL (around 1970s)
+    -------------------------

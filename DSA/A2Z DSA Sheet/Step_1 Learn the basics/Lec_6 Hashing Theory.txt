@@ -1,0 +1,64 @@
+-> Hashing means creating a injective mapping.
+
+-> To achieve this, we try to associate unique keys to unique indices.
+
+PROBLEM STATEMENT: Check if the target letter exists in the given sequence of characters.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> We iterate over the entire sequence and break the iteration by return true if the letter is found.
+
+    -> If no letter is found, we simply return false as the loop ends.
+
+        ANALYSIS
+
+        -> Time complexity is O(n).
+
+    APPROACH 2: BETTER
+
+    -> Since our search scope is characters, we can have to create a hash that maps each letter to a unique index.
+
+    -> Since every character has an ASCII value, and there are 256 characters in ASCII system.
+
+    -> Hence, we can have an array of size 256, and associate each character to an index by finding the difference between the ascii value of a character in the sequence and ascii of the starting character in the ASCII system.
+
+    -> So, for the target element, we can find its hash and look for it in the has array.
+
+        ANALYSIS
+
+        -> The time complexity is O(1).
+        -> The space complexity is O(1).
+
+
+PROBLEM STATEMENT: Check if the target integer exists in the given sequence of integers.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> This approach is same as discussed in the previous problem.
+
+    APPROACH 2: BETTER
+
+    -> Just like we considered an array of size 256 in previous problem, we have to find the size we need to create hash array.
+
+    -> We can take the size of hash array as the range given in the constraints of the problem.
+
+    -> Now, the only task to achieve is create a hash algorithm or say function. One can be to just subtract the minimum value from each element.
+
+        LIMITATIONS
+
+        -> The size of the hash array can't be more than 10^6 inside main function and 10^7 as a global declaration.
+
+
+-> The optimal algorithm to create a hashing and then storing the elements can be in any number. One of them is "Division method".
+
+    Division Method: In this method, we we take modulo 10 as the hashing. Hence, there will be only 10 indices. What about numbers with same remainder? we just store them on the same index using linked list (called linear chaining).
+
+        -> The worst case will be the occurrence of collision.
+
+        -> A collision is a situation when nearly all elements end up at same index. And in such situation, the time complexity will be O(n). But, as it can be seen, it is a rare case.
+
+-> The implementation of optimal approaches are usually available as helper functions in programming languages. Such functions are "map" and "unsorted map" in STL of C++, "hashmap" in collections of java, "set" and "dictionaries" in collections of python, etc.
+
+
+
+    

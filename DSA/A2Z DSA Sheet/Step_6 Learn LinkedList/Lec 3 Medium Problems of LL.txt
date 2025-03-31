@@ -1,0 +1,238 @@
+PROBLEM STATEMENT: Find the mid of the Linked List.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Iterate over the entire linked list and measure its length.
+
+    -> Again iterate over the linked list but just for half of the length.
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+    
+    APPROACH 2: OPTIMAL
+
+    -> Take two pointers.
+
+    -> One of the pointer moves unit step and the other move twice steps.
+
+    -> So, when the faster pointer reaches the end, the slower one will be pointing at mid element!
+
+    -> This approach is famously known as "Tortoise-Hare" approach.
+
+        ANALYSIS:
+
+        -> linear time complexity.
+
+
+PROBLEM STATEMENT: Reverse the given linked list.
+
+    RECURSIVE APPROACHES:
+
+        APPROACH 1: BRUTE FORCE
+
+        -> Take the base case as: if node.next is not null.
+
+        -> Until the condition met, recursively calls the function with giving parameter as the next of node.
+
+        -> Once the condition met, call returns back. At this point, we will have the current element and the next of this element (which is not null).
+
+        -> Just point the next of node.next to node i.e., node.next.next=node.
+
+        -> Also, nullify the next of node i.e., node.next = null.
+
+        -> After doing this, return back and repeat this procedure.
+
+            ANALYSIS:
+
+            -> Linear time complexity.
+
+            -> Linear space complexity.
+
+
+            IMPLEMENTATION (Pseudo code)
+            --------------
+
+
+    ITERATIVE APPROACHES:
+
+        APPROACH 1: BRUTE FORCE
+
+        -> We will just need a stack to store and pop the nodes.
+
+        -> The condition for loop will be: while node.next is not null.
+
+        -> Until the condition meets, we store the current nodes in the stack.
+
+        -> Once the condition met, the loop completes. At this point, we have the current element (which is the last not null element) and a stack of previous elements.
+
+        -> Now we run another loop with a condition that: while stack is not empty.
+
+        -> We pop the element and store it in a variable (say prev).
+
+        -> We change the direction of connection the same way we did in recursive approaches.
+
+        -> We then do this: node = node.next. By dong this, we actually came to second last element as the current element.
+
+        -> Repeat these steps till stack is empty.
+
+        -> Pay attention to the head node. We have to make the last element (of the original linked list) as the head.
+
+            ANALYSIS:
+
+            -> Linear time complexity.
+
+            -> Linear space complexity.
+
+
+        APPROACH 2: BETTER, OPTIMAL
+
+        -> We will require two variables in this. One say Prev and other say Next.
+
+        -> Initially Prev is null.
+
+        -> We just start iterating over the given linked list. The condition for loop will be: while node != null.
+
+        -> At each node, we store the next of the current node in Next. Then, we actually points the next of the current node to Prev.
+
+        -> Since content of Prev is already assigned, we can update Prev to current node i.e., Prev = node.
+
+        -> Further, the current node has to move to next as to iterate i.e., node = Next.
+
+            ANALYSIS:
+
+            -> Linear time complexity.
+
+            -> Constant space complexity.
+
+
+            IMPLEMENTATION
+            --------------
+
+                PYTHON CODE:
+
+                    class Node:
+
+                        def __init__(self,data):
+                            self.val = data
+                            self.next=None
+                            
+                    arr=[1,2,3,4,5]
+                    head=None
+                    
+                    for idx in range(len(arr)):
+                        if idx==0:
+                            head=Node(arr[idx])
+                            temp=head
+                        else:
+                            temp.next=Node(arr[idx])
+                            temp=temp.next
+                    temp=head
+                    prev=None
+
+                    while temp:
+                        Next=temp.next #stores next of current
+                        temp.next=prev #points the next of current to prev
+                        prev=temp #moves prev to current
+                        temp=Next #moves current to Next
+                        
+                    head=prev
+                    temp=head
+                    while temp:
+                        print(temp.val, end =" ")
+                        temp=temp.next
+
+
+PROBLEM STATEMENT: Detect a loop in the linked list.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> One thing to focus here is that if the linked list doesn't contains a loop, it will terminate. Hence if such thing happens just return False.
+
+    -> Otherwise, what we can do is to store the nodes as we iterate over the linked list. We can use a set data structure for this.
+
+    -> If the node we are visiting already exists in the set, we will know the loop exists in the linked list.
+
+    -> So, the loop condition will just be: while node != null.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+        -> Linear space complexity.
+
+
+    APPROACH 2: BETTER
+
+    -> We can use the "Tortoise-Hare" approach here.
+
+    -> The idea here is that, if two things moving over a circle with two different but constant rates, they will meet atleast twice (one in the starting and other at some instant of time).
+
+    -> Therefore, if the slower pointer and faster pointer meet, we will know that there's a loop.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+        -> Constant space complexity.
+
+
+PROBLEM STATEMENT: Find the node (starting point) that makes the loop in the linked list.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Here, the approach 1 of previous problem is useful as we were maintaining the track of the nodes.
+
+    -> So the very first node that matches the nodes in the set will be the required node.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+        -> Linear space complexity.
+
+
+PROBLEM STATEMENT: Find the length of the loop in the Linked List.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Again we can use the tracking approach of finding loop in the linked list.
+
+    -> The idea is that what if we can just find the number of nodes added in the tracking structure after the node which is the starting point of the loop?
+
+    -> The challenge will be that we need to maintain the order of insertion because a set data structure doesn't maintain the order. So we will need another structure.
+
+    -> To solve this we can use a dictionary. The dictionary will keep the key value pair where the key will be the address of the node and value will be its position (index) intially found.
+
+    -> So, if we keep increasing a position variable and just subtract the positions, we will get the length of the loop.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+        -> Linear space complexity.
+
+
+    APPROACH 2: BETTER
+
+    -> The actual thing where we need to pay attention is that we need a counter that counts the number of nodes iterated as we move.
+
+    -> The "Tortoise-Hare" approach can also be used.
+
+    -> First we will find the loop. At that point, the slower and faster pointer will collide.
+
+    -> Just move the slower one one step a head and again iterate till slower meets the faster (we don't need to do anything with faster). Alongside, count the iterations.
+
+    -> Return the count as it is the length of the loop.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity.
+
+        -> Constant space complexity.

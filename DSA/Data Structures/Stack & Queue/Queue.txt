@@ -1,0 +1,23 @@
+-> A Queue is a SLDS (Static Linear Data Structure) abstraction that works on FIFO.
+
+-> Queue is different from static arrays in a way that:
+
+	-> The elements can be deleted only from one side.
+
+	-> The elements can be deleted sequentially, only in the order of their insertions.
+
+	-> Since insertion/deletion to random indices is not allowed, operations like shifting of indices to fill the voids in between are not required.
+
+-> No matter how we implement this, we must have these fundamentals functions:
+
+	-> pop(): Deletes the front (or say firstly inserted) element and returns it (optional).
+
+	-> push(element): Appends the given element.
+
+	-> front(): Returns the front (or say firstly inserted) element.
+
+	-> size(): Returns the pre-allocated size of the structure.
+
+	-> length(): Returns the number of the elements present in the structure.
+
+	-> print(): Prints all the elements in the structure. This might be a necessary function as we have no way to iterate over the stack.

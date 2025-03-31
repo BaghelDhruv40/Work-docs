@@ -1,0 +1,155 @@
+Understanding the problem is indeed the necessary step but is not the sufficient step to solve a problem. A DSA problem mainly focus on two entities, namely, "time" and "space". Minimizing the two, optimally, concludes to a better solution than others for that problem.
+
+Once understood the problem, the next step should be to construct an algorithm to achieve it. Algorithm although said to be completely independent from the language we use to write it, but heavily depends upon the data structures utilization and manipulation.
+
+But, this doesn't mean that the number of alogrihtms for a problem must be atleast equal to number of data structures possibly eligible to be used for the same. There are data structures that may not affect the algorithm complexity.
+
+Sometimes, an algorithm complexity is so straight forward but data structures makes it complex. May be a step in the algorithm assumed to take polynomial time but we don't have any data structure to perform that step in such time complexity.
+
+
+SORTING PROBLEMS
+----------------
+
+-> Sorting the data is one of the fundamental problem when dealing with data. So how should we achieve it?
+
+-> To sort the data, we must know the criteria of sorting. This criteria can be their values, their length, based on a specific member of the data, etc.
+
+-> The existence of criteria makes an innocent sorting problem a wide subject of study. So we may consider different criteria and solve the problem for each.
+
+    SORTING BASED ON THE VALUES
+    ---------------------------
+
+    -> So, we have to consider the values of the data items for the sorting.
+    -> If in ascending, the smaller ones must be in left to the larger ones.
+    -> We must also focus on the data structure given to us that contains the information of the problem and the input.
+
+        First Approach
+        --------------
+        
+        -> The least we can do is to pick at least two items and compare them based on the criteria (here their values).
+
+        -> So, choose any one item and compare it to the remaining items.
+
+        -> Track (separately) how many smaller than or equal to it are found. Based on this number, put it at that location in a data structure.
+
+        -> So we require to have frequency of each element, cumulative frequency depicting the number of smaller or equal, cumultaive frequency that will sum upto to length of the given structure.
+
+        -> Take special care to handle those equal to the fixed item. Decrease the number of those items by one, once placed.
+
+            Analysis
+            --------
+            -> This approach is intuitive but not at all efficient.
+            -> Since we are comparing each element with remaining, we will have to do this atmost n^2 times.
+            -> Further we are maintaing the frequency that will take auxiliary space.
+            -> Since we are not doing anything in-place, we will require to have an output data structure of O(n) space complexity.
+            -> Therfore, time complexity is O(n^2) and space complexity is O(n).
+
+        
+        Second Approach (Bubble Sort)
+        ---------------
+
+        -> In the previous approach, we were comparing all the remaining values with the chosen one in each iteration. What about just swapping the sequence of adjacent values as we iterate over the structure?
+
+        -> How many iterations would be required? In one iteration, we need to keep swapping until we reach the end of the structure. In this iteration, it is gauarnteed that the one element is at the correct position and at the extreme end of the structure. So in the subsequent iteration, we need not to compare with that one element.
+
+        -> So, in each iteration, we are reducing the number of elements to check by one. Since in a single iteration, only one element can be placed at its correct position, we need to perform "n" iterations.
+
+        -> Further, in ith iteration, we need to compare (n-i) times.
+
+        -> So total number of steps will be less than n^2 approximately. To be precise, that will be sum of the sequence n, n-1, n-2, ..., 1 that will be n*(n+1)//2.
+
+        -> This approach is well known by the name of "Bubble Sort".
+
+            Analysis
+            --------
+            -> The time complexity is O(n^2) and no auxiliary space is used.
+
+        
+        Third Approach (Selection Sort)
+        --------------
+        
+        -> Another approach is to assume the chosen number is the smallest and iterate over the structure. The efficient way will be to use it sequentially.
+
+        -> If we found smaller than this number, we just swap them and assume this number as smallest (as it is atleast smaller than our pre assumed smallest number). Keep doing this till we reach the end of the structure.
+
+        -> Hence, in one iteration, one element is at its correct place.
+
+        -> Now we need to place remaining n-1 items and so we need at most n iterations in total.
+
+        -> In each iteration, we still need to compare the value with all remaining values but decreased by one as one element is at its correct place.
+
+        -> This approach is well known as "Selection Sort".
+
+            Analysis
+            --------
+            -> The time complexity is O(n^2) and no auxiliary space is used.
+            
+
+        Fourth Approach (Insertion Sort)
+        ---------------
+
+        -> Another approach is to compare elements and keep moving forward till we are getting a sorted order. Once the order breaks, we move backward by swapping the values till we again get the sorted order. We continue comparing forward from the point where we started going back.
+
+        -> In a single iteration, we just keep moving forward. But, if the sort order breaks, we also need to move back some steps. Still, we are tracking the point from where we started going back to continue moving forward from that instantly. So, this approach is much better in terms of number of steps to be made.
+
+        -> In the worst case only we would require to repeat the process n^2 times.
+
+        -> This approach is well known as "Insertion Sort".
+
+            Analysis
+            --------
+            -> The time complexity is O(n^2) with no auxiliary space.
+            -> Without the tracking mechanism, the worst time complexity would reach O(n^3).
+
+
+    -> The above three approaches are all equivalent in terms of their complexity (but not their algorithm).
+
+    -> Can we get a better complexity approach for the same? For that, we should pay attention to the steps involved in sorting.
+
+        -> We compare two elements at a time.
+        
+        -> We iterate to grab those two elements.
+
+        -> We arrange the elements accordingly.
+
+    -> In the above three approaches, we required O(N) to iterate over the sequence. And, O(N) to compare the elements. Can we reduce any or both of these complexity? The answer is yes!
+
+    -> Another way of iterating over a sequence other than the linear iteration is a method which I call "divide and divide". In this method, we keep divide the sequence into half until we left with one element. The algorithm that follows this is "divide and conquer". The "divide and divide" way of iteration is explained below in detail:
+
+        -> To apply the algorithm, we let two variables namely, low and high (or left and right). The low is equals to 0 and the high is equals to one less than the length of the given sequence.
+
+        -> We take the mid point by, mid = (low+high)//2.
+
+        -> Now we have three pointers namely, low, mid and high. The pair (low,mid) denotes one part of the sequence and the pair (mid+1,high) denotes another.
+
+        -> We can apply the same on the (low, mid) sequence. Note here that the variable "mid" is the variable "high" for this sequence. Hence we can find another "mid" variable for this sequence. This procedure will keep taking place until low equals high. At this point, it will mean that we have only single element in the sequence.
+
+        -> Once we reach that point, we will actually have two elements (one denoting one part of the sequence and other denoting another).
+
+        -> We can now return to one step back and we will have two parts of a sequence. Since one part is already explored (we just came back into the past) we can now explore the second one.
+
+        -> Therefore, after exploring one part of a sequence we need to come back and explore the other in the same way. Once that also has been explored, we can finally return to one step back.
+
+        -> In this way, we can explore all the elements of the sequence. A demo code is provided below:
+
+            nums=[1,2,3,4,5]
+            low=0
+            high=len(nums)-1
+            def traverse(arr,low,high):
+                if low==high:
+                    print(arr[low], end=" ")
+                    return
+                mid = (low+high)//2
+                traverse(arr,low,mid) #left call
+                traverse(arr,mid+1,high) #right call
+            traverse(nums,low,high)
+            //Output: 1 2 3 4 5
+        
+        -> To traverse in reverse, we can just switch the left and right call.
+
+    -> So, we have found a new way of iteration. Even though it still has O(n) time complexity as in the end we are fetching all elements of the sequence. But the approach opens new gate of thinking for making camparisons.
+
+    
+
+
+

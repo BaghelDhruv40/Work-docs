@@ -1,0 +1,24 @@
+Q: How should I learn in computer science?
+Ans. Computer Science is a fast pace field. Here, both efficient way of theoretical learning and practical implemenation matters. 
+
+Q: What the industries are asking for?
+Ans. A lot of analysis is required to answer this. Should I focus on achieving theoretical depth of a concept? Should I focus on knowing the maximum number of tech? Should I focus in building the mindset required to tackle a task?
+
+We can't incline on any one of these here. The strategy totally depends upon the environment we are aiming to work into.
+
+To some companies, the top notch up to date about tech mindset matters.
+
+To some companies, the skills in the mentioned tech matters.
+
+To some companies, the attitude or mindset to think and make approaches matters.
+
+So, way before to decide our strategy, it is required to analyse the industry we are targeting. It might be easy for some to master all. But, for most, it is the skill to figuring out this first is necessary.
+
+Q: What is the efficient way to prepare for placement?
+Ans. When preparing for placements, our initial focus must be on the rounds that will lead us to interview. DSA is the most crucial one.
+
+Suppose we made to reach interview rounds, how should i prepare for it? For on campus placements, they won't see our projects but our knowledge about that. So, overall, we need to pay attention on the theoretical knowledge. A perspective about projects will help. Projects should be seen as a great source of questions. Indeed they make us familiar with the work flow, but they are a great source of questions and own exploration. Learning a concept without knowing its importance is worthless. And, since it's quite hard to theoretically reach to the importance of a concept or tool, it is better to explore by practice. Further, even if we are able to realise the importance of a concept theoretically, we need to be up to date about the tech tools available that implements those concepts.
+
+
+
+When I use an app, besides the functionalities of that app, I love how smooth the UI is. And that's what I should also target for.

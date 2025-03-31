@@ -1,0 +1,73 @@
+-> MySQL Community Server (or simply MySQL Server) is the core MySQL database server, which is free to use and open-source. It's where our actual databases and tables reside, handling data storage, retrieval, and management.
+
+-> MySQL Server can run comfortably on a desktop or laptop, alongside your other applications, web servers, and so on, requiring little or no attention.
+
+-> If we dedicate an entire machine to MySQL, we can adjust the settings to take advantage of all the memory, CPU power, and I/O capacity available. MySQL can also scale up to clusters of machines, networked together.
+
+-> The MySQL Server is a client/server system that consists of a multithreaded SQL server that supports different back ends, several different client programs and libraries, administrative tools, and a wide range of application programming interfaces (APIs).
+
+-> There are many different programs in a MySQL installation. Most MySQL distributions include all of these programs, except for those programs that are platform-specific. (For example, the server startup scripts are not used on Windows.)
+
+    -> The MySQL server, mysqld, is the main program that does most of the work in a MySQL installation.
+
+        -> mysqld: The SQL daemon (that is, the MySQL server). To use client programs, mysqld must be running, because clients gain access to databases by connecting to the server.
+
+    -> MySQL client programs that connect to the MySQL server:
+
+        -> mysql: The command-line tool for interactively entering SQL statements or executing them from a file in batch mode.
+
+        -> mysqladmin: A client that performs administrative operations, such as creating or dropping databases, reloading the grant tables, flushing tables to disk, and reopening log files. mysqladmin can also be used to retrieve version, process, and status information from the server.
+
+        -> mysqlsh: MySQL Shell is an advanced client and code editor for MySQL Server.
+        
+
+MAIN FEATURES OF MYSQL SERVER
+-----------------------------
+
+-> Written in C and C++.
+
+-> Designed to be fully multithreaded using kernel threads, to easily use multiple CPUs if they are available.
+
+-> Provides transactional and nontransactional storage engines.
+
+-> Uses very fast B-tree disk tables (MyISAM) with index compression.
+
+-> Designed to make it relatively easy to add other storage engines. This is useful if we want to provide an SQL interface for an in-house database.
+
+-> Executes very fast joins using an optimized nested-loop join.
+
+-> Implements in-memory hash tables, which are used as temporary tables.
+
+-> Implements SQL functions using a highly optimized class library that should be as fast as possible. Usually there is no memory allocation at all after query initialization.
+
+-> Provides the server as a separate program for use in a client/server networked environment.
+
+-> A privilege and password system that is very flexible and secure, and that enables host-based verification.
+
+-> Password security by encryption of all password traffic when we connect to a server.
+
+-> MySQL includes several client and utility programs. These include both command-line programs such as mysqldump and mysqladmin, and graphical programs such as MySQL Workbench.
+
+
+USING MYSQL
+-----------
+
+->  mysql (sometimes referred to as the “terminal monitor” or just “monitor”) is an interactive program that enables you to connect to a MySQL server, run queries, and view the results.
+
+-> Syntax to connect: $> mysql -h host -u user -p
+                        Enter password: ********
+
+-> host and user represent the host name where our MySQL server is running and the user name of our MySQL account. The ******** represents our password; enter it when mysql displays the Enter password: prompt.
+
+-> The mysql> prompt tells us that mysql is ready for us to enter SQL statements.
+
+-> mysql may also be used in batch mode: we place our queries in a file beforehand, then tell mysql to execute the contents of the file.
+
+-> We have been provided with some databases by default. Some are:
+
+    -> mysql: The mysql database describes user access privileges.
+    -> test: The test database often is available as a workspace for users to try things out.
+
+-> We can ask our MySQL administrator for permission to use a database of our own. Suppose that we want to call ours menagerie. The administrator needs to execute a statement like this:
+
+    mysql> GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';

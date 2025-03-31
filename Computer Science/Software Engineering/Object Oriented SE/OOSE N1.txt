@@ -1,0 +1,76 @@
+-> OOSE is an approach to system design that utilize the concepts of OOP throughout its life cycle. In general, we can say OOSE is a specific case of OOE (Object Oriented Engineering) because concepts of OOPs are itself inspired from the reality and is a general approach to solve a problem.
+
+-> OOSE is introduced by Ivar Jacobson in 1992.
+
+-> OOSE uses usecases in designing.
+
+-> It includes, "requirement", "analysis", "design", "implementation", "testing" models.
+
+-> Note:
+
+    -> Interaction diagrams are similar to UML's sequence diagrams.
+
+    -> State transition diagrams are like UML state chart diagrams.
+
+-> Use Case diagrams are:
+
+    -> expressed in "requirement" model. Then,
+
+        -> We get a "problem-domain object diagram". Which.
+
+        -> will be specified use case diagram.
+
+    -> structured in "analysis" model. Which,
+
+        -> will design the analysis diagram.
+
+    -> realized in "design" model. Where,
+
+        -> where it should be desgined using "state transition" diagrams. And,
+
+        -> "interaction" daigrams.
+
+    -> implemented in "implementation" model.
+
+    -> verified in "testing" model.
+
+
+BASIC CONCEPTS OF OBJECT-ORIENTED
+---------------------------------
+
+-> We have "objects", "classes", "data abstraction", "data encapsulation", "inheritance", "polymorphism", "message passing".
+
+    CLASSES: User defined data types on which objects are created.
+    
+        -> They are basically the blueprint to realize/design the real entities.
+
+        -> Objects with similar properties and methods are grouped to gether to form a class.
+
+        -> Doesn't occupy space in memory.
+
+    OBJECTS: Created using the template provided by the classes.
+
+        -> They are instance of class.
+
+        -> Occupy space in memory.
+
+UML (Unified Modeling Language)
+-------------------------------
+
+-> It is a graphical language to explain the structure, interactions and working of a system.
+
+-> It represents the combination of the notations by Booch, Rumbaugh, Jacobson.
+
+-> It defines 13 diagrams. They are broadly classified into two main categories: Structure Diagrams and Behavioural Diagrams.
+
+    Structure Diagrams: Consists of Class, Object, Component and Deployment Diagrams.
+
+        -> Focuses on static aspects of the system i.e., those which are not going to change in the system.
+
+        -> Describes the system's architecture, properties and entities.
+
+    Behavioural Diagrams: Consists of Interaction, Use-case, Activity and State Machine Diagrams. Some of these diagrams are further broken down which we shall see later.
+
+        -> Focuses on dynamic aspects of the system.
+
+        -> Describes how the system responds and behaves in different scenarios.

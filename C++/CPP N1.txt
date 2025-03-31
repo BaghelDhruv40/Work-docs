@@ -1,0 +1,69 @@
+-> On declaring an array, if we print any of its value, the answer will be a garbage value (system generated value).
+
+-> A string is mutable  here.
+
+STANDARD TEMPLATE LIBRARY
+-------------------------
+
+-> This library consists of "Algorithms", "Containers", "Iterators" and "Functions".
+
+    CONTAINERS : Collection of data structures
+    ----------
+
+        PAIR : A data structure that defines a pair of data types.
+
+            -> Syntax : pair <data type, data type> variableName = {val1, val2};
+
+            -> We can further define complex pair of pairs like:
+
+                pair <data type, pair<data type, data type>> variableName = {val1, {val2, val3}};
+
+            -> To fetch elements, we don't have index but ".first" and ".second" attributes.
+
+            -> We can create an array of pairs instead of chaining the second point. For example: pair <data type, data type> arr[] ={{val1, val2},{val3, val4}};
+
+        
+        VECTOR : A dynamic array data structure.
+
+            -> Syntax : vector <data type> variableName = {val1, val2, val3,..., valN};
+
+            -> We have push_back(argument) method to append the given argument (which can be anything).
+
+            -> Similarly, we have emplace_back(argument) method also. This method is better than push_back().
+
+            -> To initiate the vector with some size and values, we can use the following syntax:
+
+                vector <data type> variableName(size, initialization value);
+
+            -> We can fetch elements using the index or at(index) method (not much used).
+
+            -> We have various methods associated with the vector:
+
+                -> begin(): a pointer to the initial index of the vector.
+
+                -> end(): a pointer to the location next to last element of the vector.
+
+                -> back(): returns the last element of the vector.
+
+                -> size(): the size of the vector.
+
+                -> clear(): empty the vector.
+
+                -> pop_back(): pop the last element of the vector
+
+                -> swap(vector): swap the two vectors.
+
+        LIST : Similar to vectors with additional features.
+
+    Iterator : Basically a pointer.
+    ---------
+
+            -> In order to iterate over containers (which are iterable), we first have to define an iterator for that container. This can be done as:
+                // particular case of vector container is taken
+                vector <data type> :: iterator iteratorname;
+
+            -> Then we have many functions associated with this iterator:
+
+                -> 
+
+                

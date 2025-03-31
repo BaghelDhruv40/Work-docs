@@ -1,0 +1,36 @@
+PROBLEM STATEMENT: Given a binary tree, return it in preorder form.
+
+    RECURSIVE APPROACHES
+    --------------------
+
+        APPROACH 1: BRUTE FORCE
+
+        -> In preorder form, the parent comes first then the left child and then the right child.
+
+        -> So till the node is not empty, we first insert the value of node in the output data structure, then calls the function for the left child of the current node i.e., node.left and repeat the procedure.
+
+        -> Once there's no left child, we just return back.
+
+        -> We are at a node just above its child level, but we have not explored its right child. So, we now call the function for the right child of the current node i.e., node.right .
+
+        -> Now again, we first insert the value of node in the output data structure then calls the function for its left child and then calls the function for the right child of the current node.
+
+            ANALYSIS:
+
+            -> In the worst case, the tree might be de generated (linearly skewed or forms a singly linked list). So, the time complexity to traverse is O(n). In best case, the complexity will just be O(log n).
+
+            -> Space complexity is O(n) occupied by the output structure and the recursive calls.
+
+        
+    ITERATIVE APPROACHES
+    --------------------
+
+        APPROACH 1: BRUTE FORCE
+
+        -> Iteratively, we can only go in one direction (usually forward). But, we must have to return back from a child to its parent to explore the other child possible.
+
+        -> How can we achieve it in iterative way? We need to keep a track of the node already visited. Like, once we reach a point wher next node is null, we have to return back to recently visited node. The best data structure to keep this track would be stack.
+
+        -> The need of stack data structure is quite easy to guess as that what appears implicitly in recursion too!
+
+        

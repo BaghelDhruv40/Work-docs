@@ -1,0 +1,84 @@
+PROBELEM SATEMENT: Given a positive integer, find the sum of all the divisors in this range.
+
+    BRUTE FORCE APPROACH
+    --------------------
+
+    -> The numbers in the range denotes the numerator. So for each numerator, we find its divisors and store them in a data structure.
+
+    -> To find the divisors of a numerator, we have to iterate in the till a point.
+
+    -> To find that point, analyse that first we have to check if the division by the denominator results into zero remainder. If so, that denominator must be the divisor and the quotient must also be the divisor.
+
+    -> The denominator that divides the numerator properly lies in the left side of the mid of the range while the quotient they result lies in the right side of it.
+
+    -> Hence, instead of making the end point as half the range, we can use square root of the numerator. Also, add one in this end point to handle the edge case.
+
+    -> Better to use a dictionary data structure to avoid duplicate values.
+
+    -> So now, we can find all divisors and just sum up them by fetching from the dictionary.
+
+        ANALYSIS
+        --------
+        -> The Dictionary data structure used results into O(n) space complexity.
+
+        -> The procedure to find the divisors result into O(n**0.5) time complexity.
+
+        -> The above procedure have to be repeated for all numerators and so the time complexity becomes O(n**1.5).
+
+        -> Lastlly, summing up all the divisors requires O(n) time complexity.
+
+        -> Therefore, the overall time complexity is O(n+n**1.5) => O(n**1.5).
+
+    OPTIMAL APPROACH
+    ----------------
+
+    -> This approach requires a lot of analysis.
+
+    -> The divisors will always lie in the inclusive range [1,N]. To sum up, we can think of finding what is the frequency of each divisor.
+
+    -> So how many divisors will be 1? This will be given by the quotient!
+
+    -> Hence, we have to evaluate 1*(N//1) + 2*(N//2) + 3*(N//3) + ... + N*(N//N)
+
+    -> This approach can be reached from the brute force one by recogizing patterns in the occurrences of divisors. Otherwise, maths skills will work.
+
+        ANALYSIS
+        --------
+        -> The time complexity is O(n) and space complexity is O(1).
+
+
+PROBLEM STATEMENT: Find all the primes in the given range [1,N].
+
+    BRUTE FORCE APPROACH
+    --------------------
+
+    -> Primes are those numbers which have only two divisors, 1 and themselves.
+
+    -> We can iterate for a numerator to count its divisors. If it exceeds 1, we can break the loop and repeate the same for another numerator.
+
+    -> To find the divisors, we have to iterate till next integer to the square root of the numerator.
+
+    -> Once figuring out the primes, we can store them in output data structure.
+
+        ANALYSIS
+        --------
+        -> The worst case (when the number is not prime), the loop as to run n**0.5 times and so the overall time complexity will be same as in the case of finding the divisors of numerators in the given range, which is O(n**1.5).
+
+
+    BETTER APPROACH
+    ---------------
+
+    -> Instead of counting the divisors for each numerator, what we can do is store 2 in the data structure that will carry all the primes.
+
+    -> Now we can iterate for numerators in the range [3,N+1].
+
+    -> Instead of iterating in the range [1,numerator] for counting divisors, we can iterate over the prime-carrying data structure.
+
+    -> Since, that data structure carries only prime, if a numerator is not divisible by all of them, that will mean that it is also a prime and so will be included in that data structure.
+
+    -> Since number of primes in the data structure may atmost be square root of the numerator, but not always, this approach is slightly better in non-extreme situations.
+
+        ANALYSIS
+        --------
+        -> The time complexity is O(n**2) and no auxiliary space is used except the output data structure and so space complexity is O(n).
+
