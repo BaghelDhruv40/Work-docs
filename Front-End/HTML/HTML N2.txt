@@ -13,6 +13,9 @@ I've explored the tags in html and found that there are basically very few tags 
 	-> forms and button tags: The fundamental tags for user interaction. These includes <button> tag, <input> tag, etc.
 
 
+-> HTML has been a fundamental for SEO. However, the scope of SEO is way bigger and includes various other factors other than use well structuring and correctly using meta data.
+
+
 DON'Ts
 ----------
 -> Use display properties on body tag.

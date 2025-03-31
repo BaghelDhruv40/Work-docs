@@ -10,7 +10,7 @@
 
 -> So ADT not only store data but allow us to perform data fetching operations on them. No matter what ADT, it must provide a way to locate desired data unit and to perform crud over it.
 
--> At the core of the concept of memory, we have physical quantities used to depict a state. So a memory can be imagined as a collection os variables (references). But, each variable can only store one of the two states, and, an information may require more than those states. Instead of making new states, we can use the existing states, to depict a new state. Now it's upto us how to use these states in efficient way to depict new states and so an information.
+-> At the core of the concept of memory, we have physical quantities used to depict a state. So a memory can be imagined as a collection of variables (references). But, each variable can only store one of the two states, and, an information may require more than those states. Instead of making new states, we can use the existing states, to depict a new state. Now it's upto us how to use these states in efficient way to depict new states and so an information.
 
 -> One way is to utilize the concept of boolean algebra. And if so, new states are just linear sequences of the two states.
 
@@ -23,52 +23,144 @@ WHAT ARE DATA STRUCTURES ?
 
 -> Some examples of DS are arrays, linkedlist, Hashtable, etc.
 
+-> The most fundamental property of a data structure is to be iterable or at least providing a way to do so.
+
 
 CLASSIFICATION OF DATA STRUCTURES
 
 -> We classify datastructures broadly as Linear and Non linear.
 
-	LINEAR: These datastructures are logically linear as they store data in continuous (one-by-one or sequential) manner and traverse linearly also. They include:
+	LINEAR: These data structures are logically linear as they store data in continuous (one-by-one or sequential) manner and traverse linearly also. Some of the famous ones are lists, arrays, queue, stack, strings, sets, maps, etc.
 
-		-> List:
-		-> Array:
-		-> Queue:
-		-> Stack:
-		-> Tuple:
-		-> String:
-		-> Set:
-
-	NON-LINEAR: These datastructures
+	NON-LINEAR: These data structures do not store data in sequential form and traversal to them are not linear also. Some of the famous ones are trees, heaps, tries, graphs, etc.
 
 
 LINEAR ADT
------------------
+----------
 
 -> Suppose we need to store a number of data items. Below are some questions may arise:
 
 	-> How to store these data items?
 	Ans. To store these items:
-		-> We can book a continuous block of locations.
+		-> We can book a continuous block of locations. But,
+
+			-> How to achieve this? We would require an internal mechanism that randomly pick a location and book the size we have given and return the pointer to its first block.
+
+			-> When a pointer is declared, a data type is also assigned to it. Data types of a variable signifies that how much memory is booked by the variable. If so, data type of a pointer will mean the memory booked by the location the pointer points to to carry the value. Is it correct? The answer is NO! And the discussion on this will be carried below.
+			
+			An hint of why is it wrong is that consider the case when a pointer is declared for a user defined data type (yet not discussed). Since we have no mechanism of knowing how much memory will be used by the user defined data type, the system can't book it.
+
+			-> Now, assuming a mechanism (calloc() in C) is there to allocate continuous memory as per the given size, we can talk further about this approach.
 
 			CHARACTERISTICS:
 
 			-> Knowing the location of just first block location reveals all the items on iterating over it sequentially.
+
 			-> The number of blocks (or say locations), that may be called the size or length of the structure, should be specified in the start (that means must be known).
+
 			-> Knowing the first and last location (or a relative position called index) of the blocks, we know the range over which we can iterate.
 
 			MERITS:
 
 			-> If index is known, CRUD on an item randomly is possible. Therefore constant time complexity.
+
+			-> Existence of iterability.
 			
-			LIMITATIONS:
+			ANALYSIS:
 			
 			-> The size is static.
-			-> Inserting an item may require O(n) time.
+
+			-> Inserting over the sequence for an item may require O(n) time.
+
+			-> Insertion at the end (if possible) requires unit time.
+
+			-> Deleting an item based on its value and not index may require O(n) time. Note here that deleting means replacing the value at that index with the default one.
+
+			-> Extending the size is only possible by copying the items in larger size structure, hence requires O(n) time.
+
+			IMPLEMENTATIONS
+			---------------
+
+				STATIC ARRAY:
+
+				-> Static array is a fundamental implementation of continuous linear ADT.
+
+				-> We need to provide the size of it in advance while declaring it. The name used while declaring the array is used as the pointer name of the first location of the array.
+
+				-> Along with the size, we also need to provide the data type. Since array is nothing but continuos block of memory, the same pointer is used to iterate over it. If same pointer is iterating, the data type must remain same through out the array. Hence, array store single data type of elements.
+
+				-> Instead of pointer operations, we are provided array operations to work with them like fetching an element by mentioning the index, etc.
 
 
-		-> We can discontinusouly assign them to locations.
-			-> Being discontinuous, we may require to track the location for each. How? If storing the location is a way then we may come into a loop. So, will have to think of a way to preserve the coonection.
-			-> 
+		-> We can discontinusouly assign them to locations. But,
+
+			-> Being discontinuous, we will require to track the location for each. And, the only way to store a collection of values is the one discussed previously.
+
+			-> What data type is used to store location? Well the discussion on it is yet to come but we are familair with pointers and we can define a pointer to a pointer. So, we can imagine a continuous structure carrying all the pointers.
+
+			-> One more thing is that how will we automate the procedure of storing new items? Such mechanism was still intuitive in case of continuos approach as the system would just pick a random location and based on the size given books the continuous blocks.
+
+			Here, we may think of a primitive procedure that repeats the number of times equal to the size given. The primitive procedure will just be picking random location and putting it into the "location-tracking-structure". The size of that structure will be same.
+			We do have a mechanism to allocate discontinuous memory of given size in C language and that is malloc() method. This returns a pointer of void data type and so, we have to type cast it according to our needs.
+
+			-> Obviously, we can't adopt discontinuity using continuous approach It will be like an approach derived from an approach. So, if storing the location is a way then we may come into a loop. Therefore, we will have to think of a new way to preserve the connection.
+
+			-> What if we can create complex data type, like, a data type that can store multiple data types? Severals points to consider:
+
+				-> Since it is not a primitive data type and complexity of it is not fixed, we need pointers to refer and fetch info from it. Hence, we need to declare the data type of the pointer as this user defined data type. A data type on a variable declaration signifies that how much memory is booked by the variable but what about the case of this user defined data type? The system doesn't know how much size to book!
+
+				-> So, how will the size of it be decided? For primitive data types, the system has already defined standards. The solution is a mechanism that can just add up all the sizes of primitive data types used to build that "user defined data type".
+
+				-> Actually, the statement that "data type on the declaration decides the size to book" is valid only for primitive data type. For pointers, the data type are actually declared for de referencing purpose. It doesn't signify the size booked by the pointer. The size of pointers to store locations are pre defined in computer architecture no matter what data type is used in thier declaration! And so, this is the reason we can declare a pointer of a user defined function while defining that data type itself!
+
+			-> Hence, existence of mechanism to create user defined allow us to talk further about this approach:
+
+			CHARACTERISTICS:
+
+			-> It's dynamic as pointers to every new node is stored in the previous node and so allow us to not care about any "location-tracking-structure" that requires a size to be given.
+
+			-> No size is required to be given.
+
+
+			MERITS:
+
+			-> Existence of iterability.
   
 
+			ANALYSIS:
 
+			-> Unit time complexity of insertion/deletion of a node at the beginning.
+
+			-> Appending/Insertion an element requires O(N) time.
+
+			-> Expanding is easily possible.
+
+			-> Deletion of an element doesn't require filling the place with another value.
+
+			
+			IMPLEMENTATIONS
+			---------------
+
+				SINGLY LINEKDLIST:
+
+				-> We create a struct in C or class in oop languages that denotes it.
+
+				-> Another class (or struct) is created to denote the nodes.
+
+				-> The memory for nodes is allocated by the malloc method (in C) or new keyword (in opp languages).
+
+
+
+NON-LINEAR ADT
+--------------
+
+-> Having a great discussion on linear ADT, we have devloped fundamental knowledge of how to approach for solutions.
+
+-> What is a non-linear ADT and why do we need them? Linear ADT are such ADT that allow us linear iteration. That means, we can have at most two directions to move on over every element/node that will lead to a new unexplored node.
+
+-> So, non-linear ADT posses more than 2 directions to move (for at least one element/node). But, where do we need such ADT? Consider following:
+
+-> Suppose we need to store and explore the consequences of a decision. For example tossing of "N" coins. Below are some question that can be raised:
+
+	-> How can we do that?
+	

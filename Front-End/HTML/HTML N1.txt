@@ -114,3 +114,13 @@ TABLE TAG: Used to create a 2D table structure in the page. It includes further 
 	-> table caption: <caption> about the table </caption>. To write what this table is for.
 
 
+DETAILS TAG: This tag is the fundamental block to create an accordian. It has a label that is enclosed within <summary></summary> tag. For example:
+
+	<details>
+		<summary>Details</summary>
+		Something small enough to escape casual notice.
+	</details>
+
+	-> This tag has only two states, open and closed. So when clicked on it, it opens.
+
+

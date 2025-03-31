@@ -5,6 +5,8 @@
 
 -> Primitive datatypes are string, number, boolean, void, never.
 
+-> void datatype is used to signify that a function returns nothing.
+
 -> TS doesn't force explicit annotation every place. For cases:
 
 	-> If we are assigning a literal to the variable.
