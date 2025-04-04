@@ -1,0 +1,57 @@
+-> What is Marketing?
+Ans. Marketing is defined as a process of "promoting goods or/and services" using different techniques or approaches. So, the keyword is "promoting". Now, the classification of Marketing is left upon the "techniques" to be used.
+
+Depending upon the techniques/methods used for marketing, we can broadly classified into two classes: Traditional Marketing and Digital Marketing.
+
+    -> Traditional Marketing: It is not a term but a super class of many other classifications of Marketing which were used or famous in the history of marketing. Some of them are Print-marketing, Poster-marketing, telecommunication-marketing.
+
+    -> Digital Marketing: It is the modern approach for marketing and is currently well famous. 
+
+One thing to pay attention in marketing is that besides psychology (which is used once the method is selected), the approach to marketing relies on the current trend in way of communication, because, the very first thing to promote something is to first reach to the audience. Indeed, promotion is a kind of one way communication but communication requires at least two members. So, reaching the audience is the very first cruicial step.
+
+-> What is traditional Marketing?
+Ans. As already been given a glimpse of it, traditional marketing is a term used to group the past practices used for marketing. It is "traditional" in both the way of reaching and psychology parts. But usually, while using this term, we are more inclined towards the "approaching/reaching" part as this is the one which is usually bounded with the current options present.
+
+-> What is Digital Marketing?
+Ans. We have not talked much about this; And since it is currently a hyped topic in marketing, we can dwell into it. See, marketing we already know, we just have to focus on "digital" here. So,
+
+    -> What does "digital" in DM means?
+    Ans. Digital here doesn't signifies all the digital modes of communication, but, the most famous one! And that is Internet. So, it is actually "digital network" marketing.It should be focused here that DM is specifically about utilizing Internet. In digital, we could also count "television marketing" but it is not the case.
+
+-> Why Digital Marketing?
+Ans. The question is equivalent to asking "Importance of DM or features of DM". See, the Digital Marketing is indeed about utilizing Internet, at first, but the psychology of people changes with time. And so, DM is utilizing both the modern parts of "reaching" and "psychology". Here are benefits of DM:
+
+    -> The reach is no doubt highest because of the vast web of Internet.
+
+    -> The physical resources required is way less! There's no need for papers, ink and distribution by man power.
+
+    -> The creation of content is much more affordable and easy.
+
+    -> You owns the creativity.
+
+-> Why Digital Marketing is harder? What makes it the easiest?
+Ans. The two questions are contradictory but are not wrong. DM is indeed harder than traditional marketing and here are the points to convince:
+
+    -> The "reaching" part is itself one of the barrier although we are talking about the largest web network. If we are just talking about the inter-connected nodes in the web, DM is of no use.
+
+        -> See, being interconnected does means we can reach anyone (present in the network), but, it is also way harder to reach them. We must know the address of the host/target to reach it. And if not, we can just broadcast in that network, but still, it doesn't mean our content will be consumed by them.
+
+    -> Type of content consumption is not static.
+
+        -> Internet has a main purpose of sharing resources and not all people are consuming same resources! Hence, depending upon what our audience is consuming on Internet, we will have to format/ mold our content. Indeed, this is a hard task! It will be a waste of lot of money to broadcast all formats of our content as classifying the audience based on the content they consume is not possible (unless we track them and have a way of doing it efficiently).
+
+    -> Non-uniformly accelerated reach.
+
+        -> The broadcasting doesn't ensure that the reach of the content will be efficiently handled. It will totally depend upon the audience behaviour that whether they are consuming the content or not.
+
+Hence, DM is indeed vast but also difficult. But can't we work on these points and ease the field? That is the reason the boom of DM just came and not from the starting of Internet! Here are the points that ease DM.
+
+    -> Narrowing the spread: In a web, where nodes are just vastly spread, we need a way to converge people so that the content is consumed by majority. Hence, increasing the chances of reach. That's what has done by social media. The main object of social media was to bring people on the same platform to interact and communicate with each other.
+
+    -> Narrowing the type of content consumption: Social media didn't converge the audience only, it introduced specific type of content formats only and hence narrowing the format options for content creators!
+
+    -> Accelerating the reach: Social media further implements algortihms to efficiently spread the content to right audience.
+
+    -> Creativity tools: The advancement in tech led to emmergence of productivity and creativity tools. These can be used to create catching content.
+
+    -> Analytics tools: The emergence of Analytics tools let the content creators to also analyse the reach and audience behaviour and interactions to their content.

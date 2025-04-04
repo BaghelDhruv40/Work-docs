@@ -1,0 +1,3 @@
+I just realised that may be my way of problem solving is not what the DSA rounds are looking for. I'm not building an analytical, pattern recognition, decision making skill. I'm aiming for solving the given problem by directly diving and not filtering the irrelevant things to narrow the scope for focus.
+
+My approach is neither systematic. Sometimes, solution comes to my mind way later. But, what I need is to find the solution in the given time! And the key to this is to improve the necessary skills required. The thought process should be rigid.
