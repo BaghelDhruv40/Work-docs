@@ -1,29 +1,28 @@
--> Operating System is just a program to reduce the complex and repetitive tasks at the very lowest level of utilizing hardware of a computer.
+-> Linux is basically a kernel. Kernel is something that interact with the hardware.
 
--> This is the very first need of thinking of an OS.
+-> Richard Stallman and Linus Benedict Torvalds are founders of Linux.
 
--> The very first computers were for dedicated work and not a general purpose one. Being a dedicated one, a computer used to go through only limited steps and exploit only limited resouces. But, as the wave for making a general purpose computer emerged, computers were no more dedicated and managing multiple dedicated tasks become very difficult for end user. hence, a program was needed to handle atleast repitive operations and manage the tasks and resources effectively.
+-> Linux was inspired by MINUX which was inspired by UNIX.
 
--> OS is kind of a manager. It controls and coordinates use of hardware among various applications and users.
+-> Linux is free because of GNU General Public License. It says that we can take any software and the redistribution of it along with the modification is totally free.
 
--> A computer system can be divided into four components:
-	-> Hardware
-	-> OS
-	-> Application programs
-	-> Users
+-> Linux kernel is same mostly but the tools from GNU is different.
 
--> A question comes to my mind that why we made a software for control and coordination? why this feature is not introduced into the hardware i.e., CPU itslelf?
+-> Destros are specific group of people which takes the responsibility of linux and manage its updates and version.
 
--> An OS can be view from two perspectives:
+-> Some popular destros are Arch, Debian (owns MInt, Ubuntu, Kali, Parrot, Deepin, etc.), Redhat (owns CentOS, Fedora), etc.
 
-	-> User View.
-	-> System View.
+-> In Linux, we have wide variety of shells (or terminals). One such is Bash Shell.
 
--> From the System pov, OS is the program most intimately involved with the hardware.
+-> Distrotest.net is a site to try all linux.
 
-	-> The OS is a "Resource Allocator".
-		-> Manages all resources.
-		-> Decides b/w conflicting requests for efficent and fair resource use.
+-> Bootloader is an essential topic to discuss here. Bootloader here is simply a pointer. It points to different OS installed in the Hardware. Having two OS in the system and deleting one which was used recently without resetting the boot loader will lead to loss the pointer to 1st OS.
 
-	-> The OS is a "Control Program".
-		-> Controls execution of programs to prevent errors and improver use of the computer.
+-> We have the topic named Virtualization. It is a software that helps in installing multiple OS containers.
+
+-> We have two cases. Either the virtualization is directly above the harware layer, above which we can install multiple os containers.
+The other case is, we already have an OS over hardware layer, and on top of it, we have virtualization.
+
+-> We have the concept of Hypervisors with two types.. Type 1 and Type 2.
+	-> Type 1 is loaded directly on hardware. Ex: Hyper-V
+	-> Type 2 is loaded on OS. Ex: Fusion, Virmware player, etc.
