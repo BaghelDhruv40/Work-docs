@@ -1,4 +1,4 @@
-JavaScript is the heart of websites. It manages the http request and responses and is the soul of interativeness. Focusing here about the interativeness part only, the UI or frontend has become more intimate with JS. It is obvious that developers make a library specialized for this task. React if one such library but emerged due to a major reason. The UI fault story in the facebook page is all been taught when comes to introduction of React. ReactJS was first created by Jordan Walke, a SE at facebook.
+JavaScript is the heart of websites. It manages the http request and responses and is the soul of interativeness. Focusing here about the interativeness part only, the UI or frontend has become more intimate with JS. It is obvious that developers make a library specialized for this task. React is one such library but emerged due to a major reason. The UI fault story in the facebook page is all been taught when comes to introduction of React. ReactJS was first created by Jordan Walke, a SE at facebook.
 
 JS is the base, so nothing magical is happening in React. But, how things are implemented definitely amuses at the first sight.
 

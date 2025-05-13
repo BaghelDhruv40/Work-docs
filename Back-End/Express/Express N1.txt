@@ -1,1 +1,146 @@
 -> Express is a backend framework for NodeJS. This means, it provides a basic backend project structure with minimal required files to start with.
+
+STEPS FOR SIMPLEST EXPRESS APP CREATION
+---------------------------------------
+
+-> Here are the simple steps to create the simplest express application:
+
+    -> Create a folder to denote the project, say Project_01.
+
+    -> Create a folder, inside this project, to denote backend, say "Backend".
+
+    -> Use the command in the integrated terminal of this folder: npm init
+
+    -> This command will initialize this folder as a "node project". We can verify this by the creation of "package.json" file here.
+
+    -> Now install express as: npm i express
+
+    -> This will create a node_modules folder with the basic modules including express. Here, it is recommended to install "nodemon" also.
+
+    -> The default entry point is the index.js file (yet not created by us). So just create this file.
+
+    -> In this file we write the following code:
+
+        import express from "express";
+
+        const app = express();
+
+        const port;  //yet not defined.
+
+        app.listen(port, ()=>{
+            console.log(`The server is running at ${port} port`)
+        })
+
+    NOTE: The above code is not yet completed but this is the correct point to discusse something. This much code feels quite similar to the server-creation code directly in node. For reference,
+
+        import http from "node:http";
+
+        const server = http.createServer();
+
+        const port; //yet not defined.
+
+        server.listen(port,()=>{
+            console.log(`The server is running at ${port} port`)
+        })
+    
+    So, the thing is, both of these codes will not work. Here, we do have created the server and started listening, but we have not mentioned what to do after listening! Hence, we have to add:
+
+        app.get("/",(req, res)=>{
+            res.end("Hello World!")
+        })
+    
+    before the app.listen() in express code. Similarly, we have to add a callback in createServer():
+
+        const server = http.createServer((req, res)=>{
+            res.end("Hello World!)
+        })
+    
+    Now they are equivalent. But still there's an advantage in express code. The express code can listen to both frontend API request or direct browser URL hit, but, the pure node code can't respond to frontend API as there's no mention of http API for req/res (like get, post, etc.). For that, we have to add the following code:
+
+        http.get("http://localhost:port", (req, res)=>{
+            res.send("Hello World!")
+        })
+
+
+SUB APPS
+--------
+
+-> We can definitely create as many express apps as we want in the Backend folder. An express app is called a sub app when we want an association of that app with our main express app. In such case, we may not use different ports. We must also mount the sub apps in the main app as:
+
+    app.use('/subapp', subapp) // /subapp is the route and subapp is the app.
+
+
+EXPRESS ROUTERS
+---------------
+
+-> The concept of express routers came later. They are light weight and introduced to reduce some complexity in using mounted sub apps (apps associated with main app). The whole procedure is same.
+
+-> The main difference between routers and sub apps is that routers must have same port as the main app.
+
+-> Below are the steps to create the simplest router:
+
+    -> Create the below directory path:
+
+        Backend/src/routes
+
+    -> Inside routes named folder, we need a defaulty searched file, namely index.js. This file acts as a mapper for further specific routers.
+
+    -> Further, inside routes named folder, we can add more folders (This is an optional but convenient way), say route01, rout02, ...and so on. Inside each of these folders, we create respective JS file.
+
+    -> Let's look inside the JS file (say route01.js) of rout01 named folder.
+
+        import {Router} from "express";
+
+        const router = Router();
+
+        // One or more route-handlers, like
+
+        router.get("/", (req, res) => res.end("Hello from route01"))
+
+        export default router;
+
+    -> Now, let's look into the main "index.js" file residing in routes named folder:
+
+        import {Router} from "express";
+
+        import route01 from "./route01/route01.js" //highly recommended to use js extension here. Similarly, we can add more routes.
+
+        const router = Router();
+
+        //One or more route-handlers. This is an optional. For example:
+
+        //router.get("/xyz", (req, res)=> res.end("Hello from routes!"))
+
+
+        //Mounting different routes
+        
+        router.use(mountpath, routename) //example: router.use("/abc", route01)
+
+        export default router;
+
+
+SERVING STATIC FILES TO THE CLIENT
+----------------------------------
+
+-> Serving static files means some static files which might be present locally on the server.
+
+-> How client can request for static files? Either through frontend or directly through URI. In case of,
+
+    -> Frontend: The user-agent might be provided with hyperlinks or UI to trigger a request.
+
+    -> Direct URI: Handling this case will actually depict the real behind the scene.
+
+-> When the URI itself consist of the static file, for example:
+
+    http://localhost:port/filenameWithExtension , we have to handle this route on the backend. What we might be doing is something like,
+
+    app.get('/filenameWithExtension', (req, res)=> res.send(file))
+
+Another way of doing the same is using express.static() middleware. How?
+
+    app.use(express.static(root,options))
+
+"root" is the folder name (or path may be) where files exists.
+"options" denotes an object which consists of certain constraint like what type of files allowed to be send, etc.
+
+Hence, express.static() middleware is doing the same but easily.

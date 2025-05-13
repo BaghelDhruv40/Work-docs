@@ -22,14 +22,13 @@ PROGRAM AND PROCESS
 VARIABLES AND REFERENCES
 -----------------------------------------
 
--> Interesting thing is in the realization that variables, on printing, gives the value (and not the address) in case of primitive datatypes. This is different from the case when a variable is a reference of an object. In that case, printing the variable will give the address where it points to. First i thought that in case of primitive datatypes, there is an extra step being performed to get its value but this is not what actually happens. The two behaviours are because primitive variables and object variables are different entities. In case of primitive, variables directly hold the literals whereas in non-primitive they hold the address.
+-> Interesting thing is in the realization that variables, on printing, gives the value (and not the address) in case of primitive datatypes. This is different from the case when a variable is a reference of an object. In that case, printing the variable will give the address where it points to. First I thought that in case of primitive datatypes, there is an extra step being performed to get its value but this is not what actually happens. The two behaviours are because primitive variables and object variables are different entities. In case of primitive, variables directly hold the literals whereas in non-primitive they hold the address.
 
 -> So mutating a primitve variable only changes the value it hold and not the address.
 
 -> The mechanism behind this is that, declaring a variable allocates an address in the stack memory. Defining the variable just assigns the literal to it (for primitve).
 
--> We can't declare same variable more than once but we can define them multiple times and every definition points to same location until we assign a literal and not another variable.
-Assigning a variable to another variable changes the address of the whichever was the last defined.
+-> We can't declare same variable more than once but we can define them multiple times and every definition points to same location.
 
 -> In case of non-primitve variables (or just say references), No matter how many declarations of the object, if the RHS is same (either same literal of another reference pointing to same literal), they all refer to same address. Further, assigning different literals to same reference results into mutation of the address (because a new object is created everytime). These behaviour is just opposite to primitive variables.
 

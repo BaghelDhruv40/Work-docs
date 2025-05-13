@@ -1,0 +1,1 @@
+-> The only way to access web resource (an HTML doc) is to reach for the resource by the path of it and then the browsers render it on the client machine.

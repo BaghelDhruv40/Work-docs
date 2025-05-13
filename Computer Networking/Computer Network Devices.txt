@@ -1,0 +1,61 @@
+DEVICES USED IN COMPUTER NETWORKS
+----------------------------------------------------------
+
+	-> Cables: Twisted pair (UTP/STP), Coaxial, Optic fibre.
+	-> Repeaters: Hardware implemented only.
+	-> Hub: Hardware implemented only.
+	-> Routers: HW/SW implemented.
+	-> Switches: HW/SW implemented. Works on DLL
+	-> Bridges: HW/SW implemented. Works on DLL.
+	-> Gateway: Just a term
+	-> IDS: Intrusion Detection System
+	-> Firewall
+	-> Modem
+
+CABLES
+----------
+
+	UTP
+	-----
+
+		-> 10BaseT: 10 stands for 10Mbps, Base stand for such cables which permit one station at a time otherwise collision occurs, T stands for 100m.
+
+		-> 100BaseT: Similar to above.
+
+		Ex: Ethernet LAN.
+
+	COAXIAL
+	------------
+
+		-> 10Base2: 2 stands for 200m.
+		-> 10Base5: 5 stands for 500m.
+
+	OPTIC FIBRE
+	------------------
+
+		-> 100BaseFX: Around 2Km.
+
+
+REPEATERS
+---------------
+
+	-> Amplifies the signal to its original strength.
+
+	-> 2 port device.
+
+	-> Forwarding is done.
+
+	-> No filtering is done i.e., no logic is there to restrict the movement of signal.
+
+	-> Collision domain is that "n" collision can be possible.
+
+
+HUB
+------
+	-> A multiport repeater.
+
+	-> Forwarding is done.
+
+	-> No filtering is done i.e., message sent by one node can be passed through all.
+
+	-> Collision domain is "n".

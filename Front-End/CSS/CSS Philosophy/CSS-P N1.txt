@@ -1,0 +1,4 @@
+CSS by default utilizes the default Box-Model of HTML. We have those inline, block and inline-block elements here. Further, content-area, padding, border and margin are the essential properties of every element.
+
+-> Can we divide the UI/UX part of frontend into two ways? One is designing and other is utilizing.
+Ans. UI/UX part of frontend indeed must be seen in two ways. One is the designing part where we must have the mindset of creativity and innovation. The other part focus on finding the way out of pre-built components to achieve our goals.

@@ -1,0 +1,24 @@
+-> Having learned about Binary Trees, it is pretty clear that they are not that much efficient in their raw form. Indeed Binary trees are helpful in say expression evaluation, any other scenarios where we must visit all the nodes. The time complexity in such case is O(n) and same for space complexity to store n-nodes.
+
+-> In scenarios where we don't want to visit all the nodes, we have to find a pattern that fullfil our greed of efficient traversal over the tree. Such pattern has been found and is unique. This is the Binary Search Tree pattern.
+
+BINARY SEARCH TREE
+------------------
+
+-> A binary search tree is a BT such that their nodes obey a pattern.
+
+    -> The left child node if exist must have a value lesser than its parent.
+
+    -> The right child node if exist must have a value greater than its parent.
+
+-> This rule helps in shrinking the scope of search to literally half everytime we proceed one node a head. Hence, the time complexity to traverse the tree and look for a key (and that means completing the unsuccesful traversal on the tree) becomes O(logn). But still, this might not always the case. If the BST is degenerated, the traversal will take O(n). But that's a special case but can't be ignored.
+
+-> There is indeed a solution to restrict the time complexity to O(logn) always. And this solution is Balanced BST.
+
+
+BALANCED BST
+-----------
+
+-> A balanced BST is a BST in which the height difference of the right subtree and left subtree of any node must not exceed 1. Infact, the values in the set {-1,0,1} are the only allowed values to say the tree is Balanced BST.
+
+-> If this rule is obeyed, the time complexity to traverse, insert and delete a key are all same and is equal to O(logn).

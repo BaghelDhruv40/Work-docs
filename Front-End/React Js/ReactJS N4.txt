@@ -39,3 +39,5 @@ REACT HOOKS
         -> What is the difference between props and state?
         Ans. Props are parameters given to the components. They are pass by value. Hence, they can be treated as usual JS variables. While, state can't be manipulated freely using JS. We need useState() hook for its definition and manipulation. States are pass by reference and that would also mean that if we reuse a component where states are defined, the two states will be different for each reuse of the component! In order to achieve a behaviour of simultaneous manipulation of a state for all the reused components, we need to define the state at the parent level of that component and pass that as a prop to the component.
 
+    
+

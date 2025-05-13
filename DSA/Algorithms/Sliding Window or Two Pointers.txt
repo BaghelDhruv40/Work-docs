@@ -8,7 +8,7 @@
 
 -> Having two pointers can lead to many more feature extraction about the data. Indeed, having two pointers means having that much for each pointer what a single pointer provides atleast.
 
--> Problems related to monitoring atleast two members of the sequence simultaneously requires two pointers (unless we have a constraint that reduces the need of two pointers to one pointer). A window is nothing but the the members enclosed between two pointers. The minimum window an have a single element when the two pointers are overalapping.
+-> Problems related to monitoring atleast two members of the sequence simultaneously requires two pointers (unless we have a constraint that reduces the need of two pointers to one pointer). A window is nothing but the the members enclosed between two pointers. The minimum window can have a single element when the two pointers are overalapping.
 
 PROBLEM STATEMENT 1: Find all pairs (relative order maintained) possible in a sequence.
 

@@ -1,0 +1,13 @@
+-> Heap is a complete binary tree.
+
+-> There's no order of insertion for the elements in heap. All we have to obey is to maintain the 'complete binary tree'.
+
+-> Heap can be classified based on the property obey by the nodes of it. The classification is,
+
+    -> Max Heap: A complete binary tree in which every node has the value greater than its descendents (no restriction on the order between the siblings).
+
+    -> Min Heap: A complete binary tree in which every node has the value smaller than its descendents.
+
+-> In order to maintain the complete binary tree structure, we can just use the array representation of the Heap. If we have to maintain the same for Max or Min Heap, we have to take of these points:
+
+    -> Whenever a node is inserted or deleted, we have to make sure that the nodes are obeying the restriction on the values of nodes.

@@ -1,0 +1,23 @@
+-> Here, I will discuss the workflow of backend.
+
+    -> The very first thing is to create a JS file (usually called index.js).
+
+    -> Import the http module from nodejs.
+
+    -> Use the instance of the module to create the server. It is done as:
+
+        import http from 'node:http'
+
+        const server = http.createServer( (req,res) => {
+            res.end("whatever message we want to send")
+        })
+
+        server.listen(portNumber)
+
+    -> This is the simplest server code possible. The end() method ends the connection with the message given as the argument. Indeed we have many methods to use on "res" object, for instance, writeHead(), write(), etc.
+
+    -> If we directly hit this endpoint (or say URL) through the browser, we will get a self-generated webpage by the browser with the data written there. That's interesting! This webpage is created by the browser automatically just for user-view.
+
+    -> We don't directly hit this endpoint although we can. The frontend is responsible to hit the endpoints of the server and fetch content from there. But, frontend web APIs uses http methods to communicate with server. Some methods are http.get(), http.post(), etc. Both these methods are different. Hence, on the server, a way must be there to handle such requests and yet we don't have any except that createServer(). That createServer can't be used for this purpose.
+
+    -> So, we use http.get(), http.post(), etc; on the server too to recognize any http requests made by something for specified route.

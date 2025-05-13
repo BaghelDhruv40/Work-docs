@@ -1,0 +1,19 @@
+-> What is a graph?
+Ans. Graph is a collection of entities along with the information about the interconnection between them. This definition of graph emphasizes us to think of them as such a general concept. We can use graph to describe almost everything.
+
+-> How graph can be utilized for memory and storage?
+Ans. Graph can be utilized in a way that the nodes can contain the data and the connection can represent their location relative to each other. If so, we must require a way to iterate over them. Suppose we have a location that points to the root or source destination. Once we can reach it, we can iterate over the graph.
+
+-> What is required to traverse a graph?
+Ans. An Adjacency list is enough to be able to traverse a graph. Adjacency list is a structure that contains nodes and their adjacent nodes mapping. So, we can visit a node and explore it iteratively. If a node is already visited, we can move on to next. There's another way to represent a graph but that is an inefficient one. This is the matrix representation. It is inefficient because there can be cases when our graph is not much large.
+
+
+TYPES OF GRAPHS
+---------------
+
+Graphs are of many types. They are:
+
+    -> Simple Graph
+    -> Multi-Graph
+    -> Pseudo Graph
+    -> Connected Graph

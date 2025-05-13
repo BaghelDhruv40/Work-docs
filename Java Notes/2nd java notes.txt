@@ -32,9 +32,9 @@
 		-> float: assigned 4 bytes.
 		-> double: assigned 8 bytes. (default)
 
-	3. Character: char is assigned 2 bytes.
+	3. Character: "char" is assigned 2 bytes.
 
-	4. Boolean: boolean is assigned a bit.
+	4. Boolean: "boolean" is assigned a byte.
 
 
 -> Non-primitive datatypes are those datatypes expictly created by the programmer. Wrapper classes in Java is a set of non-primitive datatypes introduced to mimic the primitive datatypes as classes and objects.
@@ -75,7 +75,6 @@
 In the simplest way possible, abstract class can be used to describe the minimum requirements to define something. It helps in making axioms for definitions.
 
 -> We can also make abstract methods in java, but they only be declared in an abstract class. But an abstract class need not to have any abstract method.
-
 
 -> We have threads in java and actually java's one of the feature is multithreading. Before threads, first let's talk about processes. A software may have many components that have specific tasks to do. Each component of a software is referred to a Process. Now Each Process can be further divided into parts called threads.
 

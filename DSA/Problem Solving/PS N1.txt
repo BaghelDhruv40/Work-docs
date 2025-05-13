@@ -149,7 +149,67 @@ SORTING PROBLEMS
 
     -> So, we have found a new way of iteration. Even though it still has O(n) time complexity as in the end we are fetching all elements of the sequence. But the approach opens new gate of thinking for making camparisons.
 
-    
+
+REVERSING PROBLEMS
+------------------
+
+-> Reversing a sequence is another fundamental problem when dealing with data. So, how do we achieve it?
+
+    REVERSING BASED ON VALUES
+    -------------------------
+
+    -> Here, we just care about the reversing of values and not the actual "address order" of the sequence.
+
+        APPROACH 1: ITERATIVE
+
+            FOR STATIC ARRAYS:
+
+            -> Reversing is just about rotating about 180 degrees the sequence about the axis passing from middle.
+
+            -> Therefore, we just have to iterate over the array until the mid index and keep swapping the value at each index with equidistant value on the other side from the middle.
+
+                ANALYSIS:
+
+                -> linear time complexity.
+                -> No extra space used.
+
+            
+            FOR LINKED LIST:
+
+            -> The same intuition for reversing can't be applied to this case. This is because, the elements on the right of the middle can't be accessed based on any index or a constraint.
+
+            -> What we can do is to use a stack.
+
+            -> On iterations, we just add the node values into the stack.
+
+            -> Then on next iteration over the linked list from the start, we overwrite the value of each node with the top value of the stack.
+
+            -> Once overwritten, we can just pop that value from stack.
+
+            -> In this way, we can reverse the linkedlist through iterative method.
+
+                ANALYSIS:
+
+                -> Linear time complexity i.e., O(2*N) to be specific.
+
+                -> Linear space complexity.
+
+        
+        APPROACH 2: RECURSIVE
+
+            FOR STATIC ARRAYS:
+
+                PYTHON CODE:
+
+                arr=[1,2,3,4,5]
+                def Rev(idx):
+                    if idx>=len(arr)//2:
+                        return
+
+                    arr[idx],arr[len(arr)-1-idx] = arr[len(arr)-1-idx],arr[idx]
+                    Rev(idx+1)
+                Rev(0)
+                #Output: [5,4,3,2,1]
 
 
 

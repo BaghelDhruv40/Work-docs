@@ -1,0 +1,137 @@
+PROBLEM STATEMENT: Sort a given stack.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Since we can make only one stack operation at a time, we can pop the top element from the stack and compare it with the now top element of the stack.
+
+    -> If the now top is greater than the popped one, replace it with the popped one.
+
+    -> Once replaced, we have to pop the top element again from the stack.
+
+    -> Let's keep these popped elements in a temp array.
+
+    -> Repeat the steps. Compare the top element of the stack with the latest popped element. If top one is smaller, just pop the element from the stack and append it in the temp array. If greater, compare with further back values in the temp array.
+
+    -> In short, until the stack is empty, we do these:
+
+        -> If temp is empty, just pop the element from stack and append in the temp array. Once temp is non empty,
+
+        -> Keep popping the top elements of stack and appending in the temp array if stack[-1]<=temp[idx]. Here idx is used to track indices and is usually the last filled index.
+
+        -> If stack[-1]>temp[idx], keep reducing idx (better take another variable for the same say tempIdx) till temp[tempIdx]>stack[-1]. At this point, (tempIdx+1)th element will be the first one smaller than stack[-1]. Hence we have to increase tempIdx by 1 once out of loop.
+
+        -> Now unless tempIdx==idx, we perform these operations:
+
+            -> Store the pop element from the stack in a variable say tempStore.
+            -> Append temp[tempIdx] into stack.
+            -> Replace temp[tempIdx] as temp[tempIdx]=tempStore.
+            -> tempIdx+=1
+
+        -> What these operations are doing is maintaining sorted order within temp array.
+
+    
+    IMPLEMENTATION:
+
+        PYTHON CODE:
+
+        # Iterative approach
+
+        temp=[]
+        idx=-1
+        while stack:
+
+            if temp:
+                if stack[-1]<=temp[idx]:
+                    temp.append(stack.pop())
+                    idx+=1
+                else:
+                    tempIdx=idx
+                    while tempIdx>-1 and temp[tempIdx]<stack[-1]:
+                        tempIdx-=1
+                    tempIdx+=1
+                    while tempIdx<=idx:
+                        tempStore=stack.pop()
+                        stack.append(temp[tempIdx])
+                        temp[tempIdx]=tempStore
+                        tempIdx+=1
+            else:
+                temp.append(stack.pop())
+                idx+=1
+        while temp:
+            stack.append(temp.pop())
+        print(stack)
+
+        # Recursive Solutions:
+
+        # Approach 1
+        def SortStack(temp,idx,stack):
+            if stack:
+                if not temp or stack[-1]<=temp[idx]:
+                    temp.append(stack.pop())
+                    idx+=1
+                    
+                else:
+                    tempIdx=idx
+                    while tempIdx>-1 and temp[tempIdx]<stack[-1]:
+                        tempIdx-=1
+                    tempIdx+=1
+                    while tempIdx<=idx:
+                        tempStore=stack.pop()
+                        stack.append(temp[tempIdx])
+                        temp[tempIdx]=tempStore
+                        tempIdx+=1
+                    
+                SortStack(temp,idx,stack)
+                
+            return temp
+                
+
+        temp = SortStack([],-1,stack)
+        while temp:
+            stack.append(temp.pop())
+        print(stack)
+
+        # Approach 2
+        def OrderMaintain(idx, tempIdx, temp, stack):
+            if tempIdx<=idx:
+                tempStore=stack.pop()
+                stack.append(temp[tempIdx])
+                temp[tempIdx]=tempStore
+                OrderMaintain(idx, tempIdx+1, temp, stack)
+            return stack, temp
+            
+        def SearchBigOne(idx,tempIdx, temp, stack):
+            
+            if tempIdx>-1 and temp[tempIdx]<stack[-1]:
+                SearchBigOne(idx, tempIdx-1,temp,stack)
+            else:
+                stack, temp = OrderMaintain(idx, tempIdx+1, temp, stack)
+            return stack, temp
+            
+        def SortStack(temp,idx,stack):
+            if stack:
+                if not temp or stack[-1]<=temp[idx]:
+                    temp.append(stack.pop())
+                    idx+=1
+                    
+                else:
+                    stack, temp = SearchBigOne(idx,idx,temp,stack)\
+                    
+                SortStack(temp,idx,stack)
+                
+            return temp
+                
+
+        temp = SortStack([],-1,stack)
+        while temp:
+            stack.append(temp.pop())
+        print(stack)
+
+        
+                    
+                
+        ANALYSIS:
+
+        -> Time complexity is O(n^2) (for both iterative and recursive solutions).
+
+        -> Space complexity is O(n) (varies per solution).

@@ -1,0 +1,24 @@
+-> Memory is one the concept of CS field that always fascinated me. The concept of memory is closely related to ADTs and it requires two questions to be answered:
+
+    -> How to store/fetch data items (the smallest amount of info possible)?
+
+    -> If made practically possible, how to store/fetch collection of data items/units?
+
+-> The answer to these questions have been solved by physics and mathematics. Although physics solves the most crucial part of making "storing" possible, math provides a logic of how to make the use of such implementation, the most we can!
+
+-> Intuitively, it feels much more convenient to place the related data at close or same place. Boolean mathematics promotes this intuition. See, what we allow at the deepest level is to store just a "state". collection of states can be used to depict different information. But, a collection doesn't care about order of units and so different orders of units means the same collection.
+
+-> Boolean mathematics helps us to utilize the order of states to depict a unique info. Hence, we use a continous block of memory cells /bits to store info. This continuous block of memory cells is called a "byte". And this is the smallest unit that can be assigned an "address" in memory.
+
+-> It is not like that we couldn't adopt a random way of selecting 8 bits to form a byte and store data, but as the math says, it is mathematically good to stick to "continuous block" for a "byte".
+
+-> Once we defined a byte, now we have two choices. Either select other bytes in continous or random way.
+
+-> A "word" is a continous array/ block of bytes. It is the smallest unit of work for CPU. Hence, CPU asks for one word everytime.
+
+-> So, fundamentally we have a "byte" for addressing memories and the variables used in programming languages are collections of these bytes (or even words). The headache is on the CPU how it processes it, but the address pointed by the variable will be just one.
+
+-> The simple primitive type variables may also be a collection of "discontinuously linked bytes and words".
+
+-> Therefore, both "continuous" and "non-continuous" approaches co-exists at hardware level.
+    

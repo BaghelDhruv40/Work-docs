@@ -1,0 +1,25 @@
+PROBLEM STATEMENT: Find the Kth largest/smallest (Distinct one) element from the sequence.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> Sort the sequence accordingly.
+
+    -> Iterate till we get the Kth distinct element from the left.
+
+    
+        ANALYSIS:
+
+        -> The time complexity is O(nlogn + n) i.e., O(nlogn).
+
+        -> No auxiliary space is used.
+        
+
+    APPROACH 2: BETTER, OPTIMAL
+
+    -> Use Max Heap or Priority Queue data structure.
+
+        ANALYSIS:
+
+        -> The time complexity is O(logn).
+
+        -> Auxiliary space is used by the priority queue and so O(n) complexity.

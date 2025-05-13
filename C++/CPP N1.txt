@@ -1,4 +1,12 @@
--> On declaring an array, if we print any of its value, the answer will be a garbage value (system generated value).
+-> To import a package/module, the syntax can be: #include <modulename> or #include "modulename" . The difference between them is:
+
+    -> Angular bracket is used when we want the module to be searched in system directory. Hence, it is preferred to use this notation for standard library headers.
+
+    -> Double quotes is used when we want tthe module to be searched in desired or current directory firt. Hence, it is used when working with user defined packages.
+
+-> On declaring an array outside main(), if we print any of its value, the answer will be a garbage value (system generated value). The max size of this array here can be 10^7.
+
+-> On declaring an array inside main(), if we print any of its value, the answer will be 0 (or its equivalent in other datatypes). The max size of this array here can be 10^6.
 
 -> A string is mutable  here.
 

@@ -8,4 +8,4 @@ But, still here is a lot more. JS in web browsers is very limited. It can perfor
 
 Q: What is the difference between Typescript and Javascript?
 
--> JS is a loosely types language. Many of the objects we interact with, we never care about their types. TS is a development tool that does static checking for JS. At the end, all the typescript code converts back to JS code. Then what's the benefit of it? Probably just reducing the unwanted bugs.
+-> JS is a loosely typed language. Many of the objects we interact with, we never care about their types. TS is a development tool that does static checking for JS. At the end, all the typescript code converts back to JS code. Then what's the benefit of it? Probably just reducing the unwanted bugs.

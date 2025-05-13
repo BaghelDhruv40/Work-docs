@@ -1,0 +1,46 @@
+-> What is SE and why do we even need this?
+Ans. SE is a systematic procedure of steps in the Software Development. Resources are everything and so we always try to optimize solutions along with certain trade offs. No matter whom project we are building, we always want to complete the task with minimum turn backs or only when they are actually relevant/required.
+
+Software Development includes many stages. As already discussed we have certain reasons which leads us to go back to previous stages of development. If the Software is well developed as imagined, going back to previous stages are just the requirement of further improvements or updates. If the software is not yet completed but we have to go to previous stages, that could be the sign of bad start or mid-way changes or certain errors or difficulty in practically achieving.
+
+The intuitive way of dealing with big problems to to adopt a modular approach and divide the actual problem into mutually exclusive tasks. Software engineering is all about achieving this maturity to break the problem into such sets of stages/sub-tasks. Completion of a sub-task gives an assurance that yes we can move forward safely. How many sub-tasks or stages will a big problem be broken to might not be fixed and calling such sub-tasks as Sub-task1, sub-task2 and so on might feel the most convinient way. But, the problem with such naming is that we actually don't get any idea what stages we have actually crossed! It's better to name them based on the purpose or task we are solving there.
+
+What people have found that Software Development can be broken into very mutually exclusive sub-tasks and yes we can logically name them too. One more thing we should emphasize here is that even though sub-tasks are quite exclusive to each other but they can be classified into certain phases of development. These phases depicts a zoom out picture of development and these phases are some kind of mutual exclusive too!
+
+To reduce loops in our progress, we may first try to build a rigid foundation so that we can assure we are going correctly. To make this foundation, we have to do a lot of discussion, analysis and what not. The foundation is build stronger by such theoretical approach. Thinking about something even includes whether will we be able to achieve what we are thinking of. So yes, way before start practical, we have a theoretically strong foundation and enthusiasm. Hence, creating a theoretical foundation is a phase. It is a phase and not a primtive sub-task is because we have various other things we might be doing in this.
+
+Once the theoretical foundation is completed. We can assure ourself and the client that yes we will be able to achieve the project. And so, all the formal and legal procedures have to be settled now to start the practical work. Well this procedure is a sub-task and we might put this sub-task within the foundation phase or a separate phase. We shall decide it later but for now, at least we are able to find another crucial task.
+
+So, now the time comes for the actual practical work. And here we are literally implementing what we have decided in the first phase. So, it is another phase and we can call it "Implementation phase". Implementation is itself a lengthy process but this is literally considered the easiest and least time consuming phase of the whole development cycle. The reason is that here we have a skilled team who can do practical and all the resources and route is already available to use and follow. That's the power of foundation phase!
+
+So yes, we can move forward from the Implementation phase also. Now it's time to handover the product to the client! Not yet. The foundation phase ease the load at Implementation phase. Implementation phase includes achieving practical but here we do have sub-tasks. We might be able to achieve the sub-tasks here but what we can't do in foundation phase is that to be assure about the correct working of all the modules, built in Implementation phase, and their working when combined to form the final product. Well indeed this is a practical work and so could be included in the Implementation phase itself but it is not the case because of difference in the concerns. Implementation phase focus on achieving practicality but this new phase tests that practicality. And so, we name this new phase as Testing phase!
+
+Once testing is done, we can now be fully assured about the product we made. It's time to handover the project to the client. And this process is itself a phase. Handover is not a simple thing. It also includes many sub-task. Once product is deployed and in the production, yes we have finally handed over the product!
+
+Now comes the last thing. This thing might not be directly related to the development cycle but affects the cycle. This thing is feedacks and updates. This is just a sub-task but since a single one, we may also call it a phase. 
+
+These Five broad phases completes the Software Development Cycle.
+
+
+-> Foundation phase is the most crucial phase of the development cycle. It has to take care of all the following sub-tasks and phases. Further, the conclusions of this pahse must be understandable at every phase. This phase indeed consumes a lot of resource and time. How can the foundation phase be optimized and utilised in the best way?
+Ans. Well it is a justified statement about the foundation phase. And yes, we need to optimize our practices in this field to move on further phases. We can improve our way of thinking and use software tools to boost the productivity and ease this long process.
+
+Okay here is a quite good statement, "If we can explain a concept/idea in a way we usually perceive this universe by our senses, we can spread the awareness about it to the max extent.". We do have found a good way to do this. The way is of "Object-oriented World". Here, the entities are depicted by "objects", classified by "classes" and the concepts/ideas are depicted by something called "abstract classes" and "interfaces".
+
+-> What is the difference b/w a Program and a Software?
+Ans. A Program is a working piece of machine code whereas a Software is a complete package of a Program, a Documentation and an Operation guide.
+
+
+-> What are the OO Methodologies?
+Ans. Obviously, building a good methodology to work well in our foundation phase can't be come up in one try. We have several methodologies:
+
+    -> OOA-Based (Coad and Yourdon)
+    -> OOD-Based (Grady Booch)
+    -> OMT-Based (Rumbaugh)
+    -> OOSE-Based (Jacobson)
+
+
+
+
+-> What is Use case?
+Ans. There are many ways/approaches by which we can collect the requirements. Usecase is one of those approach. Here, the focus is oriented on identifying the roles, interactions, etc.

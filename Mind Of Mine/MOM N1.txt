@@ -1,0 +1,11 @@
+-> Godel proved the three fundamental questions wrong which were beleived to be true by Hilbert. They were:
+
+    -> Is math complete?
+
+    -> Is math consistent?
+
+    -> Is math decidable?
+
+-> To answer the first two, Godel made the system of symbols that could be used to represent each symbol and number in mathematics uniquely. For the case of equations, the Godel number of them could be found by using Godel numbers of symbols as the power of prime numbers from start and multiply them to earn a product representing Godel number of that equation.
+
+-> He made this system to talk about one statement, "There's no proof of this statement". There was indeed a Godel number of this statement. So, in order to prove a statement, we might end up using symbols in such a way that their product end up in the Godel number of that equation/statement. Hence, if we prove the statement "There's no proof of this statement", We literally proved that "There, is, no proof of this statement". This concludes that our proof is wrong. But, if we say that there is no prove of this statement, it means the Godel system is wrong. Since Godel system is mathematical, this means our mathematics is incomplete and inconsistent (there will always be some statement that can be proved wrong in future leading the demolish of all the foundation of maths).

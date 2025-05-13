@@ -1,6 +1,20 @@
--> Hashing means creating a injective mapping.
+-> Hashing means creating a injective mapping. 
 
 -> To achieve this, we try to associate unique keys to unique indices.
+
+-> But, practically achieving it might leads to large memory requirement. Therefore, a hash function is designed in such way that is practically efficient. Some types of hash function commonly used are h(x) = x, h(x) = x % size, h'(x) = [h(x) + f(i)] % size where f(i) can be any function like linear, quadratic, etc and i>=0.
+
+-> h(x) = x is called the perfect or ideal hash function.
+
+-> h(x) = x % size leads to collison and it can be solved by chaining in which instead of directly puting the key on the hash value, we put the pointer to linkedlist which contains all the collided keys for that hash value.
+
+-> Other methods to reduce collisions are given by the last hash function written above. The f(i) function decides the method.
+
+    -> If f(i) = i, then it is called linear probing.
+
+    -> If f(i) = i^2, then it is called quadratic probing.
+
+-> In probing, what we do is, we first check if there's a key on the hash value, if it exists but not the desired key, we iterate to next index according to the hash function by changing values of "i".
 
 PROBLEM STATEMENT: Check if the target letter exists in the given sequence of characters.
 

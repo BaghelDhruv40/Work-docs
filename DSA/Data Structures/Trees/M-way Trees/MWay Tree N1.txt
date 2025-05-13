@@ -1,0 +1,3 @@
+-> M-way trees are generalized version of Binary Trees.
+
+-> In an M-way tree, each node has 'm-1' slots and each node can have atmost 'm' children.

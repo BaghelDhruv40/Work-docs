@@ -13,6 +13,7 @@ SQL is a standard language for RDBMS
 	-> DROP TABLE - deletes a table
 	-> CREATE INDEX - creates an index (search key)
 	-> DROP INDEX - deletes an index
+	-> CREATE SCHEMA - creates a new schema
 
 -> We have the following datatypes in SQL:
 
@@ -39,3 +40,19 @@ SQL is a standard language for RDBMS
 	-> Default: To set default value for an attribute.
 
 	-> Ref Constraints
+
+QUERIES
+-------
+
+	CREATE SCHEMA:
+
+	-> Syntax: CREATE SCHEMA <schema name> AUTHORIZATION <user>;
+
+	-> Example: CREATE SCHEMA Classical_Mechanics AUTHORIZATION Newton;
+
+
+	GRANT:
+
+	-> Syntax: GRANT (SELECT ON <schema or database or anything>).<permission> TO <user>;
+
+	-> Example: GRANT (SELECT ON Classical_Mechanics).* TO Newton;

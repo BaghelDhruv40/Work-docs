@@ -1,0 +1,4 @@
+-> Discuss the role of HTTP API/Module to utilize web.
+Ans. HTTP module is a fundamental one which is provided in every programming language. HTTP provide us with server creation API, request/response APIs and various methods used with them.
+
+Depending upon the paradigms of a language, the functionalities of the APIs may change. Talking specifically about NodeJS, it follows an asynchronous paradigm.

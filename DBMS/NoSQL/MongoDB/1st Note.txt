@@ -1,0 +1,12 @@
+-> MongoDB is a company that offers many applications, some of which relevant to us are:
+
+    -> MongoDB Community: Helps in running the MongoDB Server in desired machine (like localhost).
+
+    -> MongoDB Atlas: The fully managed service for MongoDB deployments in the cloud.
+
+
+-> Just like MySQL, MongoDB community product consists of many programs like mongod (a daemon program that is the server), mongosh (a client program works in a shell). mongosh connects with the server running on self managed host (if it is the local host, no username and pass required).
+
+-> To connect to the server, just use: mongosh <connection string>
+Note: For Server running in localhost, just run mongosh blank.
+

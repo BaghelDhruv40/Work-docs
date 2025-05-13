@@ -1,0 +1,91 @@
+-> How to be a Front-end Engineer?
+Ans. Engineering domains requires strict mindset. Engineering is more on the practical side than theoretical side. But, being good theoretically helps in practical in many ways.
+
+    -> It promotes maturity, respect and deep understanding of the things we are dealing with.
+
+    -> 
+-> What a Front-end Engineer do?
+Ans. Front-end 
+
+-> Why Front-end matters?
+Ans. It's one of the most important question one should ask! Well let's understand this by a chornological discussion. HTML is all about structuring the page the best way possible. That means, all we can do using HTML is:
+
+    -> The best structuring of the page.
+
+    -> Correctly using the tags.
+
+    -> Calculatively making possible for tags to communicate with each other whenever and wherever it is required.
+
+Therefore, for structuring the web page and creating complex elements/components, we must utilize HTML. But not only this, the urge to make the document look pleasant not just by its structure but other visual pleasing attributes like text formatting/ coloring/ sizing, etc., led to introduce various methods to achieve these.
+
+Okay, at this point, we can summarise the HTML role as:
+
+    -> It has tags to structure the web page and to create complex elements.
+
+    -> It has text formatting power.
+
+Well that might feel enough of powers and this is true if our aim is just to use web pages as a document only! Clearly, the aim of generations shifted and shifted to make this humble web page into more complex entity.
+
+It's a good point to talk of one of the feature that this is a crazy one. This features is "interactivity". The least interactivity we could expect from we pages in the initial days was "hyperlinks". Hyperlinks are for navigating from one page to another (or even on different sections of same page) by clicking on it. So yes, web pages had the ability to percieve the "click" on Hyperlinks. We extended this interactivity to literally another level. Many other ways of interactivity were introduced in HTML. Pay attention that interactivity can be classified broadly into two classes: "attribute/style interactivity" and "functional interactivity".
+
+    -> Style Interactivity: These are basically such interactivity which are for visual pleasant. Like hover effects, color changing, font changing, etc.
+
+    -> Functional Interactivity: These are such interactivity which triggers some work. Like Submission of forms.
+
+Both types of interactivity can be used intermixably.
+
+Focus on Style interactivity. These feel much "static" in the sense that we have to hardcode/pre mentioned them in HTML.
+
+Functional Interactivity at this point is also hardcoded internally. We can't manipulate them. For example: a form element in HTML has "onSubmit" functionality which just listens for the event of Submission on the element where is is used.
+
+Here comes the need of "manipulation of interactivity" or introduction of more interactivity ways. Developers then worked on creating interactivity interfaces that could be used to further define "desired functionality" and this was the point "JavaScript" came to use these interfaces. An year after JS, a new member was introduced. We know it as "CSS".
+
+CSS raised the benchmark for structuring as well as making web pages look awesome. What CSS can not do is "create elements". We must have to use HTML tags for that, but, then we can handover the work to CSS. CSS further improved the "interactivity " of users with the web page. Later JS adopted the ability to manipulate CSS also and so now all these are inter connected. The connection between them is so intimate now that we see all these three as a family and call this family "Front-end".
+
+
+
+ 
+-> Do I have to be a Front-end Engineer?
+
+-> What are the abilities and uses of HTML? What are the best practices or "things to keep in mind" for HTML?
+Ans. Here, we are going to discuss the current image of HTML.
+
+    ABILITIES:
+
+    -> Have tags to define structure/layout of document.
+    -> Have tags to embedd further file formats into the document.
+    -> Have ways to interact with these file formats.
+    -> Have attributes and functionalities on the tags.
+    
+
+    USES:
+
+    -> Structuring the web page.
+    -> Formatting the web page.
+    -> Very limited interactivity.
+
+
+    THINGS TO KEEP IN MIND:
+
+    -> Every element on a web page is either HTML element or media.
+    -> When to work on layout/structure of something, try to find if it is possible through HTML or CSS is required?
+    -> When to work on formatting, ask yourself whether we want it to be dynamically handled or not. If not, just HTML may possibly work there.
+
+
+-> What are the abilities and uses of CSS? What are the best practices or "things to keep in mind" for CSS?
+Ans. Here, we are going to discuss the current image of CSS.
+
+    ABILITIES:
+
+    -> Web page formatting.
+    -> Web page structuring.
+    -> Responsiveness.
+    -> Animations and Transitions.
+
+    THINKS TO KEEP IN MIND:
+
+    -> Responsiveness is one of the hardest to handle.
+    -> To be good in making responsive designs, we must be well in sizing.
+    -> Flex and Grid must have been mastered.
+
+-> Frontend is indeed about presentation. But how the rendering can be made as soon as the content updates? How can we achieve this fast updation on both backend and frontend!?

@@ -1,0 +1,108 @@
+-> How to be a backend engineer?
+
+-> What a backend engineer do?
+
+-> Why backend matters?
+Ans. A similar question was asked for front-end. See, Front-end is all about applying best practices to present web pages/content to the user and finding best practices to handle heavy load on presentation, scale up as the rendering of pages become complex and so on. Overall it's all about presenting the content and handling that presentation. Backend requires a total different perspective.
+
+Backend is all about making things happen and work, making the desired task possible in the best way. So, the very first thing to kick out of the mind is "don't care or thing about front end" except one thing, making the communication between backend and frontend the easiest and convenient.
+
+Every project idea can be broadly divided into two scopes: "what the user will percieve" and "what the project will do". The second scope is the backend scope. So, it must go into the brain straightly that we are not concerned about how to present to the user but how to achieve all the functionality of the project and finding the best way to communicate with frontend and provide it the best way it can utilize for frontend part.
+
+
+-> Discuss on Backend.
+Ans. When it comes to web network, the ultimate thing that exist here is a web page (i.e., an HTML doc). It is not the case that no other thing could be the ultimate one, but, HTML doc was the chosen one for the web. Whatever have to travel (for the end users) from server to client is this HTML doc. So what info we can send through this doc? pretty much everything! Just put the things in this doc and as this will travel and reach the destination, so our desired things.
+
+HTML doc was thought to be simple. Just a text doc. We have tags/elements to achieve the purpose of puting info in this doc. Well here we can classify the HTML doc into two classes based on the criteria that "whether all the information required to be shared has already put in the doc using the HTML elements" or not. We call the first one a "static page" and the other one as "dynamic page". Let's go into deep of each.
+
+    -> STATIC PAGE: We already defined static page but is it the correct way? The content of static page is already pre-set by the owner of that page and this is what actually matters. Suppose some interative elements that display content only when interacted by the client/end user explicitly. If the content displayed by such elements are static (pre-set by the owner), the page will be considered static. So other name of static page can be "Pre-set content page".
+
+    One thing to notice here is that, once the HTML doc is reached to the client, everything has reached to the client and no further interactions (expect interactions with hyperlinks) trigger a web request.
+
+
+    -> DYNAMIC PAGE: We defined this type of page as just a page which is not static, but what is the extent of its definition. Dynamic pages are simply not completely static. Therefore, they must contain content that is not pre-set and may change depending upon many factors or user personalization.
+
+    Being dynamic, this must be emphasized that dynamic pages must trigger web requests for dynamic content. The mechanism by which servers sends this dynamic content is interesting and give birth to two classifications. We will talk about them later and let's stick to the mechanism first. Remember we talked that whatever has to travel from server to client over the web has to come in the form of web page.
+
+    A web server can't have all the web pages for dynamic page requests. Hence, at the server itself, the whole web page designed again with relevant changes in the dynamic changes and then sent to the client. This mechanism is called "Server-side Rendering".
+
+The picture of web at this point is okay. Things are going correctly (although not efficient). What more can be done? Static pages are for specific purposes. Their role purpose is just to share and present the content to the world. Dynamic pages have different aim and purpose. They target the audience. They may try to keep the track of every move and interactions done on the pages. In the "sole purposes" of web, no mention is of "track the interaction". Web server are inheritly forgeters. They just know the client system connected to it but doesn't remember whether this client has requested for any resource in the past. Hence every request is seen as the first request by the server. This behaviour is called "statelessness". This limitation have to be overcome by some methods. To make the requests stateful, we have 3-4 fundamental ways:
+
+    -> Cookies
+    -> Session
+    -> LocalStorage
+    -> SessionStorage
+
+These are considered fundamental but obviously there are more ways like Tokens and all. Let's have a brief of them.
+
+    -> Cookies: A JS object containing info and is stored at client side and retrieved automatically at every request made.
+
+    -> Session: A Server side concept where server stores some details about the user and sends a cookie to be stored on the client side. We call these cookies as server cookie. Clearly, the difference between cookies and server cookies is just their purposes and certain modifications. Overall, session cookies are cookies by definition.
+
+    -> LocalStorage: A small storage on the client side that can hold data. Difference between cookie storage and LocalStorage is that cookies are retreived automatically. But to achieve such behaviour on LocalStorage we need to write the logic expicitly.
+
+    -> SessionStorage: This is the storage used by Session cookies. This is cleared automatically as the browser/tab is closed.
+
+
+Session can be a good topic to discuss now, but, I want to discuss on the topic used by Session. This topic is database.
+
+Until now, Web standards (http) provide us with great APIs to share resources on web network. But, a question might be asked where does the web servers store the web docs? They might be using their own storage. Well, the system storage utilization might be enough for static pages as everything is already embedded into it and so just a single file. But dynamic pages require dyanmic data. Dynamic data can be way more huge than the system storage size. Hence, we must use another storage to store this data. This storage is provided by a DBMS. DBMS, other than the file system present in the systems, are highly oriented on the storing/retreival of huge data efficiently. They might not feel convenient on the end user side as they requires good skills of the queries. DBMS provides API for their use and Web standards adopted those APIs to be used in the web apps.
+
+
+-> How should one approach backend?
+Ans. Backend doesn't have a fixed or limited scope. Every logic related to dynamic content comes under Backend and handling it is a concept in itself. Still, as discussed above, there are some topics that are related to backend and handled on te client side. Majority of backend is handled on server side. We don't have fixed no. of concepts to be learned in backend but yes we can learn those which are now quite common or generally commonly seen in almost every web app. Here are some backend concepts we must know at least:
+
+    -> DBMS (SQL and NoSQL).
+
+    -> API handling (Handling cookies, session, LocalStorage and dynamic content sending/receiving).
+    
+    -> Cyber Security (Security ways, encryptions, authentication and authorization, etc.)
+
+
+-> What is a Web server and How a machine becomes a web server?
+Ans. As have been discussed, Web servers are dedicated machines that contains web pages. A web architecture can be thought a kind of similar to that file transfer method in which we literally connect two devices and the file storage comes into our machine. But web is wireless. In order to communicate with web server, we write a link in the search bar and we gets connected to it. Let's go in depth what actually is the mechanism.
+
+First let's have a brief overview of how interconnection between computers happen. There must be devices installed in the systems that detect and connection happened and that allow us to create a network. If talk about wired network, let's plug a wire in our system and once this wire connects to another system, the two systems are now interconnected. Some cases are here:
+
+    -> This wired connection can be a one way (simplex) communication channel. If so, the direction of communication might be decided by:
+
+        -> The port where the we plugged in.
+
+        -> The system which first plugged in.
+
+        -> Or other technical procedure I don't know. But the crucial point is that a mechanism must be there to identify the sender and reciever.
+
+    -> This wired connection can be two way (half or full duplex) communication channel. If so, both system can be sender and reciever.
+
+Once the systems are interconnected, there must be a list of connected systems available in the systems. Hence, we can select files and select the system to which we have to send the selected files. Or we can just have the file drive of connected system in our file manager.
+
+Pay attention here. Besides creating an interconnection, we have different modes of communication (simplex, half and full dulpex). So, creating an interconnection is one task and what mode we want is another. Obviously, Selection of mode must be discussed before creating a network.
+
+So far, we successfully connected the systems. Now we can share resources! But wait. What types of resources can be shared? That's a critical and important question. A connection between printer and desktop can't be of the type where we can send anything (like machine code of our program) to the printer. Hence, this is another criteria when comes to networking. We have to consider what mode of communication we want and what type of data can be shared over it before creating a network. Once we are clear with these, congrats we have formed the Internet! Internet? what is that? Well, Internet is the Network of Networks i.e; two or more networks again connected to each other. This is a good point to emphasize here that Internet and Web is different! As we can observe here that Web is a type of network (that means Web is indeed a network but here we can share only web resources (web pages)). Today, we generally refer Web-Internet as the Internet itself but Internet is actually just a term to denote network of networks.
+
+Having understood all this, We can talk about protocols. Protocols are necessary in making all of the above discussion practically possible. Protocol is a set of rules and algorithm that instructs to achieve a task practically. So, a system must have protocols to achieve connection, mode of communcation and what type of resources are possible to share and how!
+
+Connection related protocols is one category. Mode of communication protocols may not be considered separate category and so may be included in the connection related protocols itself. Then comes the "type of resources" related protocols. And this one is interesting. For each type of resource, we may have separate protocol. Like FTP, SMTP etc.
+
+Well this was about wired connection but same things (those three criterias and protocols) are required for wireless communication too. First we need to consider the mode of communication (simplex, half and full duplex) and type of resources to b shared over the network. We must have protocols related to them in our system. In case of wireless, we need harware that identify and accepts the connection, and, initialize a connection so other systems can connect. As we have now understood the difference between Internet and Web-Internet, we can shift our focus to Web.
+
+See, being an Internet, Web also require the above discussed criteria and protocols. So let's ask questions:
+
+    -> How Web-Interconnection is practically achieved?
+    Ans. Web requires IP-address and Port number to completely identify the location of a service running in a system. Remember Web comes under that type of connection where a system gets the whole file system of another system. In case of wireless, the intuition is same but practically it is not this much same. So the first step is the create the network. How? Being wireless, the server must announce in the air that systems can connect to it! So we need a protocol that makes this possible. We need a protocol on the client system so that it can hear this announcement and so connect to the server. If this is achieved, we need a protocol for what type of resources we can share over this network and how we can share those. Here are the answers to them:
+
+        -> The protocol that helps web server to announce and be ready to identify and accept connection requests from other systems is the "HTTP" protocol.
+
+        -> The same protocol "HTTP" also allow clients to hear the announcement and able to connect to it.
+
+        -> The same protocol "HTTP" allow the server to send/respond with web pages over Web-Internet and allow the clients to accept and request web pages. Hence the protocol for "type of resource".
+
+Therefore, we must be utilising the methods in HTTP to make a machine, a Web Server and we must be utilising the methods in HTTP on the client side to request and response over Web.
+
+This completes the part of the question that how a machine becomes a web server and it also completes the part that what is a web server. We defined a web server by its characteristics that it is a machine that contains web pages and it sends web pages when requested by client and all. But as we have now discussed that a machine must also have more things that make it able to interact with other systems and so completes the defintion of Web server. We can also call Web Server an "HTTP-Server" and Web-Internet or Web-Network an "HTTP-Network".
+
+
+
+
+
+A simple request-response cycle is a good picture of resource sharing but not everything we may choose to provide for free or to everyone. In such case, for every request done by a user, the server first try to recognize the authenticity or authorization of the user. How this can be achieved? Well web requests and responses are objects that carry information. We can use them to send further information which the server may look for authentication. How to train the server to do authentiation for resources? Well the primary thing is the url. Backend contains the code that runs on the server machine and for every route it performs some work before responding. So, if we can perform some authentiation process for certain routes before the actual work, we can achieve the task.  In functional programming terms, we call this middle process to happen before actual work, a "Middleware".

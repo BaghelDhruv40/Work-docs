@@ -1,15 +1,15 @@
 A computer network is a term to denote the network created between the distinct computers. Network means a connection so that two computers can interact with each other. Suppose we have all the hardware functionalites that helps in establishing a network, the network can be wired or wireless.
 
-What are ISPs? ISP is nothing but a computer network which offers a user to connect to their network. For example, a university may have their own network and any new user can be connected to this network with the assistance of ISP of the university.
+What are ISPs? ISP is a specific type of NSP (Network Service Provider). An NSP is nothing but a computer network which offers a user to connect to their network. For example, a university may have their own network and any new user can be connected to this network with the assistance of NSP of the university. So, ISP is a particular network that is itself connected to the global/public network so called "Internet" and offers a user to connect to their network in order to connect to the world.
 
-We generally know ISP which connects us to the public or global internet. That means they are themselves a network already connected to the internet. Since we are participating in the internet through them, they have the power to restrict or control what we can acess.
+We generally know ISP which connects us to the public or global internet. That means they are themselves a network already connected to the Internet. Since we are participating in the Internet through them, they have the power to restrict or control what we can acess.
 
-A great analogy of ISP is that with landowners. Suppose a group owns certain lands near the transport network. if we want to take part in that network and have a specified location in that network, we have to rent that land. ISP rents us certian addresses in the internet know as IP address.
+A great analogy of ISP is that with landowners. Suppose a group owns certain lands near the transport network. if we want to take part in that network and have a specified location in that network, we have to rent that land. ISP rents us certian addresses in the Internet know as IP address.
 
-The importance of ISP is highlighted through the above texts. What been called ISP so far is nothing but those telephone service companies. They took the responsibilty to provide internet access too. This was done using the already established wired telephonic connection. At ISP office, the internet is provided by transmitting the signals over telphonic line and at the user end, a modem, connected to telephone and the PC modulates the anlalog and digital signals. This was the "dial up" internet access.
+The importance of ISP is highlighted through the above texts. What been called ISP so far is nothing but those telephone service companies. They took the responsibilty to provide Internet access too. This was done using the already established wired telephonic connection. At ISP office, the Internet is provided by transmitting the signals over telphonic line and at the user end, a modem, connected to telephone and the PC modulates the anlalog and digital signals. This was the "dial up" Internet access.
 The two main disadvantages were that no one could use telephone service when using dial up, and , the speed was low.
 
-Then came "Digital Subsriber Line" which was actually a concept to provide internet through some better way but ended up just like dial up with some differences. User had the permanent internet access and both services could be used simulataneously.
+Then came "Digital Subsriber Line" which was actually a concept to provide Internet through some better way but ended up just like dial up with some differences. User had the permanent internet access and both services could be used simulataneously.
 
 
 

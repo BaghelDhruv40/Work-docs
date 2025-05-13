@@ -15,12 +15,13 @@ VARIABLES
 
 	-> This means assigning value to the declared value in the RHS of the equality.
 	-> Multiple definition is allowed for a variable.
-	-> Mutating the definition of a variable doesn't alters its address unless it has been assigned to another variable in the RHS of the equality. Simply, mutating the literals doesn't alter the address.
+	-> Mutating the definition of a variable doesn't alters its address.
 
 -> To print the address of a primitive variable, we  use the "&" just before the variablename. This "&" therefore acts as a "value at" operator.
 
 	-> For example: int a = 10;
 				printf("%p", &a);
+
 -> If we want to print the value stored there, we use "*" just before "&variablename". This "*" therefore acts as a "dereferencing" or "value of" operator.
 
 	-> For example: printf("%d", *(&a)); //output: 10

@@ -1,8 +1,6 @@
 -> javac filename.java		#for compile.
 
-
 -> java classname 			#for run.
-
 
 -> public classname
 	{
@@ -11,14 +9,32 @@
 		}
 	}
 
-
--> String variablename = condition? result if true: result if false; 		# benefits when we need one line condition and outputs. This operation is called a Ternary Operation.
+-> String variablename = condition? result if true: result if false; 		# benefits when we need one line condition and outputs. This operation is called a "Ternary Operation".
 
 
 -> IDE for java are eclipse, Intelij, etc..
 
-
 -> Filename and classname need not to be same unless the class is public. 		# Only one class can be made public.
+
+-> Here's an overview of steps occur after entering the compilation line in terminal:
+
+	-> To compile, we write javac filename.java . So after this,
+
+	-> The compiler makes the .class files for all the classes in the file.
+
+-> Here's an overview of steps occur after entering the run line in terminal:
+
+	-> To run, we write java filename.java . The filename here must be a class in the source code and that too carrying a main(). After this,
+
+	-> JVM loads the class whose name was given in the terminal.
+
+	-> JVM searches for static main().
+
+	-> It runs this method and takeover all the responsibilty to the programmer (or its code).
+
+-> It is allowed to have multiple classes with their own static main method. When it's the time to run, we can only give one class name. And so, doesn't matter how many class have their own main(), they will never collide at the time of execution. We can think of it as each such class is a separate file actually and not in the same file.
+
+-> We can call the main method of one class into another in the same way we call a static method. This is true even if all such classes are in the same file.
 
 
 -> Java has 3 types of loops that are for, while, and do while.
@@ -68,7 +84,7 @@
 -> Constructor( or constructors ) will be called every time we create an object.
 
 
--> Objects without a name  or say with no reference are called "Anonymous objects". For ex: new.classname().
+-> Objects without a name  or say with no reference are called "Anonymous objects". For ex: new classname().
 
 
 -> We can pass the parameters in the default constructor bracket itself (unless we don't have more constructors) without necessarily assigning the parameters values afterward. For ex: new classname(variablename: "the name");
@@ -84,7 +100,7 @@
 
 
 -> METHOD OVERLOADING:
-						Method overloading can be understood in this way. Overloading means "excess", so that may means a method is which overloaded. But in terms of what it is overloaded? in terms of number of parameters. Same method when defined multiple times with just the difference of number of parameters it takes, this act is called method overloading. 
+						Method overloading can be understood in this way. Overloading means "excess", so that may means a method which is overloaded. But in terms of what it is overloaded? in terms of number of parameters. Same method when defined multiple times with just the difference of number of parameters it takes, this act is called method overloading. 
 	
 	Example: Suppose, add() is a method defined as
 
@@ -102,7 +118,7 @@
 -> Private objects and instances are only available openly inside the class they are defined .
 
 
--> The concept of making a variable private and then accesing it by creating a method is called "Encapsulation".
+-> The concept of making a variable private and then accesing it by creating a method is called "Encapsulation". # Wrong
 
 
 -> We have "static" keyword which can be used with instances and instance methods.

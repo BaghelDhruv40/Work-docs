@@ -1,0 +1,13 @@
+-> Suppose we are given a graph in a way that we have been told that the nodes are from 0 to n-1 and the edges are defined by the 2-column matrix, named, edges, i.e; edges[i] = [ai, bi] represent the edge between ai and bi. We are required to find the shortest path from single source to destination. How can we do this?
+
+-> See, we shall first find what are the nodes, a node is connected to. Let's put this in another array. Further, we may also store the corresponding weights on the edge. So, we might store a tuple for each node. For example:
+
+    temp= [[(v1, w1), (v2, w2)], [(v3, w3), (v4, w4)]...]
+
+Hence, node 0 is connected to v1 and v2 with having their weights as w1 and w2.
+
+-> Now, let's go to the source node. For this node, start finding the min nodes weight from the temp array. Add this weight to the ans array and move to the node corresponding to this weight.
+
+-> Repeat this step unless we reach the destination node.
+
+-> This is the Dijkstra algorithm.

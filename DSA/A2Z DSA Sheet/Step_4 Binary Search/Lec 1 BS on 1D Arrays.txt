@@ -1,0 +1,96 @@
+PROBLEM STATEMENT: Search the target in a rotated sorted array having duplicates.
+
+    APPROACH 1: BRUTE FORCE
+
+    -> This problem is very much similar to the one having no duplicates.
+
+    -> What we can attempt is to remove duplicates.
+
+    -> But removing duplicates requires linear traversal. Therefore, increasing time complexity. Further, if we have to traverse, whay not just find the key itself.
+
+    -> Hence, we can attempt to just linearly traverse the array.
+
+
+        ANALYSIS:
+
+        -> Linear time complexity and no auxiliary space is used.
+
+    
+    APPROACH 2: BETTER
+
+    -> Removing the duplicates won't work in this problem.
+
+    -> So, the very first thing we can do is to check whether the target is equal to the first or last element of the array. If yes, just return True.
+
+    -> If not, focus on the pattern in the array. We can graphically think it as two inclined paralled lines (with flats in b/w possible as duplicates exists). For example: Here, Y-axis denotes members in array and X-axis denotes the trend.
+
+                         *
+                     *
+            *    *
+        *                                   *
+                                    *    *
+                                *
+                            *
+
+    -> So, we just have to tackle this two portion of the array. Mathematical condition of analyzing these two portions are:
+
+        -> if target< nums[-1]: Target is in right part, so shrink towards this.
+
+        -> if target> nums[-1]: Target is in left part, so shrink towards this.
+
+    -> Let's analyse right part:
+
+        -> Since target lies in this part,
+
+            -> if nums[mid]< nums[-1]: That means nums[mid] is in right part.
+
+                -> if target <= nums[mid]:
+
+                    high = mid-1
+
+                -> else: low = mid + 1
+
+            -> else: high = mid - 1
+
+    -> Let's analyse left part:
+
+        -> Since target lies in this part,
+
+            -> if nums[mid]> nums[-1]: That means nums[mid] is in left part.
+
+                -> if target <= nums[mid]:
+
+                    high = mid-1
+
+                -> else: low = mid + 1
+
+            -> else: low = mid + 1
+
+
+    -> Hence, we can find the key!
+
+    
+        ANALYSIS:
+
+        -> A problem occurs when nums[0]==nums[-1]. In this situation, the conditions fails to decide where to shift.
+
+        -> Time complexity is O(logN) with no axiliary space used.
+
+        -> We have to find another situation to tackle the problem.
+
+
+    APPROACH 3: OPTIMAL
+
+    -> Since the only problem in the previous approach was one condition, we can think of removing that condition.
+
+    -> Hence, we can change the low and high to that point where nums[low]!=nums[high] and the problem goes away!
+
+    -> We take two variables start = low and end = high just to replace nums[-1] with nums[end] in the conditions that contains this.
+
+
+        ANALYSIS:
+
+        -> Best time complexity is O(logN) and worst is O(N) which is rare.
+
+        -> Constant space complexity.
+        

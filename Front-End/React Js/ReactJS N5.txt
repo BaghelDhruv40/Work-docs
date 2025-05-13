@@ -1,0 +1,6 @@
+-> Is ReactJS a JS library or NodeJS library?
+Ans. That's an interesting question. To create a React app, we use npm. npm is a utility of NodeJS. If we analyze the code of ReactJS, no where we use DOM manipulation APIs of JS. Instead, we use createRoot() from 'react-dom/client' module to take over the command over the only div with id='root' (usually) present in the index.html. This method returns an object that has two methods: render() and unmount(). render() takes the React Component as a parameter.
+
+React Components are just normal JS functions that returns a wierd thing called JSX that resembles with "a string having HTML in it". So, here too, we are not creating HTML components using DOM APIs to dynamically append them in index.html. Hence, React is free from JS DOM APIs. But, the access of React to the system is same as JS.
+
+The conclusion is that "ReactJS is neither a JS library nor NodeJS library". It is much of a library that uses JS but runs anywhere where the intersection of JS and NodeJS can work. Such things where this much JS works is called "isomorphic apps". Hence, ReactJS is more a isomorphic library. ReactJS can be used on the server side.

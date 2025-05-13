@@ -1,0 +1,2 @@
+-> What are the uses of NodeJS? How powerful is it?
+Ans. NodeJS does have many powers but first we shall discuss about two of them. They are "File-System access" and "Http API".

@@ -1,0 +1,22 @@
+-> The mechanism by which server sends dynamic content introduces two classifications, namely, "Client-side Rendering" and "Server-side Rendering".
+
+SERVER-SIDE RENDERING
+---------------------
+-> It is the default behaviour of web to handle web requests and response.
+
+-> The whole web page is created first on the server itself and then send to the client.
+
+-> The client system renders the page.
+
+
+CLIENT-SIDE RENDERING
+---------------------
+-> It is a mechanism introduced for the efficiency of dynamic content updation.
+
+-> Web pages are now designed in such a way that only the relevant changes get affected. This thing requires:
+
+    -> A mechanism on the client side that updates only the relavant changes and not the whole page.
+
+    -> A mechanism on the client side that sends a web requests just for relevant data and handling it.
+
+    -> A slight change in the workload of the server to just send the requested things in a suitable format.

@@ -1,0 +1,7 @@
+-> What is Web Dev about? What we do in Web Dev? Why such field exists? There are many questions related to the so called field "Web Dev".
+
+-> The main purpose of Web is resource sharing. The Web Development field emerged with this being the main objective at that time. Web was not possible without Internet (which has been discussed in great detail at Work Docs/ Computer Networking/ Top-Down Approach/ Fundamentals.txt). But, Why do we need Web? What is Web actually?
+
+-> If the purpose is resource sharing, we could achieve it in many ways. Like just opened
+
+-> Frontend can be thought of as a way of how to improve html as a resource and backend can be thought of as a way of how to make html as an efficient web app.

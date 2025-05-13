@@ -10,7 +10,7 @@
 
 -> So ADT not only store data but allow us to perform data fetching operations on them. No matter what ADT, it must provide a way to locate desired data unit and to perform crud over it.
 
--> At the core of the concept of memory, we have physical quantities used to depict a state. So a memory can be imagined as a collection of variables (references). But, each variable can only store one of the two states, and, an information may require more than those states. Instead of making new states, we can use the existing states, to depict a new state. Now it's upto us how to use these states in efficient way to depict new states and so an information.
+-> At the core of the concept of memory, we have physical quantities used to depict a state. So a memory can be imagined as a collection of memory cells. But, each memory cell can only store one of the two states, and, an information may require more than those states. Instead of making new states, we can use the existing states, to depict a new state. Now it's upto us how to use these states in efficient way to depict new states and so an information.
 
 -> One way is to utilize the concept of boolean algebra. And if so, new states are just linear sequences of the two states.
 
@@ -50,7 +50,7 @@ LINEAR ADT
 			
 			An hint of why is it wrong is that consider the case when a pointer is declared for a user defined data type (yet not discussed). Since we have no mechanism of knowing how much memory will be used by the user defined data type, the system can't book it.
 
-			-> Now, assuming a mechanism (calloc() in C) is there to allocate continuous memory as per the given size, we can talk further about this approach.
+			-> Now, assuming a mechanism (calloc() and malloc() in C) is there to allocate continuous memory (virtual memory space) as per the given size, we can talk further about this approach.
 
 			CHARACTERISTICS:
 
@@ -100,10 +100,9 @@ LINEAR ADT
 
 			-> One more thing is that how will we automate the procedure of storing new items? Such mechanism was still intuitive in case of continuos approach as the system would just pick a random location and based on the size given books the continuous blocks.
 
-			Here, we may think of a primitive procedure that repeats the number of times equal to the size given. The primitive procedure will just be picking random location and putting it into the "location-tracking-structure". The size of that structure will be same.
-			We do have a mechanism to allocate discontinuous memory of given size in C language and that is malloc() method. This returns a pointer of void data type and so, we have to type cast it according to our needs.
+			Here, we may think of a primitive procedure that repeats the number of times equal to the size given. The primitive procedure will just be picking random location and putting it into the "location-tracking-structure". The size of that structure will be same. Well such primitive procedure is sbrk() and mmap() system calls controlled by Kernel. Functions like malloc(), calloc() just recieves an illusionary continuous memory allocation but at the depth, random allocations are performed by kernel memory unit. malloc() and calloc() returns a pointer of void data type and so, we have to type cast it according to our needs.
 
-			-> Obviously, we can't adopt discontinuity using continuous approach It will be like an approach derived from an approach. So, if storing the location is a way then we may come into a loop. Therefore, we will have to think of a new way to preserve the connection.
+			-> Obviously, we can't adopt discontinuity using continuous approach It will be like an approach derived from an approach. So, if storing the location is a way then we may come into a loop. Therefore, we will have to think of a new way to preserve the connection. (This point is not correct)
 
 			-> What if we can create complex data type, like, a data type that can store multiple data types? Severals points to consider:
 
@@ -141,13 +140,15 @@ LINEAR ADT
 			IMPLEMENTATIONS
 			---------------
 
-				SINGLY LINEKDLIST:
+				SINGLY LINKEDLIST:
 
 				-> We create a struct in C or class in oop languages that denotes it.
 
 				-> Another class (or struct) is created to denote the nodes.
 
 				-> The memory for nodes is allocated by the malloc method (in C) or new keyword (in opp languages).
+
+				-> Remember, malloc requires size to be given. How will we determine the size of user-defined datatypes? The answer is sizeof() method in C. It returns the summed up size of all members of the user-defined datatype with padding included.
 
 
 
@@ -158,9 +159,7 @@ NON-LINEAR ADT
 
 -> What is a non-linear ADT and why do we need them? Linear ADT are such ADT that allow us linear iteration. That means, we can have at most two directions to move on over every element/node that will lead to a new unexplored node.
 
--> So, non-linear ADT posses more than 2 directions to move (for at least one element/node). But, where do we need such ADT? Consider following:
+-> So, non-linear ADT posses more than 2 directions to move (for at least one element/node). But, where do we need such ADT? The answer to this question is that it is better to first observe how our world is greatly and easily be explained using such ADTs.
 
--> Suppose we need to store and explore the consequences of a decision. For example tossing of "N" coins. Below are some question that can be raised:
-
-	-> How can we do that?
+-> Think of a structure that is a collection of well ordered entities along with the information about the connection between them. We can think of it as a structure talking about two sets. One set contains the entities and other the "connection information". This sturcture is called a Graph. Since set theory is a well proved framework to explain our universe, Graph is a structure that can be used in almost every problem.
 	

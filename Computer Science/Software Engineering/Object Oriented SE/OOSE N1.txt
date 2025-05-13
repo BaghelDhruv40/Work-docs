@@ -74,3 +74,24 @@ UML (Unified Modeling Language)
         -> Focuses on dynamic aspects of the system.
 
         -> Describes how the system responds and behaves in different scenarios.
+
+
+RATIONAL UNIFIED PROCESS
+------------------------
+
+-> RUP is SDLC model that is based on OOSE. It uses UML to ease the workload and enhance the understandablity.
+
+-> RUP is basically divided into two structures:
+
+    -> Static Structure: This talks about the static aspects of the system applicable in all phases involved in SDLC.
+
+    -> Dynamic Structure: This divides the whole cycle into four phases.
+        -> Inception
+        -> Elaboration
+        -> Construction
+        -> Transition
+
+
+OBJECT-ORIENTED ANALYSIS
+------------------------
+-> RUP defines three types of classes: Entity class, Interface class and Control class.

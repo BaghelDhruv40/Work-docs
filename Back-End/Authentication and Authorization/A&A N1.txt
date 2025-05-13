@@ -13,10 +13,13 @@ AUTHENTICATION
 
 	-> How to retain the authentication status of the user?
 	Ans. One way is to turn a flag on and send it in the request header. If so, the user would require to authenticate only once and remain authenticated for the whole session.
-What about multiple session? For that, 
+
+	What about multiple session? For that, 
 		-> The flag can be stored in the browser localstorage and will be deleted only if the user explictly log out. Or,
+		
 		-> Instead of localstorage, the flag is stored in the backend database. When a user visit the site, the backend may ask them to enter their credentials one by one instead of all at ones, so that, the backend can check if the flag for the provided username or email is turned on, the password step can be bypassed. This could be the reason we used to be told to always logout (to turn the flag off).
-All these ways may be good but not secure as they relies on just the credentials of the user. Anyone with just the half knowledge of credentials can breach.
+
+	All these ways may be good but not secure as they relies on just the credentials of the user. Anyone with just the half knowledge of credentials can breach.
 
 	-> What are session tokens?
 	Ans. Session tokens are a way to solve the problem of retaining the status of the authenticated user. After the successful authentication, certain tokens can be generated which then can be verified by the backend. But, how are they different from authentication flag method? The tokens carry many info about the user and their verification is made much more secure by better algorithms. Further, the backend signs the tokens and any alterations besides those done by the backend itself leads to change of signature and so the backend identifies that the user is not authenticated one.

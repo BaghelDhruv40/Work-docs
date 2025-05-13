@@ -3,4 +3,4 @@ ASYNCHRONOUS PROGRAMMING
 
 -> The execution of a process is done sequentially as governed by the stack execution model. Asynchronous programming is a way to bypass a line before its completion. Why to do such thing? A part of code may require large amount of time to be completed and so blocks the execution of the subsequent lines. Multithreading is yet another way to achieve this. The similarity between asynchronous and multithreading programming is that they are here to solve the same issue. But, the difference between them is how they are achieving this.
 
--> Asynchronous
+-> Asynchronous nature lies in the operating system. This is nothing but an "interrupt" model. Interrupts are signals that are sent by something to convey the start or end of the task. So, an asynchronous task causes an interrupt at the start and end of it to let the CPU know.

@@ -1,0 +1,55 @@
+PROBLEM STATEMENT: Find all the permutations of the given sequence.
+
+    APPROACH 1: FAILED
+
+    arr=[1,2,3,4]
+    """
+    start=0 123
+    start=1 123
+    start=2 123 (printed) and returned back
+    start=1 132
+    start=2 132 (printed) and returned back
+    start=0 231
+    start=1 231
+    start=2 231 (printed) and returned back
+    start=1 213
+    start=2 213 (printed) and returned back
+    start=0 312
+    start=1 312
+    start=2 312 (printed) and returned back
+    start=1 321
+    start=2 321 (printed) and returned back
+    """
+
+    permutation=[]
+    flag=False
+    temp=[i for i in arr]
+    def swap(start):
+        global temp
+        for i in range(start,(len(temp)+start)//2):
+            temp[i],temp[len(temp)-(i-start)-1]=temp[len(temp)-(i-start)-1],temp[i]
+    def permute(start):
+        global temp
+        if len(permutation)>=24:
+            return
+        # print(temp,start)
+        if start==len(arr)-1:
+            permutation.append([i for i in temp])
+            return
+        # if arr==temp and start==0:
+        #     if flag:
+        #         permute(start+1,flag)
+        #         return
+        #     else:
+        #         flag=True
+        
+        permute(start+1)
+        swap(start)
+        permute(start+1)
+    start=0
+    while len(permutation)<24:
+        permute(start)
+        swap(start)
+        # start=1
+        
+    print(permutation)

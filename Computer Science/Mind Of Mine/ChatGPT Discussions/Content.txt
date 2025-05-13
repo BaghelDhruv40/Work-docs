@@ -1,0 +1,850 @@
+-> This file is just a gateway of other files in the folder.
+
+DISCUSSIONS
+-----------
+
+-> https://chatgpt.com/share/680fcdfd-4d88-8011-9795-cd2b5e9cbc66
+
+    -> This link takes us to the chat named "Discussion on GPUs: Out of Curiosity".
+
+    -> The chat has many questions. Some are listed here :
+
+        -> What is a GPU?
+
+        -> What is its history?
+
+        -> Similarities and differences b/w CPU and GPU, RAM and Graphics Memory.
+
+        -> What is the purpose of Graphics Memory.
+
+        -> Was CRT a fundamental way of graphics?
+
+        -> Why did we need graphics when we already had screens (CRT)?
+
+        -> What was the first display and the principle behind it? What kind of output and quality of output we could have expected?
+
+
+-> https://chatgpt.com/share/680fd33d-9494-8011-9f18-87cc7b19aa2c
+
+    -> This link takes us to the chat named "Understanding Virtual Environment".
+
+
+-> https://chatgpt.com/share/9aa6171c-e5f1-4774-b315-d852ff582772
+
+    -> This link takes us to the chat named "DBMS Assignment Help".
+
+
+-> https://chatgpt.com/share/680fd526-6d84-8011-94a3-636e17172a56
+
+    -> This link takes us to the chat named "Minor Project Update".
+
+
+-> https://chatgpt.com/share/66fb4f93-83b4-8011-930d-47bd14ea9e0a
+
+    -> This link takes us to the chat named "Customer Segmentation ML Social Media".
+
+-> https://chatgpt.com/share/680fd61d-4f04-8011-a0e2-ec464e602967
+
+    -> This link takes us to the chat named "Python Platform Independence Explained".
+
+
+-> https://chatgpt.com/share/680fd67e-cc20-8011-a98a-c77ecdd47b1f
+
+    -> This link takes us to the chat named "Early Computing And Machine Learning".
+
+
+-> The link to this chat can't be generated.
+
+    -> This link takes us to the chat named "Current Shell Type Command".
+
+
+-> https://chatgpt.com/share/680fd722-5f78-8011-83d3-4d7084db0a15
+
+    -> This link takes us to the chat named "Book Index Vs Database".
+
+
+-> https://chatgpt.com/share/680fd7a2-724c-8011-8594-c620488efff0
+
+    -> This link takes us to the chat named "Data Independence Explained".
+
+
+-> https://chatgpt.com/share/680fd7f2-d220-8011-b4d3-efac47026d0c
+
+    -> This link takes us to the chat named "Learn Shell Scripting".
+
+
+-> https://chatgpt.com/share/680fd861-e600-8011-93da-d05c7e3e0202
+
+    -> This link takes us to the chat named "Changing umask in Ubuntu".
+
+
+-> https://chatgpt.com/share/680fd8a4-dd24-8011-96b1-836bc0d6000f
+
+    -> This link takes us to the chat named "Linux Practical Help".
+
+
+-> https://chatgpt.com/share/680fd967-c58c-8011-bef9-5281fa2dc377
+
+    -> This link takes us to the chat named "Why New Languages Emerge".
+
+
+-> https://chatgpt.com/share/680fda2e-b7fc-8011-8a00-7e244f35800b
+
+    -> This link takes us to the chat named "Unix Device File Interface".
+
+
+-> https://chatgpt.com/share/680fda5a-3ebc-8011-9d53-ef62412ffa95
+
+    -> This link takes us to the chat named "File info script".
+
+
+-> https://chatgpt.com/share/6741435a-838c-8011-a461-4eac363e148f
+
+    -> This link takes us to the chat named "Computer Networks Help".
+
+
+-> https://chatgpt.com/share/680fdae6-37c0-8011-8486-c114b3c54e3e
+
+    -> This link takes us to the chat named "Semaphore Explaination".
+
+
+-> https://chatgpt.com/share/680fdb40-a644-8011-a4db-699897a89efb
+
+    -> This link takes us to the chat named "What is GNOME".
+
+
+-> https://chatgpt.com/share/6743d7aa-0f88-8011-975f-2302bde0cfb8
+
+    -> This link takes us to the chat named "Shell Scripts for Ubuntu".
+
+
+-> https://chatgpt.com/share/680fdc21-6814-8011-8eb3-9920c9f9a771
+
+    -> This link takes us to the chat named "Processes vs Functions in OS".
+
+
+-> https://chatgpt.com/share/680fdc61-2bb4-8011-8ea1-138f8b35acb6
+
+    -> This link takes us to the chat named "ARPANET Hosts to DNS".
+
+
+-> https://chatgpt.com/share/680fdcba-13bc-8011-829d-c7b7b7ae9cef
+
+    -> This link takes us to the chat named "Email Architecture Overview".
+
+
+-> https://chatgpt.com/share/680fdd00-d458-8011-a805-588c1190c728
+
+    -> This link takes us to the chat named "MAC Address Overview".
+
+
+-> https://chatgpt.com/share/680fdd7b-0110-8011-8a0f-cd8f67e6a403
+
+    -> This link takes us to the chat named "Duplexing Multiplexing Demultiplexing Methods".
+
+
+-> https://chatgpt.com/share/680fddbd-7950-8011-baac-29bfe02cf2be
+
+    -> This link takes us to the chat named "Port Number Explaination".
+
+
+-> https://chatgpt.com/share/680fde34-2ddc-8011-90dd-b2ff7e15db6a
+
+    -> This link takes us to the chat named "WAP vs Wi-Fi Router".
+
+
+-> https://chatgpt.com/share/680fde7a-7090-8011-ba82-b6855f38e701
+
+    -> This link takes us to the chat named "Collision-Free Protocols Overview".
+
+
+-> https://chatgpt.com/share/680fdeb7-630c-8011-9555-536295412fbd
+
+    -> This link takes us to the chat named "Random vs Sequential Access".
+
+
+-> https://chatgpt.com/share/680fdf20-3b60-8011-958b-dff8a097c23a
+
+    -> This link takes us to the chat named "Schema and View in SQL".
+
+
+-> https://chatgpt.com/share/680fdf58-a584-8011-8287-95832ff646b6
+
+    -> This link takes us to the chat named "PL/SQL Overview and Features".
+
+
+-> https://chatgpt.com/share/680fdfd6-1728-8011-a669-626e2f9ae632
+
+    -> This link takes us to the chat named "GUI Creation and OS".
+
+
+-> https://chatgpt.com/share/6763bc55-7d20-8011-beec-04fef2279276
+
+    -> This link takes us to the chat named "Java Foundation Classes Overview".
+
+
+-> https://chatgpt.com/share/6763be6d-dc40-8011-94ab-ee5008bf7bef
+
+    -> This link takes us to the chat named "MySQL JDBC Connector Setup".
+
+
+-> https://chatgpt.com/share/6763be97-183c-8011-b528-f85a3e5412ae
+
+    -> This link takes us to the chat named "Java Packages List".
+
+
+-> https://chatgpt.com/share/680fe179-9a34-8011-a278-06f2d387b4e2
+
+    -> This link takes us to the chat named "Frontend Motivation and Innovation".
+
+
+-> https://chatgpt.com/share/680fe1cf-cf80-8011-9583-605729e21d83
+
+    -> This link takes us to the chat named "JS-D1: JavaScript Overview".
+
+
+-> https://chatgpt.com/share/680fe207-e7e4-8011-92dc-80413f04dc61
+
+    -> This link takes us to the chat named "JAVA-D1: Explore Java Application Fields".
+
+
+-> https://chatgpt.com/share/680fe23f-6a08-8011-a3e1-1ba60184a203
+
+    -> This link takes us to the chat named "C_PROG-D1: Header Files in Programming".
+
+
+-> https://chatgpt.com/share/680fe277-9374-8011-abbf-e8001bd4ae39
+
+    -> This link takes us to the chat named "DSA-D1: Convert Code Format".
+
+
+-> https://chatgpt.com/share/680fe2a3-bbdc-8011-97d7-7ee1479c5309
+
+    -> This link takes us to the chat named "WD-D1: Understanding the MERN Stack".
+
+
+-> https://chatgpt.com/share/680fe2d8-f3e8-8011-a9cd-c7d319312a1c
+
+    -> This link takes us to the chat named "SQL-D1: Duplicate Email Query".
+
+
+-> https://chatgpt.com/share/680fe312-7d14-8011-8cdf-ddaef923dc52
+
+    -> This link takes us to the chat named "Weather App Development Guide".
+
+
+-> https://chatgpt.com/share/680fe53e-50a8-8011-83c3-fc0340180568
+
+    -> This link takes us to the chat named "Internship Assignment Overview".
+
+
+-> https://chatgpt.com/share/680fe583-c650-8011-8d94-d7f941045e77
+
+    -> This link takes us to the chat named "npm --save flag meaning".
+
+
+-> https://chatgpt.com/share/680fe5ce-2288-8011-b681-9c2b6b4440d1
+
+    -> This link takes us to the chat named "Firebase Authentication Guide".
+
+
+-> https://chatgpt.com/share/680fe601-57b8-8011-bcbe-359f242330d4
+
+    -> This link takes us to the chat named "Image Shift on Resize".
+
+
+-> https://chatgpt.com/share/680fe643-1e34-8011-958d-cc9f6ede83eb
+
+    -> This link takes us to the chat named "Card Layout in Bootstrap".
+
+
+-> https://chatgpt.com/share/680fe66c-51b4-8011-83a9-9fdd46fa8765
+
+    -> This link takes us to the chat named "Github Branch Types".
+
+
+-> https://chatgpt.com/share/680fe6b4-e114-8011-b19a-bfa4cdda2540
+
+    -> This link takes us to the chat named "API Error Debugging".
+
+
+-> https://chatgpt.com/share/680fe6f9-85fc-8011-945e-dc9a872b5003
+
+    -> This link takes us to the chat named "Backend Developement Overview".
+
+
+-> https://chatgpt.com/share/680fe72a-7170-8011-b8d2-23698a8a636c
+
+    -> This link takes us to the chat named "React Django and Servers".
+
+
+-> https://chatgpt.com/share/680fe7a4-69d8-8011-9ec6-38093cd60464
+
+    -> This link takes us to the chat named "Firebase Auth in Todo".
+
+
+-> https://chatgpt.com/share/680fe7fb-179c-8011-bd86-b8c1abdbb70e
+
+    -> This link takes us to the chat named "AI Model Fine-Tuning".
+
+
+-> https://chatgpt.com/share/680fe82c-9ef8-8011-951f-5a60f695d487
+
+    -> This link takes us to the chat named "What is REST API".
+
+
+-> https://chatgpt.com/share/680fe8d5-5408-8011-99c9-5c2cb1785fc1
+
+    -> This link takes us to the chat named "Packages vs Plugins Explained".
+
+
+-> https://chatgpt.com/share/680fe920-ab6c-8011-84e2-611a0082435f
+
+    -> This link takes us to the chat named "Project Resource Guidance".
+
+
+-> https://chatgpt.com/share/680fe94e-29d8-8011-90eb-9b2e2961d4b2
+
+    -> This link takes us to the chat named "Web Dev Tools 2023".
+
+
+-> https://chatgpt.com/share/680fe97c-f8a0-8011-8d12-b9c1e5462120
+
+    -> This link takes us to the chat named "Agile Developement Overview".
+
+
+-> https://chatgpt.com/share/680fe99f-8e7c-8011-bb64-7ee0a5779130
+
+    -> This link takes us to the chat named "Problem Solving Approach Evaluation".
+
+
+-> https://chatgpt.com/share/680fe9d1-b274-8011-b634-bb8942c78a64
+
+    -> This link takes us to the chat named "Lack of Project Engagement".
+
+
+-> https://chatgpt.com/share/680fea2b-9984-8011-a4ae-b79475e64823
+
+    -> This link takes us to the chat named "E-commerce Cloud Kitchen Site".
+
+
+-> https://chatgpt.com/share/680fea5e-80e0-8011-9dae-a13527ac9d6f
+
+    -> This link takes us to the chat named "DSA Implemenation in Languages".
+
+
+-> https://chatgpt.com/share/680feaa3-d200-8011-abca-e23f7c13ab41
+
+    -> This link takes us to the chat named "API Basics in Web Dev".
+
+
+-> https://chatgpt.com/share/680feb18-5888-8011-8670-28a98780796d
+
+    -> This link takes us to the chat named "Full Stack Project Guide".
+
+
+-> https://chatgpt.com/share/680feb4f-3478-8011-a51d-d4da3f93e307
+
+    -> This link takes us to the chat named "Web App Encryption Guide".
+
+
+-> https://chatgpt.com/share/680feb7b-0e40-8011-842e-270ca6bb0c15
+
+    -> This link takes us to the chat named "LLM Model Training Guide".
+
+
+-> https://chatgpt.com/share/680febda-324c-8011-9864-217a1bec94ea
+
+    -> This link takes us to the chat named "JPA and ORM Transition".
+
+
+-> https://chatgpt.com/share/680fec1d-4098-8011-8f84-478ec8f04965
+
+    -> This link takes us to the chat named "Hibernate vs NoSQL".
+
+
+-> https://chatgpt.com/share/680fec40-2744-8011-bf38-6ded3ebf3d20
+
+    -> This link takes us to the chat named "Python __init__ Constructor Explained".
+
+
+-> https://chatgpt.com/share/680fec8b-a590-8011-a84d-06e4049c4d2a
+
+    -> This link takes us to the chat named "Staying Updated in Tech".
+
+
+-> https://chatgpt.com/share/680fecff-f260-8011-b725-4b37832b7cd4
+
+    -> This link takes us to the chat named "C# Job Opportunities".
+
+
+-> https://chatgpt.com/share/680fed2e-1d24-8011-9137-990e9167c3fc
+
+    -> This link takes us to the chat named "Frontend Developement in Java".
+
+
+-> https://chatgpt.com/share/680fed4e-6c60-8011-b289-53d1afb8daf3
+
+    -> This link takes us to the chat named "HTTP vs HTTPS Security".
+
+
+-> https://chatgpt.com/share/680fed89-c094-8011-bc1c-143e6dd0e699
+
+    -> This link takes us to the chat named "Tech Careers for Freshers".
+
+
+-> https://chatgpt.com/share/680fede3-0770-8011-9f17-59e4e9a40d64
+
+    -> This link takes us to the chat named "Unit Testing Overview".
+
+
+-> https://chatgpt.com/share/680fee04-94d8-8011-b12f-61ee34979520
+
+    -> This link takes us to the chat named "Hiring Freshers vs Experience".
+
+
+-> https://chatgpt.com/share/680fee4a-7f80-8011-be9f-74c716a3f2b1
+
+    -> This link takes us to the chat named "Nested Routing Dashboard Layout".
+
+
+-> https://chatgpt.com/share/680fee7d-a178-8011-a78d-f33a507bd543
+
+    -> This link takes us to the chat named "Django vs MERN Stack".
+
+
+-> https://chatgpt.com/share/680fee9f-c8e8-8011-8ec3-768efa4da715
+
+    -> This link takes us to the chat named "Handling Concurrent Requests".
+
+
+-> https://chatgpt.com/share/680feee4-c678-8011-8633-6ad7574ec5ca
+
+    -> This link takes us to the chat named "Object-Oriented Software Engineering Intro".
+
+
+-> https://chatgpt.com/share/680fef0b-206c-8011-8589-4e7caa265acc
+
+    -> This link takes us to the chat named "Do I need XML?".
+
+
+-> https://chatgpt.com/share/680fef49-8bf0-8011-a83e-319aafa7013f
+
+    -> This link takes us to the chat named "Regex Pattern Matching Overview".
+
+
+-> https://chatgpt.com/share/680fef66-c7b8-8011-ad90-0fb52828b4dd
+
+    -> This link takes us to the chat named "NLTK in Customer Segmentation".
+
+
+-> https://chatgpt.com/share/680fefb4-b4e0-8011-b717-bc7594a2557b
+
+    -> This link takes us to the chat named "Primitive vs Reference Types".
+
+
+-> https://chatgpt.com/share/680feff3-2398-8011-923a-d7915ac73d73
+
+    -> This link takes us to the chat named "What is Babel".
+
+
+-> https://chatgpt.com/share/680ff012-7a40-8011-a12d-13edeca12b11
+
+    -> This link takes us to the chat named "ML-D1: Recommender System Algorithms".
+
+
+-> https://chatgpt.com/share/680ff04b-8c3c-8011-9c0c-15cfc22d4605
+
+    -> This link takes us to the chat named "CLASSICAL_MUSIC-D1: Classical Music Fundamentals Guide".
+
+
+-> https://chatgpt.com/share/680ff0b3-a628-8011-9dda-598e07dc2cf8
+
+    -> This link takes us to the chat named "Sever Hacking Techniques".
+
+
+-> https://chatgpt.com/share/680ff107-bd50-8011-b037-179cd4eb4d85
+
+    -> This link takes us to the chat named "HTTP-D1: HTTP Basics Overview".
+
+
+-> https://chatgpt.com/share/680ff143-d2d0-8011-852c-7c2e9c382d67
+
+    -> This link takes us to the chat named "Cloud MySQL Solution".
+
+
+-> https://chatgpt.com/share/680ff162-9d7c-8011-a351-2fd123f9412f
+
+    -> This link takes us to the chat named "Critical Thinking Balance".
+
+
+-> https://chatgpt.com/share/680ff181-e080-8011-b083-4b5b839b52d8
+
+    -> This link takes us to the chat named "Understanding DBMS Transactions".
+
+
+-> https://chatgpt.com/share/680ff42a-e200-8011-ad88-e3c55c5b5e8a
+
+    -> This link takes us to the chat named "DBMS Concurrency Explained".
+
+
+-> https://chatgpt.com/share/680ff457-329c-8011-a981-f9d4807d39b4
+
+    -> This link takes us to the chat named "IndexDB Overview".
+
+
+-> https://chatgpt.com/share/680ff4a7-ef90-8011-8a6a-5f1be258a658
+
+    -> This link takes us to the chat named "Async vs Multithreading".
+
+
+-> https://chatgpt.com/share/680ff4ce-d8cc-8011-9287-8a5e725149e1
+
+    -> This link takes us to the chat named "ADMIN_PANEL_TALKS_T1: Intro to design a general admin panel".
+
+
+-> https://chatgpt.com/share/680ff53c-6950-8011-a89d-3d13f1882fb6
+
+    -> This link takes us to the chat named "JS_CORE-D1: Context in JS".
+
+
+-> https://chatgpt.com/share/680ff565-84a4-8011-9f4e-4d52bd9b3249
+
+    -> This link takes us to the chat named "MYSQL-T1: MySQL Components Overview".
+
+
+-> https://chatgpt.com/share/680ff5d1-87e4-8011-8354-dc800e4d164d
+
+    -> This link takes us to the chat named "Portfolio Site Discussion".
+
+
+-> https://chatgpt.com/share/680ff603-bba8-8011-a108-74e0c42a65ca
+
+    -> This link takes us to the chat named "Memory Allocation and Arrays".
+
+
+-> https://chatgpt.com/share/680ff637-0db0-8011-a894-191b5b7d3f14
+
+    -> This link takes us to the chat named "REACT_JS-D1: Learning React Essentials".
+
+
+-> https://chatgpt.com/share/680ff696-a794-8011-9640-013f81c653b7
+
+    -> This link takes us to the chat named "Java Backend Fundamentals".
+
+
+-> https://chatgpt.com/share/680ff6bc-8498-8011-ac7b-04759e5092b9
+
+    -> This link takes us to the chat named "JSP vs Servelets Overhead".
+
+
+-> https://chatgpt.com/share/680ff6e6-f2ec-8011-b7fb-f42780834352
+
+    -> This link takes us to the chat named "UI Manipulation with Other Languages".
+
+
+-> https://chatgpt.com/share/680ff714-5060-8011-bae9-abf8d3c09efa
+
+    -> This link takes us to the chat named "What is WebAssembly".
+
+
+-> https://chatgpt.com/share/680ff744-31d8-8011-8326-07ea6c0413ed
+
+    -> This link takes us to the chat named "AI Conext and Perfection".
+
+
+-> https://chatgpt.com/share/680ff76c-e424-8011-9469-7500b99d5372
+
+    -> This link takes us to the chat named "Merge Sort Time Complexity".
+
+
+-> https://chatgpt.com/share/681f9a5f-2fc8-8011-b5de-a85dcc96d40e
+
+    -> This link takes us to the chat named "MyCustomer Segmentation Model Guidance".
+
+
+-> https://chatgpt.com/share/681f9b47-a3e4-8011-8555-3e52a27e94e6
+
+    -> This link takes us to the chat named "AUTH&AUTHZ-D2: Securing DB Queries".
+
+
+-> https://chatgpt.com/share/681f9bbf-c5ac-8011-a68c-7399bc5b8db8
+
+    -> This link takes us to the chat named "OOP Memory Allocation Performance".
+
+
+-> https://chatgpt.com/share/681f9be5-f924-8011-81b3-7d32522fae06
+
+    -> This link takes us to the chat named "Audio Notes Analysis Help".
+
+    -> This was the first chat regarding my new project.
+
+
+-> https://chatgpt.com/share/681f9c57-2ca8-8011-a0fd-161e8f8a3aad
+
+    -> This link takes us to the chat named "Singing Analysis Project Idea".
+
+
+-> https://chatgpt.com/share/681f9d15-9340-8011-ac9f-344ddd28ecba
+
+    -> This link takes us to the chat named "Exploring Tech Tools".
+
+
+-> https://chatgpt.com/share/681f9d3d-3388-8011-83b3-56c18e8179bb
+
+    -> This link takes us to the chat named "History of Merge Sort".
+
+
+-> https://chatgpt.com/share/681f9d83-e6b4-8011-b010-f7a00b3b6b2e
+
+    -> This link takes us to the chat named "Backend Dev Roadmap".
+
+
+-> https://chatgpt.com/share/681f9db6-3c00-8011-a253-2128a757ee83
+
+    -> This link takes us to the chat named "Frontend React Learning Roadmap". 
+
+
+-> https://chatgpt.com/share/681f9de9-e878-8011-a7f7-5b80bb742e80
+
+    -> This link takes us to the chat named "HTML and SEO".
+
+
+-> https://chatgpt.com/share/681f9e19-6e60-8011-8d09-ed119bf52a2e
+
+    -> This link takes us to the chat named "Pointers in Early Programming".
+
+
+-> https://chatgpt.com/share/681f9e5c-b508-8011-8cbb-43e71189aa19
+
+    -> This link takes us to the chat named "DSA and Hardware Awareness".
+
+
+-> https://chatgpt.com/share/681f9e84-36c4-8011-a40a-84caf80da3a3
+
+    -> This link takes us to the chat named "Data Deletion in Cloud".
+
+
+-> https://chatgpt.com/share/681f9fa2-9654-8011-9322-05b8fc6a80d7
+
+    -> This link takes us to the chat named "Test My Thinking".
+
+
+-> https://chatgpt.com/share/681f9fe5-ca90-8011-bc22-486ebd43e26f
+
+    -> This link takes us to the chat named "History of ADTs".
+
+
+-> https://chatgpt.com/share/681fa020-95a0-8011-b097-9284b59098ee
+
+    -> This link takes us to the chat named "Resource Sharing vs Web".
+
+    -> From here I started my journey of depth of Web.
+
+
+-> https://chatgpt.com/share/681fa06e-1fb4-8011-8360-d1eda3910ec9
+
+    -> This link takes us to the chat named "HTML Boilerplate Breakdown".
+
+    -> Must Read. From here the depth of HTML began.
+
+-> https://chatgpt.com/share/681fa0ab-eb04-8011-8fd0-4098827cb7ad
+
+    -> This link takes us to the chat named "HTML5 Evolution Explained".
+
+
+-> https://chatgpt.com/share/681fa0de-d870-8011-90a8-080f38a7de4f
+
+    -> This link takes us to the chat named "Dive Deep into CSS".
+
+
+-> https://chatgpt.com/share/681fa117-bf4c-8011-b2eb-28701a4de440
+
+    -> This link takes us to the chat named "Kernel memory management".
+
+
+-> https://chatgpt.com/share/681fa148-df8c-8011-8da9-76bbd9556927
+
+    -> This link takes us to the chat named "32bit Double Storage Feasibility".
+
+
+-> https://chatgpt.com/share/681fa16d-c098-8011-aa62-bd280bf5acf3
+
+    -> This link takes us to the chat named "Why main method static".
+
+
+-> https://chatgpt.com/share/681fa18b-1528-8011-bbe8-bca42349609f
+
+    -> This link takes us to the chat named "Easing Java Workflow".
+
+
+-> https://chatgpt.com/share/681fa1f0-7a9c-8011-a431-9bf611469876
+
+    -> This link takes us to the chat named "Idea Assistance".
+
+    -> The 'Virtual Me' Project.
+
+
+-> https://chatgpt.com/share/681fa237-f258-8011-8074-e8bf96484d45
+
+    -> This link takes us to the chat named "File Systems Disk Management Guide".
+
+
+-> https://chatgpt.com/share/681fa2d9-8a7c-8011-80b8-f9c1cbc144bc
+
+    -> This link takes us to the chat named "COMP_NET-D1: Internet History Overview & Evolution".
+
+
+-> https://chatgpt.com/share/681fa31b-d3c8-8011-8a69-d585e6c850bd
+
+    -> This link takes us to the chat named "COA_OS-D1: Computing Evolution Journey".
+
+
+-> https://chatgpt.com/share/681fa39e-1694-8011-a148-d4e6f6796be9
+
+    -> This link takes us to the chat named "Discussion to Improve Concept".
+
+
+-> https://chatgpt.com/share/681fa3d2-4b64-8011-818f-b68e294865d7
+
+    -> This link takes us to the chat named "JavaScript Memory Allocation in Browsers".
+
+
+-> https://chatgpt.com/share/681fa3fc-7824-8011-bd69-1ab3cfbab94a
+
+    -> This link takes us to the chat named "Stateless and Stateful".
+
+
+-> https://chatgpt.com/share/681fa421-992c-8011-8c66-917076c1ee0d
+
+    -> This link takes us to the chat named "Security Sandbox Explained".
+
+
+-> https://chatgpt.com/share/681fa44e-2f64-8011-bd5d-283fa581f8ba
+
+    -> This link takes us to the chat named "Fetch API with Undici".
+
+
+-> https://chatgpt.com/share/681fa46b-1bf8-8011-a8a7-22c7caa91072
+
+    -> This link takes us to the chat named "WebSocket vs HTTP".
+
+
+-> https://chatgpt.com/share/681fa4a8-562c-8011-b01b-aeb60ea26b3b
+
+    -> This link takes us to the chat named "Recursive function explaination".
+
+    -> About Functions in Python.
+
+
+-> https://chatgpt.com/share/681fa4e8-7a34-8011-8383-e63c4bd9b981
+
+    -> This link takes us to the chat names "Brute Force Problem Solving".
+
+
+-> https://chatgpt.com/share/681fa5c6-b7d8-8011-a5a5-ab19d81ff1af
+
+    -> This link takes us to the chat names "Backend Page Creation".
+
+
+-> https://chatgpt.com/share/681fa5ec-2368-8011-958f-dca01e4640bc
+
+    -> This link takes us to the chat names "Backend Caching Explained".
+
+
+-> https://chatgpt.com/share/681fa646-2178-8011-97fb-dd582a4d31d7
+
+    -> This link takes us to the chat names "Backend MVC Architecture".
+
+
+-> https://chatgpt.com/share/681fa667-af10-8011-83a4-71ce0b1cc841
+
+    -> This link takes us to the chat names "Quiz Management System Guide".
+
+
+-> https://chatgpt.com/share/681fa686-255c-8011-a735-188966b8798c
+
+    -> This link takes us to the chat names "Understanding Functional Programming".
+
+
+-> https://chatgpt.com/share/681fa6a7-4138-8011-b360-ec10ab1d0b05
+
+    -> This link takes us to the chat names "Router vs SubApp".
+
+
+-> https://chatgpt.com/share/681fa6d5-422c-8011-82f1-bc95688fe610
+
+    -> This link takes us to the chat names "WWW-Authenticate Header Explained".
+
+
+-> https://chatgpt.com/share/681fa705-d1ec-8011-b3df-5f3d56e76c7d
+
+    -> This link takes us to the chat names "Express static files explained".
+
+
+-> https://chatgpt.com/share/681fa723-91b0-8011-91d2-99d5edafb9e6
+
+    -> This link takes us to the chat names "Why use useEffect".
+
+
+-> https://chatgpt.com/share/681fa85f-d8f4-8011-85a5-473fff46be0a
+
+    -> This link takes us to the chat names "MySQL Server vs Client".
+
+
+-> https://chatgpt.com/share/681fa882-96f4-8011-b01c-8988762ddfe9
+
+    -> This link takes us to the chat names "Evolution of DBMS".
+
+
+-> https://chatgpt.com/share/681fa89d-9784-8011-b52c-f4b8431b0f2c
+
+    -> This link takes us to the chat names "Physical Data Storage in DBMS".
+
+
+-> https://chatgpt.com/share/681fa8c4-ed3c-8011-9ed2-54d687364d5a
+
+    -> This link takes us to the chat names "HydrateRoot and SSR Explained".
+
+
+-> https://chatgpt.com/share/681fa8e8-d240-8011-9cf9-0d796b4d16d9
+
+    -> This link takes us to the chat names "Emergence of ReactJs".
+
+
+-> https://chatgpt.com/share/681fa9ba-cfe4-8011-97d6-9d0de4d0012b
+
+    -> This link takes us to the chat names "Protocols in URLs".
+
+
+-> https://chatgpt.com/share/681fa9dd-c1e0-8011-842b-a19d91bda8ca
+
+    -> This link takes us to the chat names "Mongoose connection flow".
+
+
+-> https://chatgpt.com/share/681faa16-a50c-8011-a83d-0b6fd735faa6
+
+    -> This link takes us to the chat names "Async vs Multithreading in OS".
+
+
+-> https://chatgpt.com/share/681faa3f-2e40-8011-a961-fdd128ee71c3
+
+    -> This link takes us to the chat names "What is AJAX".
+
+
+-> https://chatgpt.com/share/681faa67-bb40-8011-9728-995558476eca
+
+    -> This link takes us to the chat names "React default Paradigm History".
+
+
+-> https://chatgpt.com/share/681faa8c-9dcc-8011-acb5-bf5dca9b2694
+
+    -> This link takes us to the chat names "Bind vs Apply in JS".
+
+
+-> https://chatgpt.com/share/681faad6-3b1c-8011-a0ed-d8fe0af7cfb8
+
+    -> This link takes us to the chat names "E-commerce Web App MERN".
+
+    -> Complete chatGPT Ecommerce website.
+

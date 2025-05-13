@@ -1,0 +1,10 @@
+-> What is Software Testing?
+Ans. Indeed testing is done to ensure the software is operating as per the expectations and without any errors. But, that's the purpose of testing and not testing itself. I liked this perspective about testing, great.
+
+    "Testing is a process of executing the program with the intention of finding faults in it."
+
+Indeed this definition is incomplete as it is not considering a software but a program. We already know the difference between them so yes software testing includes much more work then just on programs.
+
+A book states that the most appropriate definition of ST should be like,
+
+    "Software testing is the process of verifying the outcomes of every phase of software development and validating the program by executing it with the intention of finding faults."

@@ -1,0 +1,59 @@
+-> Graph is another non linear ADT.
+
+-> Graph is visually a collection of nodes (vertices) joined to each other using a curve/line (edge).
+
+IMPLEMENTATIONS
+---------------
+
+    2D STATIC ARRAYS or SQUARE MATRIX:
+
+        PYTHON CODE:
+
+        graph= [[T, F, F], [F, T, T], [T, T, F]] # a graph having 3 vertices
+
+        # T means edge exists and F means edge doesn't exist.
+
+        # To traverse this graph
+
+
+    SEPARATE STATIC ARRAYS FOR VERTICES AND EDGES:
+
+        PYTHON CODE:
+
+        vertices = [v1, v2, v3, ...vN]
+        edges = [[v1,va], [v2,vb], ...[vN,vZ]]
+
+    
+    CLASS-BASED:
+
+        PYTHON CODE:
+
+        import random
+
+        class GraphNode:
+
+            def __init__(self,data):
+
+                self.val = data
+                self.next = []
+
+        DirectedEdges = [[v1,v2], [v2], []]
+
+        Source = GraphNode(0)
+        temp = Source
+
+        # Graph creation
+        while temp:
+
+            for i in DirectedEdge[temp.data]:
+                temp.next.append(GraphNode(i))
+
+            temp=temp.next[random.randrange(len(temp.next))]
+
+        # Graph traversal
+        def dfs(node):
+
+            for vertex in node.next:
+                if not visited[vertex]:
+                    visited[vertex]=True
+                    dfs(vertex)

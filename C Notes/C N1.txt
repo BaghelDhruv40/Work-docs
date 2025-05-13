@@ -98,6 +98,9 @@ DYNAMIC MEMEORY ALLOCATION
 
 	-> malloc() : malloc(number of bytes require) is a function that accepts number of bytes required and returns a pointer to that location of type void.
 
-	-> calloc() : calloc(number of locations, per location size) is same function as 	malloc() but it allocates memory in continuous fashion (array) with all values as zeros.
+	-> calloc() : calloc(number of locations, per location size) is same function as 	malloc() but it initialized with zeros.
 
 	-> free() : free(pointername) is the function to free the dynamically memory allocated through malloc() or calloc().
+
+-> Both malloc() and calloc() returns continuous memory space. Actually this is just a virtual memory space and Kernel is responsible to always make sure to provide continuous memory. But in reality, system calls like sbrk() and mmap()
+literally allocates random physical memory.
